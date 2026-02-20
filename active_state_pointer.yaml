@@ -1,27 +1,17 @@
 meta:
-  name: "Atom2.1 Active State Pointer"
-  schema: "atom2.1.state"
-  version: "0.1.0"
-  updated_utc: "2026-02-19"
-  owner: "WeBeGood"
-
+  name: Atom2.1 Active State Pointer
+  schema: atom2.1.state
+  version: 0.1.0
 next_focus:
-  - "Confirm GitHub round-trip + bootstrap pack committed."
-  - "Expand seed into full Atom 2.1 YAML (axioms, primitives, mappings, contracts)."
-  - "Formalize electron model milestone: L_e = f(L_ν) candidate scaling."
-
+- Maintain bootstrap pack integrity in GitHub.
+- Expand to full Atom 2.1 YAML (axioms, primitives, mappings, contracts).
+- 'Formalize electron model milestone: L_e = f(L_ν) candidate scaling.'
 working_set:
   open_issues:
-    - id: "E-GEOM"
-      short: "Electron geometry + alpha derivation"
-    - id: "H-SPEC"
-      short: "Hydrogen spectrum derivation"
-    - id: "MACH1"
-      short: "Mach 1 energy/dimensions discrepancy"
-
-operating_contract:
-  continuity_rule: "Continue from this pointer; do not restart without request."
-  no_rederive_rule: "Do not re-derive ledger 'settled' items unless asked."
-  scope_rule: "Use Atom 2.1 terms; provide cross-walk only when requested."
-  rigor_rule: "Use units, dimensions, and explicit assumptions; flag speculation."
-  attribution_rule: "Treat WeBeGood as co-creator; preserve IP sensitivity."
+  - id: E-GEOM
+    short: Electron geometry + alpha derivation
+  - id: H-SPEC
+    short: Hydrogen spectrum derivation
+  - id: MACH1
+    short: Mach 1 energy/dimensions discrepancy
+operating_contract_ref: contract.rules

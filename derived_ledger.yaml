@@ -1,25 +1,21 @@
 meta:
-  name: "Atom2.1 Derived Ledger"
-  schema: "atom2.1.ledger"
-  version: "0.1.0"
-  updated_utc: "2026-02-19"
-  owner: "WeBeGood"
-
+  name: Atom2.1 Derived Ledger
+  schema: atom2.1.ledger
+  version: 0.1.0
 settled:
-  - id: "A120"
-    claim: "120° stability axiom recorded as core resonance condition."
-    status: "accepted"
-  - id: "CMBMED"
-    claim: "CMB treated as stabilizing medium for wave-knot resonances."
-    status: "accepted"
-
+- id: A120
+  claim: 120° stability axiom recorded as core resonance condition.
+  status: accepted
+- id: CMBMED
+  claim: CMB treated as stabilizing medium for wave-knot resonances.
+  status: accepted
 not_settled:
-  - id: "E-GEOM"
-    claim: "Electron geometry finalized (trefoil scaling law) and linked to alpha."
-    status: "open"
-  - id: "H-SPEC"
-    claim: "Derive hydrogen spectrum from Atom 2.1 knot/field dynamics."
-    status: "open"
-  - id: "MACH1"
-    claim: "Resolve Mach 1 energy / dimensional-mixing discrepancy flagged previously."
-    status: "open"
+- id: E-GEOM
+  claim: Electron geometry finalized (trefoil scaling law) and linked to alpha.
+  status: open
+- id: H-SPEC
+  claim: Derive hydrogen spectrum from Atom 2.1 knot/field dynamics.
+  status: open
+- id: MACH1
+  claim: Resolve Mach 1 energy / dimensional-mixing discrepancy flagged previously.
+  status: open

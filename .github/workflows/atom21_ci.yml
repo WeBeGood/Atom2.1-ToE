@@ -21,6 +21,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyyaml
 
+      - name: Render split-pack from SuperSeed
+        run: |
+          python render_superseed.py
+
       - name: Validate Atom 2.1 pack
         run: |
           python validate_atom2_1.py

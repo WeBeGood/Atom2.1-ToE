@@ -1,25 +1,21 @@
 meta:
-  name: "Atom2.1 Frontier"
-  schema: "atom2.1.frontier"
-  version: "0.1.0"
-  updated_utc: "2026-02-19"
-  owner: "WeBeGood"
-
+  name: Atom2.1 Frontier
+  schema: atom2.1.frontier
+  version: 0.1.0
 questions:
-  - id: "SCALING"
-    prompt: "What explicit geometric scaling law maps neutrino boundary phenomena to electron trefoil closure?"
-    desired_output: "Equation set with units + testable predictions."
-  - id: "ALPHA"
-    prompt: "Derive fine-structure constant alpha from knot/phase-lock geometry (including correction terms)."
-    desired_output: "Derivation, approximations ledger, numeric target alpha^-1 ≈ 137.035999."
-  - id: "ENTANGLE"
-    prompt: "Formalize θ=180° instantaneous/entanglement boundary in Atom 2.1 and propose falsifiable tests."
-    desired_output: "Operational definition + experimental signatures."
-
+- id: SCALING
+  prompt: What explicit geometric scaling law maps neutrino boundary phenomena to electron trefoil closure?
+  desired_output: Equation set with units + testable predictions.
+- id: ALPHA
+  prompt: Derive fine-structure constant alpha from knot/phase-lock geometry (including correction terms).
+  desired_output: Derivation + numeric target alpha^-1 ≈ 137.035999.
+- id: ENTANGLE
+  prompt: Formalize θ=180° instantaneous/entanglement boundary in Atom 2.1 and propose falsifiable tests.
+  desired_output: Operational definition + experimental signatures.
 tasks:
-  - id: "BOOTPACK"
-    action: "Create manifest.yaml and validate load_order across seed/ledger/state/frontier."
-  - id: "SIM-INIT"
-    action: "Define simulation initial conditions mapping primitives to fields + boundary conditions."
-  - id: "LLM-INIT"
-    action: "Define prompt-template that loads YAML and enforces operating_contract."
+- id: BOOTPACK
+  action: Validate load_order across seed/ledger/state/frontier.
+- id: SIM-INIT
+  action: Define simulation initial conditions mapping primitives to fields + boundary conditions.
+- id: LLM-INIT
+  action: Define prompt-template that loads YAML and enforces operating_contract.
