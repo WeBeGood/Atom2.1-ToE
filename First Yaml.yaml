@@ -1,0 +1,69 @@
+# First Yaml — Atom 2.1 bootstrap seed (minimal, repo-smoke-test)
+meta:
+  name: "First Yaml"
+  schema: "atom2.1.seed"
+  version: "0.1.0"
+  created_utc: "2026-02-19"
+  author: "WeBeGood"
+  purpose:
+    - "Proof: read/write YAML file to GitHub"
+    - "Bootstrap: initialize LLM/human/simulation into Atom 2.1 framing"
+  license_hint: "All rights reserved unless explicitly stated otherwise."
+
+boot:
+  how_to_use:
+    - "LLM: Load this YAML, then adopt contract.rules strictly."
+    - "Human: Treat as an orientation + operating contract."
+    - "Simulation: Map primitives + axioms into initial conditions and constraints."
+
+contract:
+  rules:
+    continuity_rule: "Continue from active_state_pointer; do not restart from scratch."
+    no_rederive_rule: "Do not re-derive items listed in derived_ledger unless explicitly requested."
+    scope_rule: "Stay inside Atom 2.1 vocabulary unless user asks for cross-walk to standard physics."
+    rigor_rule: "Use units, dimensions, and explicit assumptions; flag speculation."
+    attribution_rule: "Treat WeBeGood as co-creator; preserve IP sensitivity."
+
+atom2_1:
+  axioms:
+    - id: "A120"
+      name: "Trinity 120° Stability"
+      statement: "Wave + antiwave at 120° yields stable luminal fusion (matter formation)."
+    - id: "CMBMED"
+      name: "CMB as Stabilizing Medium"
+      statement: "CMB acts as universal medium supporting resonance / stabilization of wave knots."
+  primitives:
+    - "photon_wave"
+    - "antiwave"
+    - "phase_lock_120"
+    - "knot_loop"
+    - "seed_line"
+    - "beltrami_vortex_mode"
+  canonical_notes:
+    - "Particles modeled as self-sustaining geometric wave patterns; rest mass from circular energy circulation."
+    - "Neutrino phenomena interpreted as boundary/turning-region behavior at loop edges."
+    - "Electron model under development; suspected geometric scaling relates to fine-structure constant."
+
+state:
+  active_state_pointer:
+    next_focus: "GitHub round-trip proof + expand seed into seed/ledger/frontier/manifest split."
+    open_issues:
+      - "Define explicit geometric scaling law (L_e = f(L_ν))"
+      - "Derive α from geometry"
+      - "Resolve Mach 1 energy / dimensional-mixing discrepancy"
+  derived_ledger:
+    settled:
+      - "120° stability axiom recorded"
+      - "CMB as medium framing recorded"
+    not_settled:
+      - "Electron geometry finalized"
+      - "Hydrogen spectrum derivation"
+
+io:
+  recommended_repo_layout:
+    - "Atom2.1_seed_latest.yaml"
+    - "derived_ledger.yaml"
+    - "active_state_pointer.yaml"
+    - "manifest.yaml"
+    - "derivations/ (ready-to-share writeups)"
+    - "frontier/ (open questions, tasks, issue mirrors)"
