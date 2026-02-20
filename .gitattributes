@@ -1,0 +1,10 @@
+# Normalize line endings (prefer LF in repo)
+* text=auto eol=lf
+
+# Explicitly treat these as text
+*.yaml text eol=lf
+*.yml  text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.py   text eol=lf
+*.bat  text eol=crlf
