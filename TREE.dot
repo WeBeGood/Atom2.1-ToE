@@ -4,6 +4,8 @@ digraph Atom21Nodes {
   "N000" [label="N000\nSpace, Time, Light (Maxwell baseline)"]; 
   "N010" [label="N010\nMaxwell in differential forms (topology-ready)"]; 
   "N011" [label="N011\nPolarization, helicity, chirality baseline (plane waves)"]; 
+  "N012" [label="N012\nEM potentials and gauge (quantization on-ramp)"]; 
   "N000" -> "N010";
   "N000" -> "N011";
+  "N000" -> "N012";
 }
