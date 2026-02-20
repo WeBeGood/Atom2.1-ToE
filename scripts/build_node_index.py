@@ -5,14 +5,13 @@ Outputs (repo root):
 - NODE_INDEX.md
 - TREE.dot
 
-Deterministic: stable ordering for reproducible diffs.
+Deterministic: stable ordering for reproducible diffs across OS.
 """
 
 from __future__ import annotations
 
-import os
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 import yaml
 
@@ -38,7 +37,8 @@ def discover_nodes() -> Dict[str, dict]:
         node_id = str(meta.get("id", "")).strip()
         if not node_id:
             continue
-        data["__path__"] = str(node_yaml.relative_to(REPO))
+        # IMPORTANT: use POSIX paths so Windows + Linux generate identical files
+        data["__path__"] = node_yaml.relative_to(REPO).as_posix()
         nodes[node_id] = data
 
     return nodes
@@ -106,7 +106,6 @@ def build_index(nodes: Dict[str, dict], order: List[str]) -> str:
 
 
 def build_dot(nodes: Dict[str, dict], order: List[str]) -> str:
-    # Simple DOT graph of dependencies
     lines: List[str] = []
     lines.append("digraph Atom21Nodes {")
     lines.append("  rankdir=LR;")
