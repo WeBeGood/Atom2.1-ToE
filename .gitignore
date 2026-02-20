@@ -1,0 +1,4 @@
+# Local patch bundles for agent_apply.py (do not commit)
+patch_*.json
+patch-*.json
+*.patch.json
