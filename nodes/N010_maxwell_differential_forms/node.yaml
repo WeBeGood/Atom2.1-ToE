@@ -1,0 +1,82 @@
+meta:
+  id: N010
+  title: "Maxwell in differential forms (topology-ready)"
+  status: open
+  maturity: M1
+  updated_utc: "2026-02-20"
+  owner: "WeBeGood"
+
+depends_on:
+  - N000
+
+scope:
+  domain: "Classical electromagnetism (geometric formulation)"
+  coordinate_system: "4D spacetime notation; compatible with Cartesian baseline"
+  units: "SI (default)"
+
+definitions:
+  - symbol: "F"
+    meaning: "electromagnetic field strength 2-form"
+    units: "encodes E and B"
+  - symbol: "A"
+    meaning: "electromagnetic potential 1-form"
+    units: "V (time component), V·s/m (space components)"
+  - symbol: "d"
+    meaning: "exterior derivative"
+    units: "operator"
+  - symbol: "⋆"
+    meaning: "Hodge star (depends on metric)"
+    units: "operator"
+  - symbol: "J"
+    meaning: "current 3-form (source)"
+    units: "encodes rho and J"
+
+claims:
+  - id: N010-C1
+    statement: "Maxwell's equations can be written compactly as dF=0 and d⋆F=J (or 0 in vacuum)."
+    units: "form equations"
+  - id: N010-C2
+    statement: "dF=0 implies locally F=dA (gauge potential exists on simply connected regions)."
+    units: "form equation"
+  - id: N010-C3
+    statement: "Topology enters via global obstructions: nontrivial cohomology can prevent a single global A even when dF=0."
+    units: "topological statement"
+
+assumptions:
+  - "Classical EM; smooth manifolds; standard differential geometry." 
+  - "Vacuum baseline corresponds to J=0." 
+  - "Metric choice (signature) affects ⋆ conventions; we will state conventions explicitly in math track." 
+
+interfaces:
+  exports:
+    - "Differential-forms Maxwell: dF=0, d⋆F=J"
+    - "Local exactness: dF=0 ⇒ F=dA (with topology caveats)"
+    - "Topology hook: cohomology / global potential obstructions"
+  imports:
+    - "N000: vacuum Maxwell equations and wave consequence"
+
+artifacts:
+  narrative: "nodes/N010_maxwell_differential_forms/narrative.md"
+  math:
+    - "nodes/N010_maxwell_differential_forms/math/notations.md"
+    - "nodes/N010_maxwell_differential_forms/math/dimensions_units.md"
+    - "nodes/N010_maxwell_differential_forms/math/forms_derivation.md"
+  latex:
+    - "nodes/N010_maxwell_differential_forms/latex/main.tex"
+    - "nodes/N010_maxwell_differential_forms/latex/refs.bib"
+  code:
+    - "nodes/N010_maxwell_differential_forms/code/sim.py"
+  figs:
+    - "nodes/N010_maxwell_differential_forms/figs/README.md"
+
+sources:
+  - key: jackson1999
+    type: book
+    note: "Baseline EM content; connect to forms formulation."
+
+validation:
+  checks:
+    - "Map dF=0 to Gauss(B) + Faraday in 3+1 split."
+    - "Map d⋆F=J to Gauss(E) + Ampere-Maxwell in 3+1 split."
+  falsifiers:
+    - "If the 3+1 split does not reproduce the standard vector Maxwell equations under stated conventions."
