@@ -1,0 +1,44 @@
+meta:
+  id: N000
+  title: "Space, Time, Light (Maxwell baseline)"
+  status: open
+  updated_utc: "2026-02-20"
+  owner: "WeBeGood"
+
+depends_on: []
+
+scope:
+  domain: "Classical electromagnetism"
+  coordinate_system: "Cartesian (x,y,z), time t"
+  units: "SI (default)"
+
+claims:
+  - id: N000-C1
+    statement: "Maxwell's equations in vacuum imply wave solutions for E and B that propagate at c."
+    units: "E: V/m, B: T, c: m/s"
+  - id: N000-C2
+    statement: "For plane waves in vacuum, E and B are transverse to propagation and mutually orthogonal."
+    units: "dimensionless geometry; E,B units as above"
+  - id: N000-C3
+    statement: "Energy flux is S=(1/mu0) E×B (Poynting vector)."
+    units: "S: W/m^2"
+
+assumptions:
+  - "Vacuum (rho=0, J=0)."
+  - "Flat Euclidean space coordinates for the baseline (prior to Atom 2.1 extensions)."
+  - "Standard vector calculus identities apply."
+
+artifacts:
+  narrative: "nodes/N000_space_time_light_maxwell/narrative.md"
+  math:
+    - "nodes/N000_space_time_light_maxwell/math/vector_calculus.md"
+  latex:
+    - "nodes/N000_space_time_light_maxwell/latex/main.tex"
+    - "nodes/N000_space_time_light_maxwell/latex/refs.bib"
+  code:
+    - "nodes/N000_space_time_light_maxwell/code/sim.py"
+
+validation:
+  checks:
+    - "Derive wave equations for E and B from Maxwell (vacuum)."
+    - "Verify plane-wave constraints (E⊥B⊥k, |B|=|E|/c)."
