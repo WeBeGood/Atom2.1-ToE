@@ -1,0 +1,108 @@
+meta:
+  id: N016
+  title: "CMB-spectrum seeded Beltrami line (Trinity phase-lock extension)"
+  status: open
+  maturity: M1
+  updated_utc: "2026-02-20"
+  owner: "WeBeGood"
+
+depends_on:
+  - N015
+  - N010
+  - N011
+  - N012
+
+scope:
+  domain: "Atom 2.1 extension: seed event → extended line under broadband (CMB) forcing"
+  coordinate_system: "Cartesian baseline; compatible with forms/potentials; axis defined by k_hat"
+  units: "SI (default)"
+
+definitions:
+  - symbol: "T_cmb"
+    meaning: "CMB blackbody temperature (parameter)"
+    units: "K"
+  - symbol: "u_nu"
+    meaning: "spectral energy density of CMB (per frequency)"
+    units: "J/m^3/Hz"
+  - symbol: "A"
+    meaning: "vector potential (candidate Beltrami family)"
+    units: "V·s/m"
+  - symbol: "kappa"
+    meaning: "Beltrami proportionality constant in ∇×A = kappa A"
+    units: "1/m"
+  - symbol: "k_hat"
+    meaning: "local line axis / propagation direction unit vector"
+    units: "dimensionless"
+  - symbol: "seed"
+    meaning: "seed descriptor exported by N015"
+    units: "dimensionless + parameter set"
+  - symbol: "line"
+    meaning: "extended seed-line object (topological/field descriptor)"
+    units: "dimensionless + length scale(s)"
+
+claims:
+  - id: N016-C1
+    statement: "Given a seed criterion S(E,B) from N015, repeated/propagated satisfaction of the criterion along an axis defines a candidate extended object ('seed-line') with direction k_hat."
+    units: "k_hat dimensionless; line has length scale(s) in m"
+  - id: N016-C2
+    statement: "Broadband background forcing can be modeled by a spectral distribution u_nu(ν; T_cmb) that provides persistent multi-frequency drive; this is a constraint/driver term, not a nonlinear Maxwell modification."
+    units: "u_nu: J/m^3/Hz; T_cmb: K"
+  - id: N016-C3
+    statement: "Beltrami candidate family: impose ∇×A = kappa A as an organizing ansatz for line-like helical modes; kappa sets an inverse length scale for twist density."
+    units: "kappa: 1/m; A: V·s/m"
+  - id: N016-C4
+    statement: "Helicity/handedness conventions from N011 must be consistent with the Beltrami ansatz and with the seed functional’s sensitivity to chirality."
+    units: "dimensionless helicity label"
+  - id: N016-C5
+    statement: "CMB may become load-bearing in later nodes when used to constrain constants and rest-mass scales; in N016 it is introduced as a formally defined spectral driver/constraint."
+    units: "scoping statement"
+
+assumptions:
+  - "N015 provides (or will provide) a concrete gauge-invariant seed functional S(E,B)."
+  - "Beltrami ansatz is used as a candidate mode family; acceptance depends on later stability/fit tests."
+  - "CMB spectrum is introduced as a background forcing/constraint; load-bearing upgrades are deferred to later nodes and must be explicitly justified." 
+
+interfaces:
+  exports:
+    - "Definition of seed-line as propagated seed criterion along k_hat"
+    - "CMB spectral forcing interface: u_nu(ν; T_cmb) as driver/constraint"
+    - "Beltrami candidate mode family: ∇×A = kappa A"
+    - "Aether/Kelvin interpretation notes (non-load-bearing narrative)"
+  imports:
+    - "N015: seed criterion S(E,B) + Trinity phase-lock hypothesis"
+    - "N010: forms/topology framing for field structures"
+    - "N011: helicity/handedness conventions"
+    - "N012: potentials/gauge invariance constraints"
+
+artifacts:
+  narrative: "nodes/N016_cmb_seeded_beltrami_line/narrative.md"
+  math:
+    - "nodes/N016_cmb_seeded_beltrami_line/math/notations.md"
+    - "nodes/N016_cmb_seeded_beltrami_line/math/dimensions_units.md"
+    - "nodes/N016_cmb_seeded_beltrami_line/math/cmb_spectrum.md"
+    - "nodes/N016_cmb_seeded_beltrami_line/math/beltrami_ansatz.md"
+    - "nodes/N016_cmb_seeded_beltrami_line/math/line_extension.md"
+  latex:
+    - "nodes/N016_cmb_seeded_beltrami_line/latex/main.tex"
+    - "nodes/N016_cmb_seeded_beltrami_line/latex/refs.bib"
+  code:
+    - "nodes/N016_cmb_seeded_beltrami_line/code/sim.py"
+  figs:
+    - "nodes/N016_cmb_seeded_beltrami_line/figs/README.md"
+
+sources:
+  - key: jackson1999
+    type: book
+    note: "Potentials, helicity constraints, invariants as baseline." 
+  - key: cmb_blackbody
+    type: reference
+    note: "CMB treated as blackbody spectrum input; exact dataset citations added later." 
+
+validation:
+  checks:
+    - "Define an explicit u_nu(ν; T_cmb) and ensure dimensional correctness (J/m^3/Hz)."
+    - "Provide at least one concrete Beltrami field example (analytic or numeric) consistent with N011 handedness conventions."
+    - "Define a propagated line criterion and show it reduces to N015 seed event locally."
+  falsifiers:
+    - "If no physically plausible seed functional from N015 can be extended into a stable line-like structure under any reasonable forcing model, the seed-line extension hypothesis fails."
+    - "If Beltrami ansatz cannot be made consistent with gauge constraints and/or yields no stable candidate modes, it must be replaced as organizing family."
