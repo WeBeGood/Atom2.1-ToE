@@ -21,6 +21,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyyaml
 
+      - name: Build claims tables
+        run: |
+          python scripts/build_node_claims.py
+
       - name: Validate node.yaml schema
         run: |
           python scripts/validate_nodes.py

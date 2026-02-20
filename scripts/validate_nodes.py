@@ -55,6 +55,41 @@ def validate_node(node_yaml: Path) -> None:
     if not npath.exists():
         fail(f"{node_yaml}: missing narrative file {narrative}")
 
+    # Interfaces: exports/imports are recommended + validated
+    interfaces = data.get("interfaces")
+    if not isinstance(interfaces, dict):
+        fail(f"{node_yaml}: interfaces mapping required")
+
+    exports = interfaces.get("exports")
+    imports = interfaces.get("imports")
+    if exports is None or not isinstance(exports, list):
+        fail(f"{node_yaml}: interfaces.exports must be a list")
+    if imports is None or not isinstance(imports, list):
+        fail(f"{node_yaml}: interfaces.imports must be a list")
+
+    # Claims required to be list (can be empty)
+    claims = data.get("claims", [])
+    if claims is None:
+        claims = []
+    if not isinstance(claims, list):
+        fail(f"{node_yaml}: claims must be a list")
+
+    # If claims exist, each must have id/statement/units
+    for c in claims:
+        if not isinstance(c, dict):
+            fail(f"{node_yaml}: each claim must be a mapping")
+        if not str(c.get("id", "")).strip():
+            fail(f"{node_yaml}: claim missing id")
+        if not str(c.get("statement", "")).strip():
+            fail(f"{node_yaml}: claim {c.get('id')} missing statement")
+        if c.get("units") is None:
+            fail(f"{node_yaml}: claim {c.get('id')} missing units")
+
+    # claims.md must exist (generated)
+    claims_md = node_yaml.parent / "claims.md"
+    if not claims_md.exists():
+        fail(f"{node_yaml}: missing generated {claims_md.relative_to(REPO)}")
+
 
 def main() -> int:
     if not NODES_DIR.exists():

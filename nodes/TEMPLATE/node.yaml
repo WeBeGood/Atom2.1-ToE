@@ -32,6 +32,9 @@ interfaces:
   exports:
     # what downstream nodes may rely on (equations, invariants, constraints)
     # - "..."
+  imports:
+    # what this node expects from parents
+    # - "N000: wave equation"
 
 invariants:
   # optional: quantities conserved or constrained

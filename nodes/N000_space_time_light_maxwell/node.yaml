@@ -12,6 +12,23 @@ scope:
   coordinate_system: "Cartesian (x,y,z), time t"
   units: "SI (default)"
 
+definitions:
+  - symbol: "E"
+    meaning: "electric field"
+    units: "V/m"
+  - symbol: "B"
+    meaning: "magnetic flux density"
+    units: "T"
+  - symbol: "mu0"
+    meaning: "vacuum permeability"
+    units: "H/m"
+  - symbol: "eps0"
+    meaning: "vacuum permittivity"
+    units: "F/m"
+  - symbol: "c"
+    meaning: "speed of light in vacuum"
+    units: "m/s"
+
 claims:
   - id: N000-C1
     statement: "Maxwell's equations in vacuum imply wave solutions for E and B that propagate at c."
@@ -28,9 +45,20 @@ assumptions:
   - "Flat Euclidean space coordinates for the baseline (prior to Atom 2.1 extensions)."
   - "Standard vector calculus identities apply."
 
+interfaces:
+  exports:
+    - "Vacuum Maxwell equations (div/curl form)"
+    - "Wave equations for E and B in vacuum"
+    - "Wave speed relation c = 1/sqrt(mu0*eps0)"
+    - "Plane-wave orthogonality constraints (E ⟂ B ⟂ k)"
+    - "Poynting vector S=(1/mu0) E×B"
+  imports: []
+
 artifacts:
   narrative: "nodes/N000_space_time_light_maxwell/narrative.md"
   math:
+    - "nodes/N000_space_time_light_maxwell/math/notations.md"
+    - "nodes/N000_space_time_light_maxwell/math/dimensions_units.md"
     - "nodes/N000_space_time_light_maxwell/math/vector_calculus.md"
   latex:
     - "nodes/N000_space_time_light_maxwell/latex/main.tex"
@@ -42,3 +70,5 @@ validation:
   checks:
     - "Derive wave equations for E and B from Maxwell (vacuum)."
     - "Verify plane-wave constraints (E⊥B⊥k, |B|=|E|/c)."
+  falsifiers:
+    - "If vacuum Maxwell equations did not imply wave equations with finite c."
