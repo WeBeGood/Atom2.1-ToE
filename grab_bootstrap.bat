@@ -33,6 +33,15 @@ if not exist Atom2.1_superseed.yaml (
   echo D) FIRST_ACTION (one step)
   echo.
   echo ==========================================
+  echo PATCH BUNDLE FORMAT (for MAKE PATCH)
+  echo ==========================================
+  if exist PATCH_SPEC.md (
+    type PATCH_SPEC.md
+  ) else (
+    echo NOTE: PATCH_SPEC.md not found. Use the MAKE PATCH rules in LLM_WORKSPACE_INIT.txt.
+  )
+  echo.
+  echo ==========================================
   echo END OF SESSION (how to push changes)
   echo ==========================================
   echo When ready to commit changes, say: MAKE PATCH
@@ -40,7 +49,7 @@ if not exist Atom2.1_superseed.yaml (
   echo Paste the JSON, press Enter, then Ctrl+Z, then Enter.
 ) | clip
 
-echo Bootstrap text (INIT + SuperSeed) copied to clipboard.
+echo Bootstrap text (INIT + SuperSeed + PATCH_SPEC + reminders) copied to clipboard.
 echo Paste into any LLM chat (Ctrl+V).
 pause
 endlocal
