@@ -1,0 +1,1 @@
+If you can read this in GitHub, the local agent_apply.py write/commit/push pipeline works.

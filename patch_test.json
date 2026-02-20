@@ -1,0 +1,9 @@
+{
+  "commit_message": "Agent test: add AGENT_TEST.txt",
+  "files": [
+    {
+      "path": "AGENT_TEST.txt",
+      "content": "If you can read this in GitHub, the local agent_apply.py write/commit/push pipeline works.\n"
+    }
+  ]
+}
