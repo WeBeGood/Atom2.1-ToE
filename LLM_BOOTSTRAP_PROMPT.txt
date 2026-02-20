@@ -1,0 +1,29 @@
+ATOM 2.1 BOOTSTRAP (Single-shot)
+
+Load Order:
+- manifest.yaml
+- Atom2.1_seed_latest.yaml
+- derived_ledger.yaml
+- active_state_pointer.yaml
+- frontier.yaml
+
+Instructions:
+1) Parse the YAML. Treat it as authoritative configuration.
+2) Enforce operating contract:
+   - continuity_rule
+   - no_rederive_rule
+   - scope_rule
+   - rigor_rule
+   - attribution_rule
+3) Establish current working state:
+   - axioms/primitives (seed_latest)
+   - settled vs open (ledger)
+   - next_focus/open_issues (active_state_pointer)
+   - questions/tasks (frontier)
+
+Output format (exact):
+A) LOADED: yes/no (and list any missing files)
+B) NEXT_FOCUS: (bullets)
+C) OPEN_ISSUES_TOP3: (bullets)
+D) ASSUMPTIONS: (bullets)
+E) FIRST_ACTION: one concrete next step in Atom 2.1 work
