@@ -21,3 +21,5 @@ tasks:
   action: Define prompt-template that loads YAML and enforces operating_contract.
 - id: INDEX
   action: Create INDEX.md listing derivations and open issues.
+- id: NOTES
+  action: Add NOTES.md for session notes + decisions.
