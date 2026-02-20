@@ -1,0 +1,34 @@
+meta:
+  name: "Atom2.1 Seed (Latest)"
+  schema: "atom2.1.seed"
+  version: "0.1.0"
+  created_utc: "2026-02-19"
+  author: "WeBeGood"
+  repo: "Atom2.1-ToE"
+
+load_order:
+  - "manifest.yaml"
+  - "Atom2.1_seed_latest.yaml"
+  - "derived_ledger.yaml"
+  - "active_state_pointer.yaml"
+  - "frontier.yaml"
+
+atom2_1:
+  axioms:
+    - id: "A120"
+      name: "Trinity 120° Stability"
+      statement: "Wave + antiwave at 120° yields stable luminal fusion (matter formation)."
+    - id: "CMBMED"
+      name: "CMB as Stabilizing Medium"
+      statement: "CMB acts as universal medium supporting resonance / stabilization of wave knots."
+  primitives:
+    - "photon_wave"
+    - "antiwave"
+    - "phase_lock_120"
+    - "knot_loop"
+    - "seed_line"
+    - "beltrami_vortex_mode"
+  canonical_notes:
+    - "Particles modeled as self-sustaining geometric wave patterns; rest mass from circular energy circulation."
+    - "Neutrino phenomena interpreted as boundary/turning-region behavior at loop edges."
+    - "Electron model under development; suspected geometric scaling relates to fine-structure constant."

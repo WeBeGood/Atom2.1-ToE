@@ -1,0 +1,31 @@
+meta:
+  name: "Atom2.1 Manifest"
+  schema: "atom2.1.manifest"
+  version: "0.1.0"
+  updated_utc: "2026-02-19"
+  owner: "WeBeGood"
+
+files:
+  - path: "First Yaml.yaml"
+    role: "smoke_test_seed"
+  - path: "Atom2.1_seed_latest.yaml"
+    role: "seed_latest"
+  - path: "derived_ledger.yaml"
+    role: "derived_ledger"
+  - path: "active_state_pointer.yaml"
+    role: "active_state_pointer"
+  - path: "frontier.yaml"
+    role: "open_frontier"
+
+load_order:
+  - "manifest.yaml"
+  - "Atom2.1_seed_latest.yaml"
+  - "derived_ledger.yaml"
+  - "active_state_pointer.yaml"
+  - "frontier.yaml"
+
+integrity_hints:
+  yaml_rules:
+    - "UTF-8"
+    - "2-space indentation"
+    - "No tabs"
