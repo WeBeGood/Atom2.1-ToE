@@ -20,12 +20,17 @@ def write_file(relpath: str, content: str) -> None:
 
 def main() -> int:
     if len(sys.argv) < 2:
-        print("Usage: python agent_apply.py <patch.json>")
+        print("Usage:")
+        print("  python agent_apply.py <patch.json>")
+        print("  python agent_apply.py --stdin")
         return 2
 
-    patch_path = (REPO / sys.argv[1]).resolve()
-    patch = json.loads(patch_path.read_text(encoding="utf-8"))
-
+    if sys.argv[1] == "--stdin":
+        patch = json.loads(sys.stdin.read())
+        patch_path = None
+    else:
+        patch_path = (REPO / sys.argv[1]).resolve()
+        patch = json.loads(patch_path.read_text(encoding="utf-8"))
     message = patch.get("commit_message")
     files = patch.get("files", [])
     if not message or not files:
@@ -44,7 +49,8 @@ def main() -> int:
 
     # Commit + push
     run(["git", "add", "-A"])
-    run(["git", "reset", "--", str(patch_path.relative_to(REPO))])
+    if patch_path is not None:
+        run(["git", "reset", "--", str(patch_path.relative_to(REPO))])
     run(["git", "commit", "-m", message])
     run(["git", "push"])
 

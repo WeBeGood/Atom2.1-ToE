@@ -1,0 +1,9 @@
+{
+  "commit_message": "Agent test 2: add AGENT_TEST2.txt (no patch commit)",
+  "files": [
+    {
+      "path": "AGENT_TEST2.txt",
+      "content": "Second agent test. Patch JSON should NOT be committed this time.\n"
+    }
+  ]
+}
