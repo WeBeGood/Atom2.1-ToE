@@ -43,6 +43,11 @@ def main() -> int:
         write_file(rel, content)
         print(f"WROTE: {rel}")
 
+    # If SuperSeed changed, render split-pack outputs so CI stays green
+    changed_paths = {f["path"] for f in files}
+    if "Atom2.1_superseed.yaml" in changed_paths:
+        print("RUN: python render_superseed.py (SuperSeed changed)")
+        run([sys.executable, "render_superseed.py"])
     # Validate
     print("RUN: python validate_atom2_1.py")
     run([sys.executable, "validate_atom2_1.py"])
