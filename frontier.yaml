@@ -19,3 +19,5 @@ tasks:
   action: Define simulation initial conditions mapping primitives to fields + boundary conditions.
 - id: LLM-INIT
   action: Define prompt-template that loads YAML and enforces operating_contract.
+- id: INDEX
+  action: Create INDEX.md listing derivations and open issues.
