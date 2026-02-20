@@ -1,0 +1,5 @@
+digraph Atom21Nodes {
+  rankdir=LR;
+  node [shape=box];
+  "N000" [label="N000\nSpace, Time, Light (Maxwell baseline)"]; 
+}
