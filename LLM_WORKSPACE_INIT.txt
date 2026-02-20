@@ -9,10 +9,18 @@ Rules (strict):
 4) Use units/dimensions; explicitly list assumptions; flag speculation.
 5) Be concise and structured.
 
-When I later say “MAKE PATCH”, you will output ONLY a single valid JSON patch bundle with:
+When I later say "MAKE PATCH", you will output ONLY a single valid JSON patch bundle with:
 - commit_message (string)
 - files: [{path, content}] where content is FULL file contents
 No commentary outside JSON.
+
+MAKE PATCH output rules (strict JSON):
+- Output ONLY a single JSON object (no markdown fences, no commentary)
+- Use plain ASCII double-quotes only (")
+- Escape ALL newlines in file contents as \\n (do not use literal line breaks inside JSON strings)
+- Escape any " characters inside file contents as \\\" 
+- No trailing commas
+- Output exactly: { "commit_message": "...", "files": [ { "path": "...", "content": "..." } ] }
 
 After I paste Atom2.1_superseed.yaml, you must confirm you loaded it and report:
 A) LOADED: yes/no
