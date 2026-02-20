@@ -44,6 +44,7 @@ def main() -> int:
 
     # Commit + push
     run(["git", "add", "-A"])
+    run(["git", "reset", "--", str(patch_path.relative_to(REPO))])
     run(["git", "commit", "-m", message])
     run(["git", "push"])
 
