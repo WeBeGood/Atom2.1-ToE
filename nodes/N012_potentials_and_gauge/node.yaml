@@ -1,0 +1,84 @@
+meta:
+  id: N012
+  title: "EM potentials and gauge (quantization on-ramp)"
+  status: open
+  maturity: M1
+  updated_utc: "2026-02-20"
+  owner: "WeBeGood"
+
+depends_on:
+  - N000
+
+scope:
+  domain: "Classical EM potentials, gauge freedom, wave equations"
+  coordinate_system: "Cartesian baseline; 4-potential compatible"
+  units: "SI (default)"
+
+definitions:
+  - symbol: "phi"
+    meaning: "scalar potential"
+    units: "V"
+  - symbol: "A"
+    meaning: "vector potential"
+    units: "V·s/m"
+  - symbol: "B"
+    meaning: "magnetic field"
+    units: "T"
+  - symbol: "E"
+    meaning: "electric field"
+    units: "V/m"
+  - symbol: "Lambda"
+    meaning: "gauge function"
+    units: "(chosen so that A,phi transform consistently)"
+
+claims:
+  - id: N012-C1
+    statement: "Magnetic field can be written as B = ∇×A."
+    units: "B: T, A: V·s/m"
+  - id: N012-C2
+    statement: "Electric field can be written as E = −∇phi − ∂A/∂t."
+    units: "E: V/m"
+  - id: N012-C3
+    statement: "Gauge freedom: A→A+∇Lambda, phi→phi−∂Lambda/∂t leaves E and B invariant."
+    units: "invariance statement"
+  - id: N012-C4
+    statement: "In Lorenz gauge, potentials satisfy wave equations sourced by charge/current."
+    units: "wave PDEs"
+
+assumptions:
+  - "Smooth fields; standard vector calculus identities." 
+  - "Vacuum baseline corresponds to rho=0, J=0, giving homogeneous wave equations." 
+  - "Gauge convention (Lorenz vs Coulomb) must be stated explicitly." 
+
+interfaces:
+  exports:
+    - "Potential definitions: B=∇×A, E=−∇phi−∂A/∂t"
+    - "Gauge transformation (Lambda) invariance"
+    - "Lorenz gauge condition and resulting wave equations"
+  imports:
+    - "N000: Maxwell baseline equations"
+
+artifacts:
+  narrative: "nodes/N012_potentials_and_gauge/narrative.md"
+  math:
+    - "nodes/N012_potentials_and_gauge/math/notations.md"
+    - "nodes/N012_potentials_and_gauge/math/dimensions_units.md"
+    - "nodes/N012_potentials_and_gauge/math/gauge_derivation.md"
+  latex:
+    - "nodes/N012_potentials_and_gauge/latex/main.tex"
+    - "nodes/N012_potentials_and_gauge/latex/refs.bib"
+  code:
+    - "nodes/N012_potentials_and_gauge/code/sim.py"
+  figs:
+    - "nodes/N012_potentials_and_gauge/figs/README.md"
+
+sources:
+  - key: jackson1999
+    type: book
+    note: "Potentials, gauge choices, and wave equations."
+
+validation:
+  checks:
+    - "Show E,B computed from potentials satisfy homogeneous Maxwell when potentials satisfy Lorenz-gauge wave equation (vacuum)."
+  falsifiers:
+    - "If gauge transform changes E or B under stated definitions."

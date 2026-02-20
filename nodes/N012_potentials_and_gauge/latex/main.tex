@@ -1,0 +1,34 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{N012: EM Potentials and Gauge (Quantization On-Ramp)}
+\author{WeBeGood (Atom 2.1 ToE)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Definitions}
+\begin{align}
+\mathbf{B} &= \nabla \times \mathbf{A},\\
+\mathbf{E} &= -\nabla\phi - \frac{\partial \mathbf{A}}{\partial t}.
+\end{align}
+
+\section{Gauge Invariance}
+\begin{align}
+\mathbf{A}' &= \mathbf{A} + \nabla \Lambda,\\
+\phi' &= \phi - \frac{\partial \Lambda}{\partial t}
+\end{align}
+leaves $\mathbf{E},\mathbf{B}$ invariant.
+
+\section{Lorenz Gauge (Default)}
+\begin{equation}
+\frac{1}{c^2}\frac{\partial \phi}{\partial t} + \nabla\cdot\mathbf{A} = 0.
+\end{equation}
+In vacuum this yields homogeneous wave equations for $\phi$ and $\mathbf{A}$.
+
+\bibliographystyle{plain}
+\bibliography{refs,../../refs/global}
+\end{document}
