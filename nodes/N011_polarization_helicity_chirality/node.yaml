@@ -1,0 +1,78 @@
+meta:
+  id: N011
+  title: "Polarization, helicity, chirality baseline (plane waves)"
+  status: open
+  maturity: M1
+  updated_utc: "2026-02-20"
+  owner: "WeBeGood"
+
+depends_on:
+  - N000
+
+scope:
+  domain: "Classical EM waves; polarization states"
+  coordinate_system: "Cartesian + propagation direction k"
+  units: "SI (default)"
+
+definitions:
+  - symbol: "k"
+    meaning: "wavevector"
+    units: "1/m"
+  - symbol: "omega"
+    meaning: "angular frequency"
+    units: "rad/s"
+  - symbol: "E, B"
+    meaning: "EM fields"
+    units: "E: V/m, B: T"
+  - symbol: "helicity"
+    meaning: "projection of spin/angular momentum along propagation direction"
+    units: "dimensionless label for polarization state"
+
+claims:
+  - id: N011-C1
+    statement: "Plane-wave solutions admit two transverse polarization degrees of freedom."
+    units: "dimensionless"
+  - id: N011-C2
+    statement: "Circular polarizations correspond to definite helicity (left/right-handed rotation about k)."
+    units: "dimensionless"
+  - id: N011-C3
+    statement: "Helicity/chirality language provides a natural bridge from classical wave geometry to topology-first descriptions."
+    units: "conceptual bridge"
+
+assumptions:
+  - "Vacuum plane-wave baseline (inherits N000)."
+  - "Conventions for left/right handedness will be stated explicitly."
+
+interfaces:
+  exports:
+    - "Polarization basis: linear and circular"
+    - "Helicity definition for plane waves"
+    - "Conventions for left/right handed circular polarization"
+  imports:
+    - "N000: plane-wave orthogonality constraints"
+
+artifacts:
+  narrative: "nodes/N011_polarization_helicity_chirality/narrative.md"
+  math:
+    - "nodes/N011_polarization_helicity_chirality/math/notations.md"
+    - "nodes/N011_polarization_helicity_chirality/math/dimensions_units.md"
+    - "nodes/N011_polarization_helicity_chirality/math/polarization_basis.md"
+  latex:
+    - "nodes/N011_polarization_helicity_chirality/latex/main.tex"
+    - "nodes/N011_polarization_helicity_chirality/latex/refs.bib"
+  code:
+    - "nodes/N011_polarization_helicity_chirality/code/sim.py"
+  figs:
+    - "nodes/N011_polarization_helicity_chirality/figs/README.md"
+
+sources:
+  - key: griffiths2017
+    type: book
+    note: "Polarization and plane-wave EM." 
+
+validation:
+  checks:
+    - "Define explicit handedness convention and show how E rotates in time for circular polarization."
+    - "Relate circular basis vectors to linear basis." 
+  falsifiers:
+    - "If plane-wave Maxwell solutions required more than two independent transverse modes in vacuum."
