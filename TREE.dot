@@ -2,4 +2,8 @@ digraph Atom21Nodes {
   rankdir=LR;
   node [shape=box];
   "N000" [label="N000\nSpace, Time, Light (Maxwell baseline)"]; 
+  "N010" [label="N010\nMaxwell in differential forms (topology-ready)"]; 
+  "N011" [label="N011\nPolarization, helicity, chirality baseline (plane waves)"]; 
+  "N000" -> "N010";
+  "N000" -> "N011";
 }
