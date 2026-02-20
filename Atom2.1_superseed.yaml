@@ -1,0 +1,161 @@
+meta:
+  name: "Atom2.1 SuperSeed"
+  schema: "atom2.1.superseed"
+  version: "0.1.0"
+  created_utc: "2026-02-19"
+  owner: "WeBeGood"
+  purpose:
+    - "Single YAML that declares the full Atom 2.1 initialization contract"
+    - "Source-of-truth that can regenerate the split-pack files"
+    - "Initialize LLM, human, or simulation consistently"
+
+outputs:
+  files:
+    - path: "manifest.yaml"
+      generate_from: "manifest"
+    - path: "Atom2.1_seed_latest.yaml"
+      generate_from: "seed_latest"
+    - path: "derived_ledger.yaml"
+      generate_from: "derived_ledger"
+    - path: "active_state_pointer.yaml"
+      generate_from: "active_state_pointer"
+    - path: "frontier.yaml"
+      generate_from: "frontier"
+    - path: "INIT.md"
+      generate_from: "init_md"
+    - path: "LLM_BOOTSTRAP_PROMPT.txt"
+      generate_from: "llm_prompt"
+
+contract:
+  rules:
+    continuity_rule: "Continue from active_state_pointer; do not restart from scratch."
+    no_rederive_rule: "Do not re-derive items listed in derived_ledger:settled unless explicitly requested."
+    scope_rule: "Stay inside Atom 2.1 vocabulary unless user asks for cross-walk to standard physics."
+    rigor_rule: "Use units, dimensions, and explicit assumptions; flag speculation."
+    attribution_rule: "Treat WeBeGood as co-creator; preserve IP sensitivity."
+
+manifest:
+  meta:
+    name: "Atom2.1 Manifest"
+    schema: "atom2.1.manifest"
+    version: "0.1.0"
+  files:
+    - path: "First Yaml.yaml"
+      role: "smoke_test_seed"
+    - path: "Atom2.1_seed_latest.yaml"
+      role: "seed_latest"
+    - path: "derived_ledger.yaml"
+      role: "derived_ledger"
+    - path: "active_state_pointer.yaml"
+      role: "active_state_pointer"
+    - path: "frontier.yaml"
+      role: "open_frontier"
+    - path: "INIT.md"
+      role: "human_llm_instructions"
+    - path: "LLM_BOOTSTRAP_PROMPT.txt"
+      role: "single_shot_prompt"
+  load_order:
+    - "manifest.yaml"
+    - "Atom2.1_seed_latest.yaml"
+    - "derived_ledger.yaml"
+    - "active_state_pointer.yaml"
+    - "frontier.yaml"
+
+seed_latest:
+  meta:
+    name: "Atom2.1 Seed (Latest)"
+    schema: "atom2.1.seed"
+    version: "0.1.0"
+  axioms:
+    - id: "A120"
+      name: "Trinity 120° Stability"
+      statement: "Wave + antiwave at 120° yields stable luminal fusion (matter formation)."
+    - id: "CMBMED"
+      name: "CMB as Stabilizing Medium"
+      statement: "CMB acts as universal medium supporting resonance / stabilization of wave knots."
+  primitives:
+    - "photon_wave"
+    - "antiwave"
+    - "phase_lock_120"
+    - "knot_loop"
+    - "seed_line"
+    - "beltrami_vortex_mode"
+  canonical_notes:
+    - "Particles modeled as self-sustaining geometric wave patterns; rest mass from circular energy circulation."
+    - "Neutrino phenomena interpreted as boundary/turning-region behavior at loop edges."
+    - "Electron model under development; suspected geometric scaling relates to fine-structure constant."
+
+derived_ledger:
+  meta:
+    name: "Atom2.1 Derived Ledger"
+    schema: "atom2.1.ledger"
+    version: "0.1.0"
+  settled:
+    - id: "A120"
+      claim: "120° stability axiom recorded as core resonance condition."
+      status: "accepted"
+    - id: "CMBMED"
+      claim: "CMB treated as stabilizing medium for wave-knot resonances."
+      status: "accepted"
+  not_settled:
+    - id: "E-GEOM"
+      claim: "Electron geometry finalized (trefoil scaling law) and linked to alpha."
+      status: "open"
+    - id: "H-SPEC"
+      claim: "Derive hydrogen spectrum from Atom 2.1 knot/field dynamics."
+      status: "open"
+    - id: "MACH1"
+      claim: "Resolve Mach 1 energy / dimensional-mixing discrepancy flagged previously."
+      status: "open"
+
+active_state_pointer:
+  meta:
+    name: "Atom2.1 Active State Pointer"
+    schema: "atom2.1.state"
+    version: "0.1.0"
+  next_focus:
+    - "Maintain bootstrap pack integrity in GitHub."
+    - "Expand to full Atom 2.1 YAML (axioms, primitives, mappings, contracts)."
+    - "Formalize electron model milestone: L_e = f(L_ν) candidate scaling."
+  working_set:
+    open_issues:
+      - id: "E-GEOM"
+        short: "Electron geometry + alpha derivation"
+      - id: "H-SPEC"
+        short: "Hydrogen spectrum derivation"
+      - id: "MACH1"
+        short: "Mach 1 energy/dimensions discrepancy"
+  operating_contract_ref: "contract.rules"
+
+frontier:
+  meta:
+    name: "Atom2.1 Frontier"
+    schema: "atom2.1.frontier"
+    version: "0.1.0"
+  questions:
+    - id: "SCALING"
+      prompt: "What explicit geometric scaling law maps neutrino boundary phenomena to electron trefoil closure?"
+      desired_output: "Equation set with units + testable predictions."
+    - id: "ALPHA"
+      prompt: "Derive fine-structure constant alpha from knot/phase-lock geometry (including correction terms)."
+      desired_output: "Derivation + numeric target alpha^-1 ≈ 137.035999."
+    - id: "ENTANGLE"
+      prompt: "Formalize θ=180° instantaneous/entanglement boundary in Atom 2.1 and propose falsifiable tests."
+      desired_output: "Operational definition + experimental signatures."
+  tasks:
+    - id: "BOOTPACK"
+      action: "Validate load_order across seed/ledger/state/frontier."
+    - id: "SIM-INIT"
+      action: "Define simulation initial conditions mapping primitives to fields + boundary conditions."
+    - id: "LLM-INIT"
+      action: "Define prompt-template that loads YAML and enforces operating_contract."
+
+init_md:
+  title: "Atom 2.1 Initialization (LLM / Human / Simulation)"
+  notes:
+    - "This section is used to generate INIT.md in outputs."
+
+llm_prompt:
+  title: "ATOM 2.1 BOOTSTRAP (Single-shot)"
+  notes:
+    - "This section is used to generate LLM_BOOTSTRAP_PROMPT.txt in outputs."
