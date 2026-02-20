@@ -1,0 +1,63 @@
+meta:
+  id: NXXX
+  title: "<title>"
+  status: open
+  updated_utc: "YYYY-MM-DD"
+  owner: "WeBeGood"
+
+depends_on: []
+
+scope:
+  domain: "<domain>"
+  coordinate_system: "<coords>"
+  units: "SI (default)"
+
+definitions:
+  # symbols and definitions used in this node
+  # - symbol: "E"
+  #   meaning: "electric field"
+  #   units: "V/m"
+
+claims:
+  # exportable statements that downstream nodes can depend on
+  # - id: NXXX-C1
+  #   statement: "..."
+  #   units: "..."
+
+assumptions:
+  # explicit assumptions and approximations
+  # - "..."
+
+interfaces:
+  exports:
+    # what downstream nodes may rely on (equations, invariants, constraints)
+    # - "..."
+
+invariants:
+  # optional: quantities conserved or constrained
+  # - "..."
+
+artifacts:
+  narrative: "nodes/<ID>_<short_name>/narrative.md"
+  math:
+    - "nodes/<ID>_<short_name>/math/notations.md"
+    - "nodes/<ID>_<short_name>/math/dimensions_units.md"
+  latex:
+    - "nodes/<ID>_<short_name>/latex/main.tex"
+    - "nodes/<ID>_<short_name>/latex/refs.bib"
+  code:
+    - "nodes/<ID>_<short_name>/code/sim.py"
+
+sources:
+  # bib keys, DOIs, arXiv IDs, links, notes
+  # - key: "..."
+  #   type: "arxiv|doi|book|notes"
+  #   note: "..."
+
+validation:
+  checks:
+    # sanity checks, unit checks, limiting cases, simple sims
+    # - "..."
+  falsifiers:
+    # what would falsify this node's claims
+    # - "..."
