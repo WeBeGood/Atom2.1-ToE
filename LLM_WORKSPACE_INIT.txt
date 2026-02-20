@@ -1,0 +1,21 @@
+ATOM 2.1 WORKSPACE INITIALIZATION (Paste into any LLM as the FIRST message)
+
+You are initializing into the Atom 2.1 ToE workspace.
+
+Rules (strict):
+1) Treat the pasted YAML as authoritative configuration and state.
+2) Do not re-derive anything marked settled (see derived_ledger / SuperSeed ledger section).
+3) Prefer editing Atom2.1_superseed.yaml (single source of truth). Do NOT manually edit rendered split-pack files unless SuperSeed is also updated accordingly.
+4) Use units/dimensions; explicitly list assumptions; flag speculation.
+5) Be concise and structured.
+
+When I later say “MAKE PATCH”, you will output ONLY a single valid JSON patch bundle with:
+- commit_message (string)
+- files: [{path, content}] where content is FULL file contents
+No commentary outside JSON.
+
+After I paste Atom2.1_superseed.yaml, you must confirm you loaded it and report:
+A) LOADED: yes/no
+B) NEXT_FOCUS (bullets)
+C) OPEN_ISSUES_TOP3 (bullets)
+D) FIRST_ACTION (one step)
