@@ -11,12 +11,16 @@
 - `active_state_pointer.yaml` — next_focus + open issues (rendered)
 - `frontier.yaml` — questions/tasks queue (rendered)
 
+## Node graph (derivation DAG)
+- `nodes/` — derivation nodes (each has `node.yaml`, narrative, math tracks, LaTeX slices, and code)
+  - `nodes/N000_space_time_light_maxwell/` — **Space, Time, Light (Maxwell baseline)**
+
 ## What to run
 - Validate: `python validate_atom2_1.py`
 - Render from SuperSeed: `python render_superseed.py`
 
 ## Clipboard helpers (Windows)
-- `grab_bootstrap.bat` — copies INIT + SuperSeed + confirm-loaded + end-of-session steps
+- `grab_bootstrap.bat` — copies INIT + SuperSeed + PATCH_SPEC + reminders
 - `grab_superseed.bat` — copies SuperSeed only
 - `grab_patch_spec.bat` — copies PATCH_SPEC.md
 
@@ -26,5 +30,5 @@
 - Press **Enter**, then **Ctrl+Z**, then **Enter**
 
 ## Notes
-- Prefer LLM edits to **Atom2.1_superseed.yaml**; the agent auto-renders when SuperSeed changes.
-- Keep derivations as separate docs (e.g., `derivations/`) and reference them from the ledger when ready.
+- Prefer edits to **Atom2.1_superseed.yaml**; the agent auto-renders when SuperSeed changes.
+- Nodes should declare `depends_on` so we can generate an ordered tree/graph.
