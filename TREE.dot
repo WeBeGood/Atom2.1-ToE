@@ -5,7 +5,11 @@ digraph Atom21Nodes {
   "N010" [label="N010\nMaxwell in differential forms (topology-ready)"]; 
   "N011" [label="N011\nPolarization, helicity, chirality baseline (plane waves)"]; 
   "N012" [label="N012\nEM potentials and gauge (quantization on-ramp)"]; 
+  "N015" [label="N015\nTrinity phase-lock seed event (two-wave → newmode)"]; 
   "N000" -> "N010";
   "N000" -> "N011";
   "N000" -> "N012";
+  "N010" -> "N015";
+  "N011" -> "N015";
+  "N012" -> "N015";
 }
