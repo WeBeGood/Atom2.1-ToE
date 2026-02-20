@@ -1,0 +1,32 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\title{N000: Space, Time, Light (Maxwell Baseline)}
+\author{WeBeGood (Atom 2.1 ToE)}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Baseline Assumptions}
+Vacuum: $\rho=0$, $\mathbf{J}=0$. Cartesian coordinates $(x,y,z)$ and time $t$.
+
+\section{Maxwell Equations (Vacuum)}
+\begin{align}
+\nabla\cdot\mathbf{E} &= 0\\
+\nabla\cdot\mathbf{B} &= 0\\
+\nabla\times\mathbf{E} &= -\frac{\partial\mathbf{B}}{\partial t}\\
+\nabla\times\mathbf{B} &= \mu_0\varepsilon_0\frac{\partial\mathbf{E}}{\partial t}
+\end{align}
+
+\section{Wave Equation}
+Take $\nabla\times$ of Faraday and substitute Amp\`ere--Maxwell to obtain:
+\begin{equation}
+\nabla^2\mathbf{E} = \mu_0\varepsilon_0\frac{\partial^2\mathbf{E}}{\partial t^2},\qquad
+\nabla^2\mathbf{B} = \mu_0\varepsilon_0\frac{\partial^2\mathbf{B}}{\partial t^2}.
+\end{equation}
+Thus $c = 1/\sqrt{\mu_0\varepsilon_0}$.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}
