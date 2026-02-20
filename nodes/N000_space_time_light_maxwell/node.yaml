@@ -2,6 +2,7 @@ meta:
   id: N000
   title: "Space, Time, Light (Maxwell baseline)"
   status: open
+  maturity: M2
   updated_utc: "2026-02-20"
   owner: "WeBeGood"
 
@@ -65,6 +66,8 @@ artifacts:
     - "nodes/N000_space_time_light_maxwell/latex/refs.bib"
   code:
     - "nodes/N000_space_time_light_maxwell/code/sim.py"
+  figs:
+    - "nodes/N000_space_time_light_maxwell/figs/README.md"
 
 validation:
   checks:

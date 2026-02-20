@@ -14,7 +14,7 @@ import yaml
 REPO = Path(__file__).resolve().parents[1]
 NODES_DIR = REPO / "nodes"
 
-REQUIRED_META = ["id", "title", "status"]
+REQUIRED_META = ["id", "title", "status", "maturity"]
 
 
 def fail(msg: str) -> None:
@@ -55,7 +55,7 @@ def validate_node(node_yaml: Path) -> None:
     if not npath.exists():
         fail(f"{node_yaml}: missing narrative file {narrative}")
 
-    # Interfaces: exports/imports are recommended + validated
+    # Interfaces: exports/imports are required
     interfaces = data.get("interfaces")
     if not isinstance(interfaces, dict):
         fail(f"{node_yaml}: interfaces mapping required")

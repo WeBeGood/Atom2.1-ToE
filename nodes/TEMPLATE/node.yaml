@@ -2,6 +2,7 @@ meta:
   id: NXXX
   title: "<title>"
   status: open
+  maturity: M0
   updated_utc: "YYYY-MM-DD"
   owner: "WeBeGood"
 
@@ -50,6 +51,8 @@ artifacts:
     - "nodes/<ID>_<short_name>/latex/refs.bib"
   code:
     - "nodes/<ID>_<short_name>/code/sim.py"
+  figs:
+    - "nodes/<ID>_<short_name>/figs/README.md"
 
 sources:
   # bib keys, DOIs, arXiv IDs, links, notes
@@ -64,3 +67,11 @@ validation:
   falsifiers:
     # what would falsify this node's claims
     # - "..."
+
+# Maturity levels:
+# - M0 outline
+# - M1 derivation
+# - M2 quantified
+# - M3 simulated
+# - M4 falsifiable
+# - M5 publish-ready
