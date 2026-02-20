@@ -1,0 +1,23 @@
+meta:
+  paper_id: P001
+  title: "Atom 2.1 Foundations"
+  status: draft
+  updated_utc: "2026-02-20"
+
+sections:
+  - id: S1
+    title: "Introduction"
+    nodes: []
+
+  - id: S2
+    title: "Maxwell Baseline: Space, Time, and Light"
+    nodes:
+      - N000
+
+  - id: S3
+    title: "Geometry/Topology Bridge (planned)"
+    nodes: []
+
+  - id: S4
+    title: "Discussion and Next Steps"
+    nodes: []
