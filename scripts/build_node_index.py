@@ -114,7 +114,7 @@ def build_dot(nodes: Dict[str, dict], order: List[str]) -> str:
     for nid in order:
         title = nodes[nid].get("meta", {}).get("title", "")
         label = f"{nid}\\n{title}".replace('"', "'")
-        lines.append(f"  \"{nid}\" [label=\"{label}\"]; ")
+        lines.append(f"  \"{nid}\" [label=\"{label}\"];")
 
     for nid in order:
         deps = nodes[nid].get("depends_on", []) or []

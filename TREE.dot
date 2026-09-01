@@ -1,12 +1,12 @@
 digraph Atom21Nodes {
   rankdir=LR;
   node [shape=box];
-  "N000" [label="N000\nSpace, Time, Light (Maxwell baseline)"]; 
-  "N010" [label="N010\nMaxwell in differential forms (topology-ready)"]; 
-  "N011" [label="N011\nPolarization, helicity, chirality baseline (plane waves)"]; 
-  "N012" [label="N012\nEM potentials and gauge (quantization on-ramp)"]; 
-  "N015" [label="N015\nTrinity phase-lock seed event (two-wave → newmode)"]; 
-  "N016" [label="N016\nCMB-spectrum seeded Beltrami line (Trinity phase-lock extension)"]; 
+  "N000" [label="N000\nClassical electromagnetism in vacuum (Maxwell baseline)"];
+  "N010" [label="N010\nMaxwell equations in differential forms (standard baseline)"];
+  "N011" [label="N011\nPolarization, helicity, chirality baseline (plane waves)"];
+  "N012" [label="N012\nEM potentials and gauge (quantization on-ramp)"];
+  "N015" [label="N015\nTrinity phase-lock seed event (two-wave → newmode)"];
+  "N016" [label="N016\nCMB-spectrum seeded Beltrami line (Trinity phase-lock extension)"];
   "N000" -> "N010";
   "N000" -> "N011";
   "N000" -> "N012";

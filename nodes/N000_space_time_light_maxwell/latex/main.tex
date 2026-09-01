@@ -2,14 +2,23 @@
 \usepackage{amsmath,amssymb}
 \usepackage{geometry}
 \geometry{margin=1in}
-\title{N000: Space, Time, Light (Maxwell Baseline)}
+\title{N000: Classical Electromagnetism in Vacuum (Maxwell Baseline)}
 \author{WeBeGood (Atom 2.1 ToE)}
 \date{}
 \begin{document}
 \maketitle
 
+\paragraph{Scope.}
+This node records standard classical electromagnetism in flat spacetime and SI units.
+It is a recovery requirement for later Atom 2.1 hypotheses, not evidence for them.
+
 \section{Baseline Assumptions}
-Vacuum: $\rho=0$, $\mathbf{J}=0$. Cartesian coordinates $(x,y,z)$ and time $t$.
+The fields are twice continuously differentiable in an inertial Cartesian chart.
+The propagation region is a linear, homogeneous, isotropic vacuum with
+$\rho=0$ and $\mathbf{J}=0$. Initial and boundary data satisfy the divergence
+constraints. The SI value $c=299\,792\,458\ {\rm m\,s^{-1}}$ is exact, while
+$\mu_0$ is experimentally adjusted after the 2019 SI revision and
+$\varepsilon_0=1/(\mu_0c^2)$.
 
 \section{Maxwell Equations (Vacuum)}
 \begin{align}
@@ -25,7 +34,36 @@ Take $\nabla\times$ of Faraday and substitute Amp\`ere--Maxwell to obtain:
 \nabla^2\mathbf{E} = \mu_0\varepsilon_0\frac{\partial^2\mathbf{E}}{\partial t^2},\qquad
 \nabla^2\mathbf{B} = \mu_0\varepsilon_0\frac{\partial^2\mathbf{B}}{\partial t^2}.
 \end{equation}
-Thus $c = 1/\sqrt{\mu_0\varepsilon_0}$.
+Thus $c = 1/\sqrt{\mu_0\varepsilon_0}$. A solution additionally requires
+compatible initial and boundary or radiation data.
+
+\section{Plane-Wave Audit}
+For phase $\exp[i(\mathbf{k}\cdot\mathbf{x}-\omega t)]$, a nonzero vacuum mode obeys
+\begin{align}
+ \mathbf{k}\cdot\mathbf{E}_0&=\mathbf{k}\cdot\mathbf{B}_0=0, &
+ \omega^2&=c^2|\mathbf{k}|^2,\\
+ \mathbf{B}_0&=\frac{\mathbf{k}\times\mathbf{E}_0}{\omega}, &
+ |\mathbf{B}_0|&=\frac{|\mathbf{E}_0|}{c}.
+\end{align}
+
+\section{Energy and Momentum}
+\begin{align}
+ u &= \frac{1}{2}\left(\varepsilon_0|\mathbf{E}|^2+
+ \frac{|\mathbf{B}|^2}{\mu_0}\right), &
+ \mathbf{S}&=\frac{1}{\mu_0}\mathbf{E}\times\mathbf{B},\\
+ \frac{\partial u}{\partial t}+\nabla\cdot\mathbf{S}&=-\mathbf{J}\cdot\mathbf{E}, &
+ \mathbf{g}&=\frac{\mathbf{S}}{c^2}=\varepsilon_0\mathbf{E}\times\mathbf{B}.
+\end{align}
+The Maxwell stress tensor is
+\begin{equation}
+ T_{ij}=\varepsilon_0\left(E_iE_j-\frac{1}{2}\delta_{ij}|\mathbf{E}|^2\right)
+ +\frac{1}{\mu_0}\left(B_iB_j-\frac{1}{2}\delta_{ij}|\mathbf{B}|^2\right).
+\end{equation}
+
+\section{Validity Boundary}
+Media require constitutive laws; curved spacetime requires a covariant formulation;
+and quantum effects lie outside this classical node. No particle or topological ontology
+follows from the equations above.
 
 \bibliographystyle{plain}
 \bibliography{refs}

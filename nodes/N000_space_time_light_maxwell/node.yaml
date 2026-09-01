@@ -1,58 +1,88 @@
 meta:
   id: N000
-  title: "Space, Time, Light (Maxwell baseline)"
+  title: "Classical electromagnetism in vacuum (Maxwell baseline)"
   status: open
-  maturity: M2
-  updated_utc: "2026-02-20"
+  maturity: M3
+  updated_utc: "2026-08-31"
   owner: "WeBeGood"
 
 depends_on: []
 
 scope:
-  domain: "Classical electromagnetism"
-  coordinate_system: "Cartesian (x,y,z), time t"
-  units: "SI (default)"
+  classification: "standard_electromagnetism"
+  domain: "Classical, local electromagnetism in a source-free vacuum region"
+  spacetime: "Flat Minkowski spacetime; inertial Cartesian coordinates (x,y,z,t)"
+  units: "SI"
+  excludes:
+    - "Quantum electrodynamics and photon-counting effects"
+    - "Material media, dispersion, absorption, and nonlinear constitutive laws"
+    - "Curved-spacetime electrodynamics"
+    - "Atom 2.1 particle, knot, CMB-medium, or phase-lock hypotheses"
 
 definitions:
   - symbol: "E"
-    meaning: "electric field"
-    units: "V/m"
+    meaning: "electric field vector"
+    units: "V m^-1"
   - symbol: "B"
-    meaning: "magnetic flux density"
+    meaning: "magnetic flux-density vector"
     units: "T"
+  - symbol: "rho"
+    meaning: "free electric charge density"
+    units: "C m^-3"
+  - symbol: "J"
+    meaning: "free electric current density"
+    units: "A m^-2"
   - symbol: "mu0"
-    meaning: "vacuum permeability"
-    units: "H/m"
+    meaning: "vacuum magnetic permeability; measured after the 2019 SI revision"
+    units: "H m^-1 = N A^-2"
   - symbol: "eps0"
-    meaning: "vacuum permittivity"
-    units: "F/m"
+    meaning: "vacuum electric permittivity, eps0 = 1/(mu0 c^2)"
+    units: "F m^-1"
   - symbol: "c"
-    meaning: "speed of light in vacuum"
-    units: "m/s"
+    meaning: "SI defining constant for the speed of light in vacuum"
+    units: "m s^-1"
+  - symbol: "u"
+    meaning: "electromagnetic energy density"
+    units: "J m^-3"
+  - symbol: "S"
+    meaning: "Poynting energy-flux vector"
+    units: "W m^-2"
+  - symbol: "g"
+    meaning: "electromagnetic momentum density in vacuum"
+    units: "kg m^-2 s^-1"
 
 claims:
   - id: N000-C1
-    statement: "Maxwell's equations in vacuum imply wave solutions for E and B that propagate at c."
-    units: "E: V/m, B: T, c: m/s"
+    statement: "In a source-free vacuum region, Maxwell's SI equations imply homogeneous wave equations for sufficiently smooth E and B with characteristic speed c = 1/sqrt(mu0 eps0)."
+    units: "E: V m^-1; B: T; c: m s^-1"
   - id: N000-C2
-    statement: "For plane waves in vacuum, E and B are transverse to propagation and mutually orthogonal."
-    units: "dimensionless geometry; E,B units as above"
+    statement: "A nonzero monochromatic vacuum plane wave satisfies omega = c|k|, k dot E0 = k dot B0 = 0, and B0 = (k cross E0)/omega."
+    units: "omega: rad s^-1; k: m^-1; E0: V m^-1; B0: T"
   - id: N000-C3
-    statement: "Energy flux is S=(1/mu0) E×B (Poynting vector)."
-    units: "S: W/m^2"
+    statement: "Maxwell's equations imply Poynting's theorem: partial_t u + div S = -J dot E, with u=(eps0|E|^2+|B|^2/mu0)/2 and S=(E cross B)/mu0."
+    units: "u: J m^-3; S: W m^-2; J dot E: W m^-3"
+  - id: N000-C4
+    statement: "In vacuum the field momentum density is g=S/c^2=eps0(E cross B), and momentum transfer is described by the Maxwell stress tensor."
+    units: "g: kg m^-2 s^-1; stress: Pa"
+  - id: N000-C5
+    statement: "These results are standard classical electromagnetism; they impose a recovery limit on Atom 2.1 but do not establish any Atom 2.1-specific ontology or particle model."
+    units: "not applicable"
 
 assumptions:
-  - "Vacuum (rho=0, J=0)."
-  - "Flat Euclidean space coordinates for the baseline (prior to Atom 2.1 extensions)."
-  - "Standard vector calculus identities apply."
+  - "E and B are at least twice continuously differentiable on the region used for the wave-equation derivation."
+  - "The derivation is local to an inertial Cartesian chart in flat spacetime."
+  - "Vacuum is linear, homogeneous, isotropic, and source-free: rho=0 and J=0 in the region."
+  - "Spatial derivatives commute with time derivatives, and standard right-handed vector-calculus conventions apply."
+  - "Boundary and initial data satisfy the divergence constraints at the initial time."
+  - "c=299792458 m s^-1 exactly in SI; mu0 and eps0 follow the current CODATA convention and mu0*eps0=1/c^2."
 
 interfaces:
   exports:
-    - "Vacuum Maxwell equations (div/curl form)"
-    - "Wave equations for E and B in vacuum"
-    - "Wave speed relation c = 1/sqrt(mu0*eps0)"
-    - "Plane-wave orthogonality constraints (E ⟂ B ⟂ k)"
-    - "Poynting vector S=(1/mu0) E×B"
+    - "Source and source-free Maxwell equations in SI vector form"
+    - "Vacuum wave equations with stated differentiability and domain assumptions"
+    - "Plane-wave dispersion, transversality, and amplitude relations"
+    - "Poynting energy balance, vacuum momentum density, and Maxwell stress tensor"
+    - "Validity boundary separating standard electromagnetism from Atom 2.1 hypotheses"
   imports: []
 
 artifacts:
@@ -71,7 +101,31 @@ artifacts:
 
 validation:
   checks:
-    - "Derive wave equations for E and B from Maxwell (vacuum)."
-    - "Verify plane-wave constraints (E⊥B⊥k, |B|=|E|/c)."
+    - "Symbolically derive both vacuum wave equations using curl-curl identities and the divergence constraints."
+    - "Numerically verify c, vacuum impedance, plane-wave transversality, dispersion, B0=(k cross E0)/omega, and equal electric/magnetic plane-wave energy contributions."
+    - "Run tests/test_maxwell_baseline.py and require every deterministic check to pass."
+    - "Parse every node YAML and regenerate committed claims/index/paper-outline artifacts without a diff on a second run."
   falsifiers:
-    - "If vacuum Maxwell equations did not imply wave equations with finite c."
+    - "An internally inconsistent derivation or failed dimensional identity invalidates this baseline package."
+    - "A reproducible experiment within the stated classical-vacuum domain that contradicts Maxwell predictions after controlled uncertainties would falsify or restrict the baseline; it would not by itself validate Atom 2.1."
+
+sources:
+  - key: bipm_si_defining_constants
+    type: standards_reference
+    url: "https://www.bipm.org/en/measurement-units/si-defining-constants"
+    note: "Authoritative SI definition fixing c exactly."
+  - key: codata2022
+    type: constants_adjustment
+    url: "https://physics.nist.gov/cuu/pdf/JPCRD2022CODATA.pdf"
+    note: "2022 CODATA values for mu0, eps0, and vacuum impedance."
+  - key: williams_faller_hill_1971
+    type: experiment
+    doi: "10.1103/PhysRevLett.26.721"
+    url: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.26.721"
+    note: "Representative laboratory null test of Coulomb-law deviations; not an exhaustive validation record."
+  - key: jackson1999
+    type: book
+    note: "Classical field equations, conservation laws, radiation, and boundary-value scope."
+  - key: griffiths2017
+    type: book
+    note: "Introductory derivations of Maxwell waves and energy flow."

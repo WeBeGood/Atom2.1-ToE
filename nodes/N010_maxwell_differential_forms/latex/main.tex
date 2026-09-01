@@ -3,7 +3,7 @@
 \usepackage{geometry}
 \geometry{margin=1in}
 
-\title{N010: Maxwell in Differential Forms (Topology-Ready)}
+\title{N010: Maxwell Equations in Differential Forms (Standard Baseline)}
 \author{WeBeGood (Atom 2.1 ToE)}
 \date{}
 
@@ -11,15 +11,38 @@
 \maketitle
 
 \section{Core Equations}
-Maxwell in differential forms:
+Let $F$ be the field-strength 2-form, $\mathcal H$ the excitation 2-form,
+and $\mathcal J$ the charge-current 3-form. Then
 \begin{align}
  dF &= 0,\\
- d\star F &= J.
+ d\mathcal H &= \mathcal J.
 \end{align}
-In vacuum, $J=0$.
+The metric and material response enter through a constitutive relation between
+$\mathcal H$ and $F$; the exterior equations themselves are metric-independent.
+
+\section{Explicit 3+1 Split}
+With $d=d_3+dt\wedge\partial_t$ and a right-handed spatial orientation, set
+\begin{align}
+ F&=B+E\wedge dt, &
+ \mathcal H&=D-H\wedge dt, &
+ \mathcal J&=\rho\,\mathrm{vol}_3-dt\wedge j.
+\end{align}
+Then
+\begin{align}
+ d_3B&=0, & \partial_tB+d_3E&=0,\\
+ d_3D&=\rho\,\mathrm{vol}_3, & d_3H&=j+\partial_tD.
+\end{align}
+The vacuum relations $\mathbf D=\varepsilon_0\mathbf E$ and
+$\mathbf H=\mathbf B/\mu_0$ recover the N000 vector equations in SI.
 
 \section{Topology Hook}
-If $dF=0$, then locally $F=dA$ for a 1-form potential $A$. Global existence depends on topology (cohomology).
+If $dF=0$, the Poincar\'e lemma gives $F=dA$ on contractible patches.
+A global $A$ exists precisely when $[F]=0$ in $H^2_{\mathrm{dR}}(M)$;
+simple connectedness alone is not the general criterion.
+
+\paragraph{Scope boundary.}
+This is standard geometric electromagnetism. No topology-to-particle or
+Atom 2.1 ontology follows without additional hypotheses and tests.
 
 \bibliographystyle{plain}
 \bibliography{refs,../../refs/global}

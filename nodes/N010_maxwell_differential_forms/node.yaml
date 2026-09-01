@@ -1,18 +1,20 @@
 meta:
   id: N010
-  title: "Maxwell in differential forms (topology-ready)"
+  title: "Maxwell equations in differential forms (standard baseline)"
   status: open
-  maturity: M1
-  updated_utc: "2026-02-20"
+  maturity: M2
+  updated_utc: "2026-08-31"
   owner: "WeBeGood"
 
 depends_on:
   - N000
 
 scope:
+  classification: "standard_electromagnetism"
   domain: "Classical electromagnetism (geometric formulation)"
-  coordinate_system: "4D spacetime notation; compatible with Cartesian baseline"
+  coordinate_system: "Oriented 4D spacetime; explicit 3+1 split for comparison with N000"
   units: "SI (default)"
+  boundary: "Geometric reformulation only; no Atom 2.1 topology-to-particle inference"
 
 definitions:
   - symbol: "F"
@@ -20,38 +22,46 @@ definitions:
     units: "encodes E and B"
   - symbol: "A"
     meaning: "electromagnetic potential 1-form"
-    units: "V (time component), V·s/m (space components)"
+    units: "component-dependent in SI"
+  - symbol: "Hcal"
+    meaning: "electromagnetic excitation 2-form"
+    units: "encodes D and H"
   - symbol: "d"
     meaning: "exterior derivative"
     units: "operator"
   - symbol: "⋆"
     meaning: "Hodge star (depends on metric)"
     units: "operator"
-  - symbol: "J"
-    meaning: "current 3-form (source)"
+  - symbol: "Jcal"
+    meaning: "electric charge-current 3-form"
     units: "encodes rho and J"
 
 claims:
   - id: N010-C1
-    statement: "Maxwell's equations can be written compactly as dF=0 and d⋆F=J (or 0 in vacuum)."
+    statement: "Maxwell's equations can be written in unit-aware form as dF=0 and dHcal=Jcal; in vacuum Jcal=0 and the metric constitutive relation connects Hcal to F."
     units: "form equations"
   - id: N010-C2
-    statement: "dF=0 implies locally F=dA (gauge potential exists on simply connected regions)."
+    statement: "On each contractible patch, dF=0 implies F=dA by the Poincare lemma."
     units: "form equation"
   - id: N010-C3
-    statement: "Topology enters via global obstructions: nontrivial cohomology can prevent a single global A even when dF=0."
+    statement: "A global potential exists exactly when the de Rham cohomology class [F] in H^2_dR vanishes; simple connectedness alone is not the general criterion."
     units: "topological statement"
+  - id: N010-C4
+    statement: "With F=B+E wedge dt, Hcal=D-H wedge dt, and Jcal=rho vol3-dt wedge j, dF=0 and dHcal=Jcal reproduce all four vector Maxwell equations."
+    units: "SI component equations"
 
 assumptions:
-  - "Classical EM; smooth manifolds; standard differential geometry." 
-  - "Vacuum baseline corresponds to J=0." 
-  - "Metric choice (signature) affects ⋆ conventions; we will state conventions explicitly in math track." 
+  - "Classical smooth fields on an oriented spacetime manifold."
+  - "A 3+1 split and right-handed spatial orientation are fixed when comparing with N000."
+  - "The metric enters only through the vacuum constitutive relation; dF=0 and dHcal=Jcal are metric-independent."
+  - "Vacuum means Jcal=0, D=eps0 E, and H=B/mu0 in the N000 inertial frame."
 
 interfaces:
   exports:
-    - "Differential-forms Maxwell: dF=0, d⋆F=J"
-    - "Local exactness: dF=0 ⇒ F=dA (with topology caveats)"
-    - "Topology hook: cohomology / global potential obstructions"
+    - "Unit-aware forms Maxwell equations: dF=0 and dHcal=Jcal"
+    - "Vacuum metric constitutive relation between Hcal and F"
+    - "Local exactness on contractible patches and precise H^2_dR global obstruction"
+    - "Explicit 3+1 map to N000 vector equations"
   imports:
     - "N000: vacuum Maxwell equations and wave consequence"
 
@@ -72,11 +82,12 @@ artifacts:
 sources:
   - key: jackson1999
     type: book
-    note: "Baseline EM content; connect to forms formulation."
+    note: "Baseline electromagnetic conventions and covariant formulation."
 
 validation:
   checks:
-    - "Map dF=0 to Gauss(B) + Faraday in 3+1 split."
-    - "Map d⋆F=J to Gauss(E) + Ampere-Maxwell in 3+1 split."
+    - "Map dF=0 to d3 B=0 and partial_t B+d3 E=0."
+    - "Map dHcal=Jcal to d3 D=rho vol3 and d3 H=j+partial_t D."
+    - "Apply D=eps0 E and H=B/mu0 to recover N000 in SI."
   falsifiers:
     - "If the 3+1 split does not reproduce the standard vector Maxwell equations under stated conventions."

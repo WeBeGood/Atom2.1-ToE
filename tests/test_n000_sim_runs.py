@@ -14,3 +14,5 @@ def test_n000_sim_runs():
     out = (r.stdout or "") + (r.stderr or "")
     assert "N000 Maxwell baseline" in out
     assert "c=" in out
+    assert "FAIL:" not in out
+    assert out.count("PASS:") == 10

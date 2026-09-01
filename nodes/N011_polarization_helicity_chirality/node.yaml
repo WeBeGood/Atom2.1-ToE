@@ -2,17 +2,19 @@ meta:
   id: N011
   title: "Polarization, helicity, chirality baseline (plane waves)"
   status: open
-  maturity: M1
-  updated_utc: "2026-02-20"
+  maturity: M2
+  updated_utc: "2026-08-31"
   owner: "WeBeGood"
 
 depends_on:
   - N000
 
 scope:
+  classification: "standard_electromagnetism"
   domain: "Classical EM waves; polarization states"
   coordinate_system: "Cartesian + propagation direction k"
   units: "SI (default)"
+  boundary: "Polarization geometry alone does not imply a topological particle model"
 
 definitions:
   - symbol: "k"
@@ -33,21 +35,25 @@ claims:
     statement: "Plane-wave solutions admit two transverse polarization degrees of freedom."
     units: "dimensionless"
   - id: N011-C2
-    statement: "Circular polarizations correspond to definite helicity (left/right-handed rotation about k)."
+    statement: "For phase exp[i(kz-omega t)], e_sigma=(xhat+i sigma yhat)/sqrt(2) satisfies i khat cross e_sigma=sigma e_sigma; this equation, rather than an ambiguous left/right label, fixes the helicity convention."
     units: "dimensionless"
   - id: N011-C3
-    statement: "Helicity/chirality language provides a natural bridge from classical wave geometry to topology-first descriptions."
-    units: "conceptual bridge"
+    statement: "A change of viewing direction or Fourier-phase convention can swap verbal handedness labels but cannot change predictions after the convention is translated consistently."
+    units: "dimensionless convention statement"
+  - id: N011-C4
+    statement: "Classical polarization and helicity do not by themselves establish a localized particle, knot, or Atom 2.1 ontology."
+    units: "not applicable"
 
 assumptions:
   - "Vacuum plane-wave baseline (inherits N000)."
-  - "Conventions for left/right handedness will be stated explicitly."
+  - "Positive frequency omega and phasor exp[i(kz-omega t)]."
+  - "Helicity sign is the eigenvalue of i khat cross acting on the complex transverse basis."
 
 interfaces:
   exports:
     - "Polarization basis: linear and circular"
-    - "Helicity definition for plane waves"
-    - "Conventions for left/right handed circular polarization"
+    - "Convention-invariant helicity eigenvalue definition for plane waves"
+    - "Explicit time-rotation and viewing-direction statement"
   imports:
     - "N000: plane-wave orthogonality constraints"
 
@@ -72,7 +78,8 @@ sources:
 
 validation:
   checks:
-    - "Define explicit handedness convention and show how E rotates in time for circular polarization."
-    - "Relate circular basis vectors to linear basis." 
+    - "Verify i khat cross e_sigma=sigma e_sigma for sigma=+1 and -1."
+    - "At fixed z, compute the real-field rotation for exp[i(kz-omega t)] and state the observer viewing direction."
+    - "Relate circular and linear bases with a unitary change of basis."
   falsifiers:
     - "If plane-wave Maxwell solutions required more than two independent transverse modes in vacuum."
