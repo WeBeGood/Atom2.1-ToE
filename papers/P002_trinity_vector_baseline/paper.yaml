@@ -1,0 +1,33 @@
+meta:
+  paper_id: P002
+  title: "Two Coherent Vacuum Plane Waves at 120 Degrees: Vector Superposition and the Atom 2.1 Interpretation Boundary"
+  status: working_draft
+  updated_utc: "2026-09-01"
+  scope_note: "Classical vector Maxwell calculation only; the neutrino-seed label is an unvalidated project hypothesis."
+
+artifacts:
+  readable: "papers/P002_trinity_vector_baseline/paper.md"
+  latex: "papers/P002_trinity_vector_baseline/main.tex"
+  bibliography: "papers/P002_trinity_vector_baseline/refs.bib"
+  outline: "papers/P002_trinity_vector_baseline/outline.md"
+
+sections:
+  - id: S1
+    title: "Established Maxwell and polarization background"
+    nodes:
+      - N000
+      - N011
+
+  - id: S2
+    title: "120-degree vector superposition and observables"
+    nodes:
+      - N015
+
+  - id: S3
+    title: "Atom 2.1 neutrino-seed interpretation boundary"
+    nodes:
+      - N015
+
+  - id: S4
+    title: "Limitations, reproducibility, and future tests"
+    nodes: []

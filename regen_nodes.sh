@@ -6,7 +6,7 @@ echo "Regen Atom 2.1 generated artifacts"
 echo "------------------------------------------"
 echo
 
-echo "Regenerating claims/index/tree/paper outline..."
+echo "Regenerating claims/index/tree/paper outlines..."
 python scripts/build_node_claims.py
 python scripts/build_node_index.py
 python scripts/build_paper_outline.py

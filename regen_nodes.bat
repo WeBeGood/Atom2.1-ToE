@@ -9,7 +9,7 @@ echo This will regenerate:
 echo   - nodes/*/claims.md
 echo   - NODE_INDEX.md
 echo   - TREE.dot
-echo   - papers/P001_foundations/outline.md
+echo   - papers/P*/outline.md
 echo.
 
 python scripts\build_node_claims.py

@@ -1,6 +1,6 @@
 # Atom 2.1 Foundations
 
-_Last updated (UTC): 2026-08-31_
+_Last updated (UTC): 2026-09-01_
 
 ## Section map
 

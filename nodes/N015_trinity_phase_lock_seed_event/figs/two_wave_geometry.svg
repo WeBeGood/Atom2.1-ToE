@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460" role="img" aria-labelledby="title desc">
+  <title id="title">Two equal wavevectors crossing at 120 degrees</title>
+  <desc id="desc">Wavevectors k1 and k2 are symmetric about the positive x axis at plus and minus sixty degrees. Their vector sum points along positive x. Electric polarization is out of plane.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1769aa"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#b3261e"/></marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#555"/></marker>
+  </defs>
+  <rect width="760" height="460" fill="white"/>
+  <line x1="90" y1="230" x2="700" y2="230" stroke="#bbb" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="190" y1="400" x2="190" y2="45" stroke="#ddd" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <text x="705" y="225" font-family="sans-serif" font-size="20" fill="#555">+x</text>
+  <text x="200" y="55" font-family="sans-serif" font-size="20" fill="#777">+y</text>
+  <line x1="190" y1="230" x2="405" y2="76" stroke="#1769aa" stroke-width="6" marker-end="url(#arrow-blue)"/>
+  <line x1="190" y1="230" x2="405" y2="384" stroke="#1769aa" stroke-width="6" marker-end="url(#arrow-blue)"/>
+  <line x1="190" y1="230" x2="440" y2="230" stroke="#b3261e" stroke-width="7" marker-end="url(#arrow-red)"/>
+  <path d="M255,184 A80,80 0 0 1 255,276" fill="none" stroke="#333" stroke-width="3"/>
+  <text x="274" y="222" font-family="sans-serif" font-size="22" fill="#222">120°</text>
+  <text x="410" y="75" font-family="sans-serif" font-size="22" fill="#1769aa">k₁</text>
+  <text x="410" y="398" font-family="sans-serif" font-size="22" fill="#1769aa">k₂</text>
+  <text x="452" y="220" font-family="sans-serif" font-size="21" fill="#b3261e">k₁+k₂ = k x̂</text>
+  <circle cx="105" cy="92" r="18" fill="none" stroke="#6a1b9a" stroke-width="3"/>
+  <circle cx="105" cy="92" r="5" fill="#6a1b9a"/>
+  <text x="135" y="100" font-family="sans-serif" font-size="19" fill="#6a1b9a">common E polarization +z (out of plane)</text>
+  <text x="95" y="438" font-family="sans-serif" font-size="17" fill="#555">Geometry only: Maxwell superposition retains both wavevectors.</text>
+</svg>

@@ -127,22 +127,28 @@ Image model session -> export png/svg -> commit figs + store prompt in figs/READ
 
 ---
 
-## F. Paper Assembly Workflow (P001 and future papers)
+## F. Human-Readable Paper Workflow
 
 ```text
 nodes/ (truth)
    |
-   +--> papers/P001_foundations/paper.yaml (node → section mapping)
+   +--> papers/P###_name/paper.yaml (node → section mapping)
    |
-   +--> scripts/build_paper_outline.py -> papers/P001_foundations/outline.md
+   +--> papers/P###_name/paper.md (canonical readable manuscript)
    |
-   +--> main.tex may include node LaTeX slices when ready
+   +--> main.tex + refs.bib (publication-oriented counterpart)
+   |
+   +--> scripts/build_paper_outline.py -> papers/P*/outline.md
 ```
 
 This supports:
 - assembling papers from nodes
 - reordering without rewriting derivations
 - creating publication-ready sections by selecting mature nodes
+- ensuring tested M3+ derivations have a human-readable counterpart
+- keeping standard results, project hypotheses, and open tests visibly separate
+
+See `papers/README.md` for required manuscript sections, transparent authorship/funding placeholders, and validation rules. Run `python scripts/validate_papers.py` after paper changes.
 
 ---
 
@@ -159,6 +165,11 @@ Most common causes:
 3) **Schema validation failure**
 - Look for: `NODE VALIDATION FAILED: ...`
 - Common fixes: missing `meta.maturity`, missing `interfaces.exports/imports`, missing narrative file path, missing `claims.md`
+
+4) **Readable-paper validation failure**
+- Check `paper.yaml` artifact paths and node mappings.
+- Ensure `paper.md` contains the required scientific-manuscript sections.
+- Ensure every M3+ node is mapped into at least one paper.
 
 ---
 

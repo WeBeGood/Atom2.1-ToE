@@ -3,28 +3,62 @@
 \usepackage{geometry}
 \geometry{margin=1in}
 
-\title{N015: Trinity Phase-Lock Seed Event (Two-Wave $\to$ Newmode)}
+\title{N015: Two Coherent Vacuum Plane Waves at $120^\circ$}
 \author{WeBeGood (Atom 2.1 ToE)}
 \date{}
 
 \begin{document}
 \maketitle
 
-\section{Setup}
-We consider two EM excitations with fields $(\mathbf{E}_1,\mathbf{B}_1)$ and $(\mathbf{E}_2,\mathbf{B}_2)$.
-A first-pass model uses linear Maxwell superposition:
+\paragraph{Scope.}
+This slice contains a standard classical Maxwell calculation followed by a clearly
+labeled Atom 2.1 interpretation boundary. It does not derive a new photon or neutrino.
+
+\section{Geometry and Fields}
+Let $k=\omega/c$ and
+\begin{align}
+ \mathbf{k}_1&=k(1/2,\sqrt{3}/2,0),&
+ \mathbf{k}_2&=k(1/2,-\sqrt{3}/2,0).
+\end{align}
+Their crossing angle is $120^\circ$, with
+$\mathbf{k}_1+\mathbf{k}_2=k\hat{\mathbf{x}}$ and
+$\mathbf{k}_1-\mathbf{k}_2=\sqrt{3}k\hat{\mathbf{y}}$.
+For common polarization $\hat{\mathbf{z}}$ and phase offset $\delta$,
+\begin{align}
+ \mathbf{E}_1&=E_0\hat{\mathbf{z}}\cos(\mathbf{k}_1\cdot\mathbf{r}-\omega t),\\
+ \mathbf{E}_2&=E_0\hat{\mathbf{z}}\cos(\mathbf{k}_2\cdot\mathbf{r}-\omega t+\delta),\\
+ \mathbf{B}_i&=\hat{\mathbf{k}}_i\times\mathbf{E}_i/c.
+\end{align}
+Linear Maxwell superposition gives
 \begin{align}
 \mathbf{E} &= \mathbf{E}_1 + \mathbf{E}_2,\\
 \mathbf{B} &= \mathbf{B}_1 + \mathbf{B}_2.
 \end{align}
-A relative phase parameter $\theta$ controls the alignment of the oscillatory components.
+The local phase difference is
+$\Gamma=\delta+(\mathbf{k}_2-\mathbf{k}_1)\cdot\mathbf{r}
+=\delta-\sqrt{3}ky$.
 
-\section{Trinity phase-lock hypothesis}
-Hypothesis: there exists a stability extremum near $\theta \approx 2\pi/3$ (120$^\circ$) for a gauge-invariant turning-region functional $\mathcal{S}(\mathbf{E},\mathbf{B})$.
+\section{Cycle-Averaged Observables}
+With $I_0=\varepsilon_0cE_0^2/2$,
+\begin{align}
+ \langle u\rangle&=\varepsilon_0E_0^2\left(1+\frac14\cos\Gamma\right),\\
+ \langle\mathbf{S}\rangle&=I_0\hat{\mathbf{x}}(1+\cos\Gamma),\\
+ \langle\mathbf{g}\rangle&=\langle\mathbf{S}\rangle/c^2,\\
+ \langle E^2-c^2B^2\rangle&=\frac32E_0^2\cos\Gamma,
+ \qquad \langle\mathbf{E}\cdot\mathbf{B}\rangle=0.
+\end{align}
+At $\Gamma=2\pi/3$, $\langle u\rangle=7\varepsilon_0E_0^2/8$ and
+$\langle\mathbf{S}\rangle=I_0\hat{\mathbf{x}}/2$. This phase is not an
+extremum; the extrema occur at $\Gamma=0$ and $\pi$.
 
-\section{Gauge invariance}
-Any seed criterion must be expressible in terms of gauge-invariant quantities (e.g., $\mathbf{E},\mathbf{B}$ or $F,\star F$).
+\section{Interpretation and Limitations}
+The field retains both input wavevectors and represents interference, not a new plane
+wave. Atom 2.1 may propose the term ``neutrino seed,'' but Maxwell theory supplies no
+localization, stability, neutrino properties, or particle-creation mechanism. Infinite
+plane waves, one common polarization, perfect coherence, and linear vacuum response are
+assumed. CMB forcing, QED, nonlinear media, and charge-only or magnetic-only wave claims
+are outside scope.
 
 \bibliographystyle{plain}
-\bibliography{refs,../../refs/global}
+\bibliography{refs,../../../refs/global}
 \end{document}

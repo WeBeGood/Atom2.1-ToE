@@ -1,36 +1,32 @@
-# N015 Math Track — Seed Functional S(E,B) (placeholder)
+# N015 Math Track — What a Future Seed Functional Must Add
 
-## Goal
-Define a concrete, **gauge-invariant** functional S(E,B) that measures the presence of a localized turning-region / boundary feature.
+## Current result
 
-## Constraints
-S(E,B) must be:
-1) gauge-invariant (depends only on E,B or F,⋆F)
-2) local or quasi-local (detects localized structure)
-3) sensitive to phase-locking between two inputs
+The vector baseline defines only standard gauge-invariant fields and observables. It does **not** define a seed functional or establish a stability extremum at Γ=120°. For the declared input family,
 
-## Candidate families (to be refined)
-### (A) Invariant scalars
-Use Lorentz invariants:
-- I1 = E^2 - c^2 B^2
-- I2 = E·B
+⟨u⟩/(ε₀E₀²)=1+¼cosΓ,
 
-Potential seed-likeness measure:
-- S = ∫_V (w1 |I1| + w2 |I2|) dV
-with normalization choices stated.
+⟨Sₓ⟩/I₀=1+cosΓ.
 
-### (B) Helicity / chirality measures
-For suitable fields, define a helicity-like quantity (careful: gauge subtleties if using A):
-- H ~ ∫ A·B dV (requires gauge handling)
-Prefer using gauge-invariant proxies or explicitly fixed gauges.
+Their derivatives are −sinΓ/4 and −sinΓ, respectively, so Γ=2π/3 is not stationary.
 
-### (C) Poynting flux turning-region indicator
-Use energy flux S_vec = (1/μ0) E×B.
-A turning-region could be associated with rapid spatial variation or local circulation of S_vec.
+The field diagnostics
 
-## Trinity scan
-For a toy two-wave model, parameterize the second input with relative phase theta and scan:
-- theta ∈ [0, 2π)
-Compute S(theta) and look for an extremum near theta ≈ 2π/3.
+I₁=E²−c²B²,  I₂=**E**·**B**
 
-If no plausible S yields an extremum near 120° under physically plausible inputs, the hypothesis fails as stated.
+are gauge invariant, but a nonzero interference invariant is not by itself evidence of a particle or stable localized state.
+
+## Requirements for a future Atom 2.1 seed proposal
+
+A proposed functional Q[**E**,**B**] must, at minimum:
+
+1. have stated units or normalization;
+2. be gauge invariant and defined on finite-energy fields or wave packets;
+3. identify a localized region without coordinate-dependent threshold tuning;
+4. possess a stated dynamical stability criterion, not merely a phase snapshot;
+5. respect local and integrated energy-momentum conservation;
+6. distinguish a seed from ordinary Maxwell interference;
+7. predict an observable with uncertainty and a falsification threshold;
+8. explain how any claimed neutrino properties arise and compare with established neutrino phenomenology.
+
+No such functional is selected in N015. CMB forcing, QED, and charge-only/magnetic-only wave proposals are outside this vector-first step.

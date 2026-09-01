@@ -1,0 +1,143 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,booktabs,geometry}
+\geometry{margin=1in}
+
+\title{Two Coherent Vacuum Plane Waves at $120^\circ$:\\
+Vector Superposition and the Atom 2.1 Interpretation Boundary}
+\author{[Authors to be supplied]\\[Affiliations to be supplied]}
+\date{Working manuscript v0.1.0 --- 2026-09-01}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We derive the classical vector superposition of two mutually coherent,
+equal-frequency, equal-amplitude vacuum plane waves crossing at $120^\circ$.
+For common polarization normal to the wavevector plane, exact field, energy,
+Poynting-flux, momentum-density, and invariant relations are obtained as functions
+of local relative phase. A phase of $120^\circ$ is not an extremum. Linear Maxwell
+theory predicts interference and no new photon or neutrino. The Atom 2.1 term
+``neutrino seed'' is therefore retained only as an unvalidated hypothesis label.
+\end{abstract}
+
+\noindent\textbf{Keywords:} electromagnetic interference; Maxwell equations;
+plane waves; 120-degree geometry; phase control; hypothesis boundary
+
+\section{Introduction and Research Question}
+What field, energy, and momentum pattern follows from linear Maxwell theory when
+two identical coherent vacuum modes cross at $120^\circ$, and is a local phase of
+$120^\circ$ distinguished? ``Photon plane wave'' is used informally for a classical
+mode; QED and particle creation are outside scope.
+
+\section{Background}
+Maxwell's vacuum equations are linear, and coherent field sums exhibit standard
+interference~\cite{jackson1999,bornwolf1999,mandelwolf1995}. This established result
+is separated from the Atom 2.1 proposal to interpret a selected region as a
+``neutrino seed.''
+
+\section{Methods and Reproducibility}
+Let $k=\omega/c$ and choose
+\begin{align}
+ \mathbf{n}_1&=(1/2,\sqrt{3}/2,0), &
+ \mathbf{n}_2&=(1/2,-\sqrt{3}/2,0), &
+ \mathbf{k}_i&=k\mathbf{n}_i. \tag{1}
+\end{align}
+Then $\mathbf{n}_1\cdot\mathbf{n}_2=-1/2$, so the crossing angle is
+$2\pi/3$, and
+\begin{equation}
+ \mathbf{k}_1+\mathbf{k}_2=k\hat{\mathbf{x}},\qquad
+ \mathbf{k}_1-\mathbf{k}_2=\sqrt{3}k\hat{\mathbf{y}}. \tag{2}
+\end{equation}
+For common electric polarization $\hat{\mathbf{z}}$ and independent phase offset
+$\delta$, use peak phasors
+\begin{align}
+ \widetilde{\mathbf E}&=E_0\hat{\mathbf z}
+ \left[e^{i\mathbf{k}_1\cdot\mathbf r}+e^{i(\mathbf{k}_2\cdot\mathbf r+\delta)}\right], \tag{3}\\
+ \widetilde{\mathbf B}&=\frac{E_0}{c}\left[(\mathbf n_1\times\hat{\mathbf z})e^{i\mathbf{k}_1\cdot\mathbf r}
+ +(\mathbf n_2\times\hat{\mathbf z})e^{i(\mathbf{k}_2\cdot\mathbf r+\delta)}\right]. \tag{4}
+\end{align}
+The local phase is $\Gamma=\delta-\sqrt{3}ky$, giving fringe spacing
+$\lambda/\sqrt{3}$. Infinite monochromatic coherent waves, linear vacuum response,
+and local cycle averages are assumed.
+
+Reproducibility commands are
+\begin{verbatim}
+python nodes/N015_trinity_phase_lock_seed_event/code/sim.py
+python scripts/validate_papers.py
+python -m pytest -q
+\end{verbatim}
+No data fitting, randomness, or external dataset is used.
+
+\section{Results}
+The phasor magnitudes and cycle-averaged observables are
+\begin{align}
+ |\widetilde{\mathbf E}|^2&=2E_0^2(1+\cos\Gamma), &
+ c^2|\widetilde{\mathbf B}|^2&=E_0^2(2-\cos\Gamma), \tag{5}\\
+ \langle u\rangle&=\varepsilon_0E_0^2(1+\tfrac14\cos\Gamma), &
+ \langle\mathbf S\rangle&=I_0\hat{\mathbf x}(1+\cos\Gamma), \tag{6}\\
+ \langle\mathbf g\rangle&=\langle\mathbf S\rangle/c^2, &
+ \langle E^2-c^2B^2\rangle&=\tfrac32E_0^2\cos\Gamma, \tag{7}
+\end{align}
+where $I_0=\varepsilon_0cE_0^2/2$ and
+$\langle\mathbf E\cdot\mathbf B\rangle=0$.
+
+\begin{table}[h]
+\centering
+\caption{Exact phase values for the $120^\circ$ crossing geometry.}
+\begin{tabular}{ccccc}
+\toprule
+$\Gamma$ & $|\widetilde{\mathbf E}|/E_0$ &
+$\langle u\rangle/(\varepsilon_0E_0^2)$ & $\langle S_x\rangle/I_0$ &
+$\langle E^2-c^2B^2\rangle/E_0^2$\\
+\midrule
+$0$ & $2$ & $5/4$ & $2$ & $3/2$\\
+$2\pi/3$ & $1$ & $7/8$ & $1/2$ & $-3/4$\\
+$\pi$ & $0$ & $3/4$ & $0$ & $-3/2$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The phase derivatives are proportional to $-\sin\Gamma$, so $2\pi/3$ is not
+stationary. Averaging one fringe removes $\cos\Gamma$ and recovers the sums of the
+two input energy densities and vector Poynting fluxes.
+
+\section{Discussion}
+The field retains both wavevectors; Eq.~(2) is geometry, not conversion to a new
+mode. Interference redistributes energy and momentum locally without creating net
+energy. Maxwell theory supplies no localization, stability, neutrino quantum
+numbers, or independent photon. A future Atom 2.1 seed model must add explicit
+dynamics and a discriminating, falsifiable observable.
+
+\section{Limitations and Scope}
+The calculation excludes finite beams, wave packets, apertures, sources, matter,
+nonlinear optics, gravity, CMB forcing, QED, neutrino phenomenology, and charge-only
+or magnetic-only propagating-wave claims. Only a common linear polarization is
+evaluated. Internal checks are not empirical validation.
+
+\section{Conclusion}
+Two equal coherent Maxwell modes crossing at $120^\circ$ yield the standard
+interference relations above. Local phase $120^\circ$ gives intermediate values,
+not an extremum, and does not derive a particle.
+
+\section*{Data and Code Availability}
+No empirical data were used. Code and tests are stored with node N015 and in the
+repository test suite.
+
+\section*{Author Contributions}
+[To be supplied by the actual authors; no roles inferred.]
+
+\section*{Acknowledgments}
+[None declared in this repository version.]
+
+\section*{Declarations}
+Funding and conflicts of interest are not declared and must be supplied by the
+authors. Ethics approval and consent are not applicable to this theoretical work.
+No empirical validation is claimed.
+
+\section*{Version and Provenance}
+Working manuscript v0.1.0, 2026-09-01. Derived from nodes N000, N011, and N015;
+not peer reviewed.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

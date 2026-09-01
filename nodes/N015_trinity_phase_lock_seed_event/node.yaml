@@ -1,76 +1,98 @@
 meta:
   id: N015
-  title: "Trinity phase-lock seed event (two-wave → newmode)"
+  title: "Two coherent vacuum plane waves at 120 degrees (vector baseline)"
   status: open
-  maturity: M1
-  updated_utc: "2026-02-20"
+  maturity: M3
+  updated_utc: "2026-09-01"
   owner: "WeBeGood"
 
 depends_on:
-  - N010
+  - N000
   - N011
-  - N012
 
 scope:
-  domain: "Atom 2.1 constructive step (EM superposition + phase-lock hypothesis)"
-  coordinate_system: "Cartesian baseline; compatible with forms/potentials"
-  units: "SI (default)"
+  classification: "mixed_standard_result_and_project_hypothesis"
+  domain: "Classical coherent superposition of two vacuum plane-wave modes"
+  coordinate_system: "Right-handed Cartesian frame; wavevectors in the x-y plane"
+  units: "SI"
+  standard_result: "Linear Maxwell theory predicts a two-wave interference field with no new independent mode."
+  project_hypothesis: "Atom 2.1 may label a selected interference region a neutrino seed; this interpretation is not derived here."
+  excludes:
+    - "CMB or other background photon-field models"
+    - "Quantum electrodynamics or photon creation/annihilation calculations"
+    - "Charge-only or magnetic-only propagating vacuum waves"
+    - "Nonlinear, material, boundary-induced, or self-confining dynamics"
 
 definitions:
-  - symbol: "E1,E2"
-    meaning: "input electric fields (two excitations/wave packets)"
-    units: "V/m"
-  - symbol: "B1,B2"
-    meaning: "input magnetic fields"
-    units: "T"
-  - symbol: "A1,A2"
-    meaning: "input vector potentials"
-    units: "V·s/m"
-  - symbol: "theta"
-    meaning: "relative phase offset between inputs (candidate stability angle)"
+  - symbol: "alpha"
+    meaning: "geometric crossing angle between k1 and k2; fixed here to 2pi/3"
     units: "rad"
-  - symbol: "k_hat"
-    meaning: "local propagation direction unit vector"
-    units: "dimensionless"
-  - symbol: "seed"
-    meaning: "candidate boundary/turning-region excitation descriptor (newmode hypothesis)"
-    units: "dimensionless + parameter set"
+  - symbol: "delta"
+    meaning: "controllable phase offset of wave 2 relative to wave 1"
+    units: "rad"
+  - symbol: "Gamma"
+    meaning: "local relative phase delta+(k2-k1) dot r"
+    units: "rad"
+  - symbol: "k1,k2"
+    meaning: "equal-magnitude vacuum wavevectors with |k1|=|k2|=k"
+    units: "m^-1"
+  - symbol: "E0"
+    meaning: "peak electric-field amplitude of each input wave"
+    units: "V m^-1"
+  - symbol: "E1,E2"
+    meaning: "input electric fields with common z-directed linear polarization"
+    units: "V m^-1"
+  - symbol: "B1,B2"
+    meaning: "input magnetic fields Bi=(ki_hat cross Ei)/c"
+    units: "T"
+  - symbol: "I0"
+    meaning: "cycle-averaged intensity of either wave, eps0*c*E0^2/2"
+    units: "W m^-2"
 
 claims:
   - id: N015-C1
-    statement: "Two EM excitations may be modeled (first pass) by linear Maxwell superposition: E_total=E1+E2, B_total=B1+B2, with a controllable relative phase theta."
-    units: "E: V/m, B: T, theta: rad"
+    statement: "For equal magnitudes k and crossing angle alpha=120 degrees, k1+k2=k xhat and k1-k2=sqrt(3)k yhat; these vector identities do not replace the two modes by a single plane wave."
+    units: "k1,k2: m^-1"
   - id: N015-C2
-    statement: "Circular/helical polarization state (N011) constrains the handedness/helicity content of the superposed field; theta couples to rotation phase about k_hat."
-    units: "dimensionless helicity label; theta in rad"
+    statement: "For common z polarization, linear Maxwell superposition gives E=E1+E2 and B=B1+B2 with local relative phase Gamma=delta+(k2-k1) dot r."
+    units: "E: V m^-1; B: T; Gamma: rad"
   - id: N015-C3
-    statement: "Hypothesis: there exists a stability extremum near theta ≈ 2π/3 (120°) where a localized turning-region/boundary feature is maximized (candidate 'seed' formation criterion)."
-    units: "theta: rad; seed criterion is model-defined"
+    statement: "At alpha=120 degrees, cycle-averaged observables are <u>=eps0 E0^2[1+cos(Gamma)/4] and <S>=I0 xhat[1+cos(Gamma)], with <g>=<S>/c^2."
+    units: "u: J m^-3; S: W m^-2; g: kg m^-2 s^-1"
   - id: N015-C4
-    statement: "Gauge-consistent formulation: if potentials are used, the seed criterion must be defined in terms of gauge-invariant quantities (E,B) or forms (F, ⋆F)."
-    units: "invariance statement"
+    statement: "At a point where Gamma=120 degrees, <u>=(7/8)eps0 E0^2 and <S>=(1/2)I0 xhat; Gamma=120 degrees is not an extremum of either observable in linear Maxwell theory."
+    units: "u: J m^-3; S: W m^-2"
+  - id: N015-C5
+    statement: "Averaging over one transverse fringe removes cos(Gamma), recovering the sum of the two input energy densities and the vector sum of their individual Poynting fluxes."
+    units: "u: J m^-3; S: W m^-2"
+  - id: N015-C6
+    statement: "Calling any part of this interference field a neutrino seed is an Atom 2.1 hypothesis, not a consequence of linear vacuum Maxwell equations and not evidence for a new photon or neutrino."
+    units: "not applicable"
 
 assumptions:
-  - "First-pass uses linear Maxwell superposition; nonlinearity/topology enters via boundary/turning-region criteria (to be refined)."
-  - "Handedness conventions follow N011; form conventions follow N010; potential conventions follow N012."
-  - "Speculative claims are flagged; quantified predictions deferred to M2/M3."
+  - "Both inputs are monochromatic, mutually coherent vacuum plane waves with the same omega, k=omega/c, and peak amplitude E0."
+  - "The wavevectors lie in the x-y plane, are symmetric about +x, and have alpha=120 degrees."
+  - "Both electric fields use the common transverse polarization zhat; other polarization choices change interference terms."
+  - "Fields are ideal infinite plane waves; all energy and momentum statements are local cycle averages or fringe averages."
+  - "The crossing angle alpha and phase offset delta are independent parameters."
+  - "No nonlinear interaction, material response, boundary, source, quantization, or localization mechanism is assumed."
 
 interfaces:
   exports:
-    - "Trinity phase-lock hypothesis: theta ≈ 2π/3 as candidate stability angle"
-    - "Seed criterion placeholder: gauge-invariant turning-region functional S[E,B] (to be defined)"
-    - "Parameterization of two-wave inputs (frequency, polarization, phase, alignment)"
-    - "Compatibility constraints from helicity (N011) and gauge invariance (N012)"
+    - "Explicit 120-degree wavevector geometry and fringe spacing lambda/sqrt(3)"
+    - "Phase-dependent vector fields for a common transverse polarization"
+    - "Cycle-averaged energy density, Poynting vector, momentum density, and field invariants"
+    - "Standard-result versus neutrino-seed-hypothesis boundary"
   imports:
-    - "N010: forms language (F, dF=0, topology hook)"
-    - "N011: helicity/polarization conventions"
-    - "N012: potentials/gauge invariance baseline"
+    - "N000: linear vacuum Maxwell equations, plane waves, energy, and momentum"
+    - "N011: polarization and phasor conventions"
 
 artifacts:
   narrative: "nodes/N015_trinity_phase_lock_seed_event/narrative.md"
   math:
     - "nodes/N015_trinity_phase_lock_seed_event/math/notations.md"
     - "nodes/N015_trinity_phase_lock_seed_event/math/dimensions_units.md"
+    - "nodes/N015_trinity_phase_lock_seed_event/math/vector_superposition.md"
     - "nodes/N015_trinity_phase_lock_seed_event/math/seed_functional.md"
   latex:
     - "nodes/N015_trinity_phase_lock_seed_event/latex/main.tex"
@@ -81,14 +103,28 @@ artifacts:
     - "nodes/N015_trinity_phase_lock_seed_event/figs/README.md"
 
 sources:
+  - key: born_wolf_1999
+    type: book
+    doi: "10.1017/CBO9781139644181"
+    url: "https://www.cambridge.org/core/books/principles-of-optics/D12868B8AE26B83D6D3C2193E94FFC32"
+    note: "Classical electromagnetic interference and coherence."
+  - key: mandel_wolf_1995
+    type: book
+    doi: "10.1017/CBO9781139644105"
+    url: "https://www.cambridge.org/core/books/optical-coherence-and-quantum-optics/F8CB94C70FA64CD3FB60890CA2048168"
+    note: "Coherent field superposition and interference observables; only the classical framework is used here."
   - key: jackson1999
     type: book
-    note: "Linear superposition and EM invariants; used as baseline constraints."
+    note: "Vacuum plane waves, superposition, energy, momentum, and field invariants."
 
 validation:
   checks:
-    - "Define a concrete gauge-invariant 'seed functional' S(E,B) and verify invariance under gauge transforms (via N012)."
-    - "Scan theta in a toy two-wave model and confirm whether S(E,B) shows an extremum near 2π/3 (if not, revise hypothesis)."
-    - "Ensure handedness conventions in S(E,B) match N011." 
+    - "Run the standard-library N015 simulation and require all geometry, field, observable, and phase-scan checks to pass."
+    - "Verify alpha=120 degrees and delta are represented as independent parameters."
+    - "Verify the analytic values at Gamma=0, 2pi/3, and pi against deterministic numerical evaluation."
+    - "Verify spatial averaging over one fringe removes interference cross terms."
+    - "Require the readable paper and node text to state that Maxwell superposition creates no new independent photon or neutrino."
   falsifiers:
-    - "If no reasonable gauge-invariant turning-region functional yields a stability extremum near 120° for any physically plausible input family, the Trinity phase-lock hypothesis (as stated) fails."
+    - "Any failure of the stated geometry or observables under the declared assumptions invalidates this vector baseline."
+    - "Linear Maxwell theory already falsifies a claim that Gamma=120 degrees is an energy or flux extremum for this input family."
+    - "The neutrino-seed interpretation remains unsupported unless additional dynamics yield localization, stability, conserved properties, and a prediction distinguishable from ordinary interference."

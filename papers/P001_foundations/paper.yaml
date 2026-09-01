@@ -2,8 +2,14 @@ meta:
   paper_id: P001
   title: "Atom 2.1 Foundations"
   status: draft
-  updated_utc: "2026-08-31"
+  updated_utc: "2026-09-01"
   scope_note: "Sections must label standard electromagnetism separately from Atom 2.1 hypotheses."
+
+artifacts:
+  readable: "papers/P001_foundations/paper.md"
+  latex: "papers/P001_foundations/main.tex"
+  bibliography: "papers/P001_foundations/refs.bib"
+  outline: "papers/P001_foundations/outline.md"
 
 sections:
   - id: S1

@@ -13,10 +13,19 @@
 
 ## Node graph (derivation DAG)
 - `nodes/` — derivation nodes (each has `node.yaml`, narrative, math tracks, LaTeX slices, and code)
-  - `nodes/N000_space_time_light_maxwell/` — **Space, Time, Light (Maxwell baseline)**
+  - `nodes/N000_space_time_light_maxwell/` — **Classical electromagnetism in vacuum (Maxwell baseline)**
+
+## Human-readable papers
+- `papers/README.md` — durable manuscript convention and required scientific-paper sections
+- `papers/P001_foundations/paper.md` — readable standard Maxwell foundation
+- `papers/P002_trinity_vector_baseline/paper.md` — 120° two-wave vector derivation and hypothesis boundary
+- `papers/P*/paper.yaml` — node-to-section mappings used to generate each `outline.md`
 
 ## What to run
 - Validate: `python validate_atom2_1.py`
+- Validate nodes: `python scripts/validate_nodes.py`
+- Validate readable papers: `python scripts/validate_papers.py`
+- Regenerate node and paper artifacts: `regen_nodes.bat` (Windows) or `regen_nodes.sh`
 - Render from SuperSeed: `python render_superseed.py`
 
 ## Clipboard helpers (Windows)

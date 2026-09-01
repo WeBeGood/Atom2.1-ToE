@@ -33,6 +33,14 @@ jobs:
         run: |
           python scripts/build_node_index.py
 
+      - name: Build readable paper outlines
+        run: |
+          python scripts/build_paper_outline.py
+
+      - name: Validate readable paper structure
+        run: |
+          python scripts/validate_papers.py
+
       - name: Enforce generated artifacts committed
         run: |
           git diff --exit-code
