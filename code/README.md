@@ -27,3 +27,10 @@ For a node with computation:
 - Prefer writing files with UTF-8 and LF newlines.
 - Keep runtime under ~10s for CI smoke tests.
 - Add a small pytest-based smoke test when a new sim is introduced.
+
+## Two-wave animations
+
+[NewWave field views](newwave_animation/README.md) show both parent waves and their
+resultant along the x-aligned seed-line: local Charge-Only, Magnetic-Only, and
+EM-like configurations. Includes reproducible GIFs, field equations, and checks;
+the added charge-polarization extension is explicitly pending ledger acceptance.
