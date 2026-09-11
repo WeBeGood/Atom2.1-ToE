@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,hyperref}
+\title{Atom 2.1: Electron Closure and the Fine-Structure Charge--Action Interface}
+\author{WeBeGood [author list and affiliation to be confirmed]}
+\date{September 11, 2026}
+\begin{document}\maketitle
+\begin{abstract}
+A conditional reduction, not a numerical prediction of the fine-structure
+constant. The full canonical derivation and limitations are in paper.md and
+nodes N017/N018. This compact LaTeX counterpart records the central equations.
+\end{abstract}
+\section{Closure family}
+For a candidate torus trefoil around the seed-line x axis, let
+\begin{align}
+x&=a\sin3t,&y&=(R+a\cos3t)\cos2t,&z&=(R+a\cos3t)\sin2t,\\
+L_e&=R F(\rho),&F(\rho)&=\int_0^{2\pi}\sqrt{4(1+\rho\cos3t)^2+9\rho^2}\,dt.
+\end{align}
+Here $\rho=a/R\in(0,1)$. With the pitch convention $L_\nu=2\pi/|\kappa|$
+and $R=\beta L_\nu$, $L_e=\beta F(\rho)L_\nu$. An additional scalar phase law
+$|\kappa|L_e=2\pi n$ implies $\beta=n/F(\rho)$, but selects neither shape nor
+stable field dynamics. Curl eigenvalue and phase transport are not identical
+without an extra assumption.
+\section{Charge and action}
+For smooth source-free fields, $\nabla\cdot\mathbf E=0$ implies
+$Q=\epsilon_0\oint\mathbf E\cdot d\mathbf A=0$. Extensions require explicit
+sources, medium response or boundary/topology accounting.
+For a finite-energy candidate set $\boldsymbol\xi=\mathbf r/L$,
+$\mathbf E=E_*\mathbf f$, $\mathbf B=E_*\mathbf g/c$ and
+\begin{align}
+C_Q&=\frac{1}{4\pi}\lim_{s\to\infty}\oint_{|\xi|=s}\mathbf f\cdot d\mathbf A_\xi,&
+C_U&=\frac12\int (|\mathbf f|^2+|\mathbf g|^2)d^3\xi,\\
+Q&=4\pi\epsilon_0 E_*L^2 C_Q,&U_{\rm EM}&=\epsilon_0 E_*^2L^3 C_U.
+\end{align}
+If $|Q|=e$ and $\eta_{\rm EM}=U_{\rm EM}L/(\hbar c)$, then
+\begin{equation}\boxed{\alpha_{\rm fs}=4\pi\eta_{\rm EM}\frac{C_Q^2}{C_U}.}\end{equation}
+If total energy includes a medium/core contribution, use
+$\eta_{\rm EM}=f_{\rm EM}\eta_{\rm total}$. A future independently justified
+$U_{\rm total}/\omega=\hbar$ would imply $\eta_{\rm total}=\omega L/c$;
+no such normalization is established here.
+\section{Diagnostic and nonuniqueness}
+The supplied-source profile $\mathbf f=\boldsymbol\xi/(1+|\xi|^2)^{3/2}$,
+$\mathbf g=0$ has $C_Q=1$, $C_U=3\pi^2/8$ and
+$\alpha_{\rm fs}=32\eta_{\rm EM}/(3\pi)$. It is not an electron solution.
+Amplitude freedom changes the coupling while preserving shape.
+For nonzero baseline coefficients,
+\begin{equation}
+\frac{\delta\alpha}{\alpha}=\frac{\delta\eta_{\rm EM}}{\eta_{\rm EM}}
++2\frac{\delta C_Q}{C_Q}-\frac{\delta C_U}{C_U}+O(\delta^2).
+\end{equation}
+This is sensitivity bookkeeping, not derived correction coefficients.
+\section{Units and completion status}
+In SI, $\alpha=e^2/(4\pi\epsilon_0\hbar c)$; in Gaussian units,
+$\alpha=e_G^2/(\hbar c)$; in Heaviside--Lorentz units with $\hbar=c=1$,
+$\alpha=e_{HL}^2/(4\pi)$. The CODATA 2022 benchmark is
+$\alpha^{-1}=137.035999177(21)$\cite{nist}; it is never a normalization input.
+Charge-producing dynamics, stable closure, action selection, medium energy and
+controlled low-energy corrections remain open. No numerical alpha is derived.
+\section{Reproducibility and declarations}
+Run the N017/N018 Python diagnostic programs and the repository tests. Full
+assumptions, falsifiers, author/contribution placeholders, funding/conflict
+placeholders and version provenance are in paper.md. WeBeGood supplied project
+direction; ChatGPT/Codex assisted drafting and computation. No experimental data
+or human/animal research were produced. Human approval is pending publication.
+\bibliographystyle{plain}\bibliography{refs}
+\end{document}

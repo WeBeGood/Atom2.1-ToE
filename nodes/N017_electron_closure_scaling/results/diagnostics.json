@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "F": 12.707644460845197,
+      "beta_for_hypothetical_n1": 0.07869279023985921,
+      "polygon_relative_error": -6.5044520880519485e-09,
+      "rho": 0.1
+    },
+    {
+      "F": 13.825520946752418,
+      "beta_for_hypothetical_n1": 0.07233000505741505,
+      "polygon_relative_error": -9.299090164560653e-09,
+      "rho": 0.3
+    },
+    {
+      "F": 17.306642247894416,
+      "beta_for_hypothetical_n1": 0.057781283375269596,
+      "polygon_relative_error": -1.566727392265932e-08,
+      "rho": 0.6
+    },
+    {
+      "F": 22.122338119368255,
+      "beta_for_hypothetical_n1": 0.045203178552112144,
+      "polygon_relative_error": -2.0343978057724144e-08,
+      "rho": 0.9
+    }
+  ],
+  "status": "geometry_only_closure_open"
+}

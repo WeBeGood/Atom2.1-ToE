@@ -1,0 +1,68 @@
+meta:
+  id: N018
+  title: Fine-structure charge-energy-action reduction and open normalization
+  status: open
+  maturity: M3
+  updated_utc: '2026-09-11'
+  owner: WeBeGood
+depends_on:
+- N000
+- N015
+- N016
+- N017
+scope:
+  domain: Atom 2.1 open electron/alpha frontier with conditional mathematical diagnostics
+  units: SI; explicit natural-unit cross-walk
+  coordinate_system: x is distinguished seed-line axis
+  maturity_note: M3 applies to numerical checks, not empirical confirmation or completed
+    particle derivation
+claims:
+- id: N018-C1
+  statement: Smooth source-free Maxwell superpositions have zero enclosed electric
+    charge on bounding surfaces.
+  units: 'Q: C'
+- id: N018-C2
+  statement: For a finite-energy charged candidate with |Q|=e, alpha_fs=4pi eta_EM
+    C_Q^2/C_U.
+  units: dimensionless
+- id: N018-C3
+  statement: For additional medium/core energy use eta_EM=f_EM eta_total; field energy
+    cannot be replaced silently.
+  units: dimensionless
+- id: N018-C4
+  statement: Homogeneous field equations and knot geometry alone do not fix amplitude/action
+    and hence do not determine a unique nonzero alpha.
+  units: dimensionless
+- id: N018-C5
+  statement: The diagnostic sourced radial profile has C_Q=1 and C_U=3pi^2/8; it is
+    not an electron solution.
+  units: dimensionless
+- id: N018-C6
+  statement: No parameter-free inverse-alpha prediction is available from the supplied
+    nodes; residual is null unless a candidate is supplied.
+  units: dimensionless
+assumptions:
+- Project closure and medium dynamics remain open.
+- Diagnostic profiles do not claim physical electron solutions.
+interfaces:
+  imports:
+  - 'N000/N015: source-free field constraints'
+  - 'N016: Beltrami ansatz'
+  - 'N017: closure family'
+  exports:
+  - Conditional alpha identity
+  - Charge/action/stability completion criteria
+  - Benchmark residual tool with no-prediction state
+artifacts:
+  narrative: nodes/N018_alpha_charge_action/narrative.md
+  code:
+  - nodes/N018_alpha_charge_action/code/sim.py
+  math:
+  - nodes/N018_alpha_charge_action/math/dimensions_units.md
+validation:
+  checks:
+  - Run code/sim.py and tests/test_alpha_frontier.py.
+  falsifiers:
+  - Reject the particular candidate if it violates its declared field equations, charge
+    accounting, finite energy, or stability requirements.
+  - Do not promote a benchmark-calibrated coupling as a parameter-free prediction.

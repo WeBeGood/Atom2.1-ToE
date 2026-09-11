@@ -11,7 +11,8 @@ def test_paper_validator_runs():
     script = REPO / "scripts" / "validate_papers.py"
     result = subprocess.run([sys.executable, str(script)], cwd=REPO, text=True, capture_output=True)
     assert result.returncode == 0, result.stdout + result.stderr
-    assert "validated 2 paper(s)" in result.stdout
+    expected = len(list((REPO / "papers").glob("P*/paper.yaml")))
+    assert f"validated {expected} paper(s)" in result.stdout
 
 
 def test_all_paper_artifacts_exist_and_mapped_nodes_resolve():

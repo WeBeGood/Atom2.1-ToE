@@ -1,0 +1,53 @@
+meta:
+  id: N017
+  title: Electron trefoil closure and seed-length scaling
+  status: open
+  maturity: M3
+  updated_utc: '2026-09-11'
+  owner: WeBeGood
+depends_on:
+- N016
+scope:
+  domain: Atom 2.1 open electron/alpha frontier with conditional mathematical diagnostics
+  units: SI; explicit natural-unit cross-walk
+  coordinate_system: x is distinguished seed-line axis
+  maturity_note: M3 applies to numerical checks, not empirical confirmation or completed
+    particle derivation
+claims:
+- id: N017-C1
+  statement: The T(2,3) candidate has L_e=R F(rho); topology leaves R and rho undetermined.
+  units: 'L_e,R: m; rho,F: dimensionless'
+- id: N017-C2
+  statement: With L_nu=2pi/|kappa| and R=beta L_nu, L_e=beta F(rho)L_nu; this is a
+    family, not a selected scale.
+  units: 'L_nu: m; kappa: m^-1'
+- id: N017-C3
+  statement: An additional scalar phase transport/closure hypothesis implies L_e=n
+    L_nu; the curl ansatz alone does not.
+  units: 'n: dimensionless integer'
+- id: N017-C4
+  statement: Arclength quadrature agrees with independent polygonal geometry; stability
+    and charge remain unproved.
+  units: 'relative error: dimensionless'
+assumptions:
+- Project closure and medium dynamics remain open.
+- Diagnostic profiles do not claim physical electron solutions.
+interfaces:
+  imports:
+  - 'N016: candidate curl eigenfield and seed-line'
+  exports:
+  - Trefoil length function F(rho)
+  - Conditional seed-to-closure family; no selected electron
+artifacts:
+  narrative: nodes/N017_electron_closure_scaling/narrative.md
+  code:
+  - nodes/N017_electron_closure_scaling/code/sim.py
+  math:
+  - nodes/N017_electron_closure_scaling/math/dimensions_units.md
+validation:
+  checks:
+  - Run code/sim.py and tests/test_alpha_frontier.py.
+  falsifiers:
+  - Reject the particular candidate if it violates its declared field equations, charge
+    accounting, finite energy, or stability requirements.
+  - Do not promote a benchmark-calibrated coupling as a parameter-free prediction.

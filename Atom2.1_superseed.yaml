@@ -3,7 +3,7 @@ meta:
   schema: "atom2.1.superseed"
   version: "0.1.1"
   created_utc: "2026-02-19"
-  updated_utc: "2026-09-07"
+  updated_utc: "2026-09-11"
   owner: "WeBeGood"
   purpose:
     - "Single YAML that declares the full Atom 2.1 initialization contract"
@@ -162,6 +162,14 @@ derived_ledger:
       notes:
         - "This entry is the main ledger correction requested on 2026-09-07."
   not_settled:
+    - id: "ALPHA"
+      claim: "Parameter-free fine-structure constant from stable charged NewWave closure."
+      status: "open"
+      progress: "N017 formalizes closure families; N018 derives alpha_fs=4pi eta_EM C_Q^2/C_U conditionally and demonstrates missing normalization."
+      blockers:
+        - "Specify charge-producing NewWave/BBRV dynamics and boundary conditions."
+        - "Select stable geometry, action normalization and field/medium energy partition independently of measured alpha."
+        - "Compute low-energy corrections and uncertainty without target fitting."
     - id: "E-GEOM"
       claim: "Electron geometry finalized (trefoil scaling law) and linked to alpha."
       status: "open"
@@ -199,9 +207,12 @@ active_state_pointer:
     - "Maintain bootstrap pack integrity in GitHub."
     - "Keep existing derivations in the c=1, Mach-1 Luminal Realm unless explicitly marked Superluminal."
     - "Expand Superluminal Realm only as open theory: Mach>1 to Mach infinity, incidence angles 120° to 180°."
-    - "Formalize electron model milestone: L_e = f(L_ν) candidate scaling."
+    - "Continue N017/N018: derive a charged stable closure and action normalization; alpha remains open."
+    - "Read papers/P003_alpha_charge_action/paper.md and docs/2026-09-11_alpha_session_audit.md before extending ALPHA."
   working_set:
     open_issues:
+      - id: "ALPHA"
+        short: "N018 conditional reduction complete; unique charge/action/energy solution missing"
       - id: "E-GEOM"
         short: "Electron geometry + alpha derivation"
       - id: "H-SPEC"
@@ -220,10 +231,12 @@ frontier:
   questions:
     - id: "SCALING"
       prompt: "What explicit geometric scaling law maps neutrino boundary phenomena to electron trefoil closure?"
-      desired_output: "Equation set with units + testable predictions."
+      desired_output: "N017 family is implemented; next select beta, rho and phase law by dynamics and stability."
     - id: "ALPHA"
       prompt: "Derive fine-structure constant alpha from knot/phase-lock geometry (including correction terms)."
-      desired_output: "Derivation + numeric target alpha^-1 ≈ 137.035999."
+      desired_output: "N018 reduction implemented. Derive C_Q, C_U and eta_EM independently; predict low-energy inverse alpha with uncertainty."
+      status: "open"
+      benchmark_only: "CODATA 2022 inverse alpha = 137.035999177(21); never use as a fitted normalization."
     - id: "SUPERLUMINAL"
       prompt: "Formalize the Mach>1 Superluminal Realm from incidence angles 120° to 180°, including the Mach-infinity limit."
       desired_output: "Angle-dependent kernel M_A2.1(theta), conserved quantities, and clear separation from ordinary FTL claims."

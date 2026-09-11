@@ -5,10 +5,14 @@ meta:
 next_focus:
 - Maintain bootstrap pack integrity in GitHub.
 - Keep existing derivations in the c=1, Mach-1 Luminal Realm unless explicitly marked Superluminal.
-- Expand Superluminal Realm only as open theory; Mach>1 to Mach infinity, incidence angles 120° to 180°.
-- 'Formalize electron model milestone: L_e = f(L_ν) candidate scaling.'
+- 'Expand Superluminal Realm only as open theory: Mach>1 to Mach infinity, incidence angles 120° to 180°.'
+- 'Continue N017/N018: derive a charged stable closure and action normalization; alpha remains open.'
+- Read papers/P003_alpha_charge_action/paper.md and docs/2026-09-11_alpha_session_audit.md before extending
+  ALPHA.
 working_set:
   open_issues:
+  - id: ALPHA
+    short: N018 conditional reduction complete; unique charge/action/energy solution missing
   - id: E-GEOM
     short: Electron geometry + alpha derivation
   - id: H-SPEC

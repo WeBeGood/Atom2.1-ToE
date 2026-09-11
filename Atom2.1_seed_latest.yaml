@@ -12,19 +12,25 @@ atom2_1:
   axioms:
   - id: LUMINAL
     name: Mach-1 Luminal Realm
-    statement: 'Most Atom 2.1 development is in the Luminal Realm: c=1, Mach 1, waves following waves through the Beltrami Blackbody Radiation Vortex photon/CMB sea.'
+    statement: 'Most Atom 2.1 development is in the Luminal Realm: c=1, Mach 1, waves following waves
+      through the Beltrami Blackbody Radiation Vortex photon/CMB sea.'
   - id: EMASS
     name: Natural-Unit Mass-Energy Equivalence
-    statement: In the Mach-1 Luminal Realm, Einstein's E=mc^2 is handled in natural units as E=m; Restless Neutrino Mass and Rest Neutrino Mass are the same mass-energy in different topological states.
+    statement: In the Mach-1 Luminal Realm, Einstein's E=mc^2 is handled in natural units as E=m; Restless
+      Neutrino Mass and Rest Neutrino Mass are the same mass-energy in different topological states.
   - id: A120
     name: Luminal Trinity 120° Threshold
-    statement: Within the Mach-1 Luminal Realm, the 120° Trinity Addition is treated as the first stable NewWave phase-lock threshold, not as the full future superluminal angle domain.
+    statement: Within the Mach-1 Luminal Realm, the 120° Trinity Addition is treated as the first stable
+      NewWave phase-lock threshold, not as the full future superluminal angle domain.
   - id: CMBMED
     name: CMB as Stabilizing Medium
-    statement: CMB acts as universal medium supporting resonance / stabilization of wave knots in the Beltrami Blackbody Radiation Vortex.
+    statement: CMB acts as universal medium supporting resonance / stabilization of wave knots in the
+      Beltrami Blackbody Radiation Vortex.
   - id: REGIME_SPLIT
     name: Luminal versus Superluminal Regimes
-    statement: Atom 2.1 separates the developed Mach-1 Luminal Realm from the proposed Mach>1 Superluminal Realm, where incidence angles run from 120° toward 180° and Mach-infinity is a geometric/interference limit.
+    statement: Atom 2.1 separates the developed Mach-1 Luminal Realm from the proposed Mach>1 Superluminal
+      Realm, where incidence angles run from 120° toward 180° and Mach-infinity is a geometric/interference
+      limit.
   primitives:
   - photon_wave
   - antiwave
@@ -41,5 +47,8 @@ atom2_1:
   - Particles modeled as self-sustaining geometric wave patterns; rest mass from circular energy circulation.
   - Neutrino phenomena interpreted as boundary/turning-region behavior at loop edges.
   - Electron model under development; suspected geometric scaling relates to fine-structure constant.
-  - 'Default ledger interpretation: unless a section explicitly says Superluminal Realm, treat the math as c=1, Mach-1 Luminal Realm math.'
-  - Superluminal Realm development is proposed/open; it concerns interference geometry, phase closure, superluminal-looking channel artifacts, and Mach-infinity limits, not ordinary energy traveling faster than c.
+  - 'Default ledger interpretation: unless a section explicitly says Superluminal Realm, treat the math
+    as c=1, Mach-1 Luminal Realm math.'
+  - 'Superluminal Realm development is proposed/open: it concerns interference geometry, phase closure,
+    superluminal-looking channel artifacts, and Mach-infinity limits, not ordinary energy traveling faster
+    than c.'

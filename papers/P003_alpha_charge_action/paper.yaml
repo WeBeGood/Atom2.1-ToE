@@ -1,0 +1,20 @@
+meta:
+  paper_id: P003
+  title: Electron Closure and the Fine-Structure Charge–Action Interface
+  status: working_draft
+  updated_utc: '2026-09-11'
+artifacts:
+  readable: papers/P003_alpha_charge_action/paper.md
+  latex: papers/P003_alpha_charge_action/main.tex
+  bibliography: papers/P003_alpha_charge_action/refs.bib
+  outline: papers/P003_alpha_charge_action/outline.md
+sections:
+- id: S1
+  title: Trefoil closure and scaling family
+  nodes:
+  - N016
+  - N017
+- id: S2
+  title: Charge-energy-action reduction and normalization gap
+  nodes:
+  - N018

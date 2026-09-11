@@ -1,0 +1,34 @@
+{
+  "benchmark": {
+    "inverse": 137.035999177,
+    "source": "CODATA 2022, benchmark only",
+    "uncertainty": 2.1e-08
+  },
+  "comparison": {
+    "predicted_inverse": null,
+    "residual": null,
+    "residual_in_benchmark_uncertainties": null,
+    "status": "not_derived"
+  },
+  "diagnostic_profile": {
+    "C_Q": 1,
+    "C_U_exact": 3.7011016504085092,
+    "C_U_numeric": 3.7011016504085092,
+    "amplitude_freedom": [
+      {
+        "alpha": 0.0033953054526271007,
+        "eta_em": 0.001
+      },
+      {
+        "alpha": 0.03395305452627101,
+        "eta_em": 0.01
+      },
+      {
+        "alpha": 0.33953054526271004,
+        "eta_em": 0.1
+      }
+    ],
+    "charge_integral": 1.0000000000000002,
+    "classification": "supplied_source_not_electron"
+  }
+}

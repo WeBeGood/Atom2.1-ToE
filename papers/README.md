@@ -55,3 +55,5 @@ A standard derivation may constrain a project hypothesis, but it must not be pre
 - `P002_trinity_vector_baseline` — vector-first 120° two-wave calculation and explicit Atom 2.1 interpretation boundary.
 
 Later CMB, QED, particle, or nonlinear-field papers should be separate manuscripts rather than being folded into the vector-baseline paper.
+
+- `P003_alpha_charge_action` — closure family, conditional alpha reduction and explicit unresolved normalization.
