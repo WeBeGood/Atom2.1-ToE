@@ -18,6 +18,13 @@ questions:
   desired_output: Angle-dependent kernel M_A2.1(theta), conserved quantities, and clear separation from
     ordinary FTL claims.
 - id: TIRED-LIGHT
+  ledger_entries:
+  - TL-TENSION-TWIST
+  - TL-VOID-FILAMENT
+  - DARK-TENSION-TWIST
+  - TL-LOSS-LAW
+  - TL-KAPPA-AUDIT
+  provenance: notes/grok_tired_light_ledger_additions.md
   prompt: Develop parallel tired-light candidate mechanisms for Traveler photon + Void CMB photon + Neutrino
     Kink interactions.
   desired_output: Charge-to-magnetic conversion efficiency, redshift accumulation law, and falsifiable

@@ -64,6 +64,92 @@ settled:
   notes:
   - This entry is the main ledger correction requested on 2026-09-07.
 not_settled:
+- id: TL-TENSION-TWIST
+  title: Longitudinal tension transfer into loop twist
+  status: open
+  category: conjecture
+  statement: Traveling NewWave Charge-Only longitudinal tension may transfer energy into cold void loops
+    or Neutrino Ether structures, lowering frequency while preserving propagation direction; receiving
+    structures gain stored twist/restless mass.
+  attribution: Craig Fink (WeBeGood), with Grok-assisted exploration; user terminology clarified in the
+    supplied discussion.
+  open_limits:
+  - Specify the interaction and receiving degrees of freedom, including energy and forward momentum transfer.
+  - Derive frequency conversion rather than amplitude attenuation; derive per-event angular and spectral
+    preservation.
+  - Loop phase locking and stability remain to be supplied or linked to existing derivations.
+  provenance: notes/grok_tired_light_ledger_additions.md
+- id: TL-VOID-FILAMENT
+  title: Environment-dependent redshift and propagation delay
+  status: open
+  category: conjecture
+  statement: At comparable path lengths, cold void paths may produce greater longitudinal Charge-Only
+    frequency loss but less delay than cosmic-web filament paths; filament matter/knots/twist may increase
+    delay and Magnetic-Only lensing.
+  attribution: Craig Fink (WeBeGood); September 5 void/filament conjecture and terminology correction.
+  open_limits:
+  - Derive dependence on local ether state and separate propagation-speed change from additional bent-path
+    length.
+  - The glass analogy supplies no constitutive law. Cosmic-web filament is intended, not a separate topological
+    cosmic string.
+  - Redshift is longitudinal in this conjecture; the unconfirmed transverse-redshift wording is superseded.
+  provenance: notes/grok_tired_light_ledger_additions.md
+- id: DARK-TENSION-TWIST
+  title: Dark energy as longitudinal tension; dark matter as magnetic twist
+  status: open
+  category: conjecture
+  statement: Within Atom 2.1, dark energy is proposed to correspond to alternating charge attraction and
+    longitudinal tension/compression along seed-lines, while dark matter corresponds to magnetic circulation,
+    loops and stored twist.
+  attribution: Craig Fink (WeBeGood), user-stated physical identification.
+  equations:
+  - p_vec = p n_hat; d(p_vec) = n_hat dp + p d(n_hat).
+  open_limits:
+  - The momentum decomposition is an identity; assigning magnitude change to tension and direction change
+    to magnetic coupling is the conjecture.
+  - Twist stores energy too; a tension-to-twist transfer does not automatically establish confined rest
+    mass.
+  - Derive the proposed interactions and compare their predictions with the phenomena attributed to dark
+    energy and dark matter.
+  provenance: notes/grok_tired_light_ledger_additions.md
+- id: TL-LOSS-LAW
+  title: Conditional redshift accumulation and reservoir balance
+  status: open
+  category: derived_proposed
+  statement: If d ln(nu)/ds = -a_loss(s), then 1+z = exp(integral a_loss(s) ds); the loss law is assumed,
+    not derived from the interference calculation.
+  attribution: Grok-assisted discussion; conditional integration retained with the audit limitations.
+  units: 'a_loss: m^-1; s: m; nu: Hz; z: dimensionless. a_loss is not the fine-structure constant.'
+  assumptions:
+  - For independent targets of number density n_target and cross-section sigma, dP=n_target sigma ds;
+    a_loss=kappa n_target sigma describes mean energy loss for fixed fractional loss kappa.
+  - A mean energy-loss law is not automatically a single common spectral redshift.
+  open_limits:
+  - Using a_loss=H0/c fits the local slope; it does not predict H0.
+  - Model the receiving reservoir separately from observed CMB radiation unless an explicit equivalence
+    and thermalization mechanism are supplied.
+  - Derive reservoir energy balance, spectral broadening, image preservation and source-duration stretching;
+    a common extra travel delay does not stretch a light curve.
+  provenance: notes/grok_tired_light_ledger_additions.md
+- id: TL-KAPPA-AUDIT
+  title: Grok 120-degree and loop coefficients retained for audit
+  status: open
+  category: derived_proposed
+  statement: Grok proposed kappa_120=1/8 from an interference energy-density contrast and kappa_loop=3/8
+    from three locks. These are recorded as proposed claims, not accepted transfer coefficients.
+  attribution: Grok calculation as reproduced and audited in the user-supplied conversation.
+  corrections:
+  - The 7/8 normalized energy density is conditional on the specified polarization and local phase; propagation
+    angle and relative phase are distinct.
+  - The 1/8 interference contrast does not by itself demonstrate irreversible transfer.
+  - If each of three sequential events removes 1/8 of the remaining energy, the total is 1-(7/8)^3=169/512=0.330078125.
+    The value 3/8 requires each fraction to refer to the original energy.
+  - Capture probability and loss per capture must not count kappa twice.
+  open_limits:
+  - Derive the coupling, cross-section and phase-lock dynamics before promoting either coefficient.
+  - Preserve the original Grok claims for traceability; the corrected conditional arithmetic is not a
+    proven physical conversion efficiency.
+  provenance: notes/grok_tired_light_ledger_additions.md
 - id: ALPHA
   claim: Parameter-free fine-structure constant from stable charged NewWave closure.
   status: open
