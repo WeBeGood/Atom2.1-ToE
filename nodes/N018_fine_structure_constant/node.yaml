@@ -1,0 +1,33 @@
+meta:
+  id: N018
+  title: Fine-structure coupling from closure (open)
+  status: open
+  maturity: M1
+  updated_utc: '2026-09-11'
+  owner: WeBeGood
+depends_on:
+- N017
+- N000
+scope:
+  domain: Atom 2.1 frontier; conditional mathematics, not an accepted particle derivation
+  coordinate_system: x along the incoming seed-line; loop arclength s when specified
+  units: SI explicit; restore c and hbar from natural units
+claims: []
+assumptions:
+- No closure law or numerical alpha is inferred from the 120-degree interference contrast.
+- Conditional relations in the narrative are not promoted to settled ledger claims.
+interfaces:
+  exports:
+  - Dimensionless charge/action interface and corrected unit conventions
+  - Prediction and residual unavailable until closure and coupling are derived
+  imports:
+  - 'N017: unresolved stable electron closure'
+  - 'N000: Maxwell divergence and unit conventions'
+artifacts:
+  narrative: nodes/N018_fine_structure_constant/narrative.md
+validation:
+  checks:
+  - Review units, all free parameters, boundary conditions and provenance before promotion.
+  falsifiers:
+  - Reject a specific proposed solution if it violates its stated field equations
+    or independently tested predictions.

@@ -1,20 +1,37 @@
 meta:
   name: Atom2.1 Frontier
   schema: atom2.1.frontier
-  version: 0.1.0
+  version: 0.1.1
 questions:
 - id: SCALING
   prompt: What explicit geometric scaling law maps neutrino boundary phenomena to electron trefoil closure?
+  node: N017
+  narrative: nodes/N017_electron_closure_scaling/narrative.md
   desired_output: Equation set with units + testable predictions.
 - id: ALPHA
   prompt: Derive fine-structure constant alpha from knot/phase-lock geometry (including correction terms).
+  node: N018
+  narrative: nodes/N018_fine_structure_constant/narrative.md
   desired_output: Derivation + numeric target alpha^-1 ≈ 137.035999.
+- id: SUPERLUMINAL
+  prompt: Formalize the Mach>1 Superluminal Realm from incidence angles 120° to 180°, including the Mach-infinity
+    limit.
+  desired_output: Angle-dependent kernel M_A2.1(theta), conserved quantities, and clear separation from
+    ordinary FTL claims.
+- id: TIRED-LIGHT
+  prompt: Develop parallel tired-light candidate mechanisms for Traveler photon + Void CMB photon + Neutrino
+    Kink interactions.
+  desired_output: Charge-to-magnetic conversion efficiency, redshift accumulation law, and falsifiable
+    observational signatures.
 - id: ENTANGLE
-  prompt: Formalize θ=180° instantaneous/entanglement boundary in Atom 2.1 and propose falsifiable tests.
+  prompt: Formalize θ=180° Mach-infinity/entanglement boundary in Atom 2.1 and propose falsifiable tests.
   desired_output: Operational definition + experimental signatures.
 tasks:
 - id: BOOTPACK
   action: Validate load_order across seed/ledger/state/frontier.
+- id: REGIME-AUDIT
+  action: Audit ledger and node text so Mach-1 Luminal Realm statements are not mistaken for Superluminal
+    Realm claims.
 - id: SIM-INIT
   action: Define simulation initial conditions mapping primitives to fields + boundary conditions.
 - id: LLM-INIT

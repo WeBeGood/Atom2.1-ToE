@@ -1,21 +1,103 @@
 meta:
   name: Atom2.1 Derived Ledger
   schema: atom2.1.ledger
-  version: 0.1.0
+  version: 0.1.1
 settled:
+- id: LUMINAL
+  title: Mach-1 Luminal Realm convention
+  status: accepted
+  statement: Atom 2.1's developed core defaults to c=1, Mach 1, waves following waves in the BBRV photon/CMB
+    sea.
+  assumptions:
+  - Natural units are used inside the Luminal Realm.
+  - SI factors of c must be restored before comparing to external measurements.
+  open_limits:
+  - Does not itself prove particle closure, gravity, or tired-light mechanisms.
+  notes:
+  - This resolves the prior Mach-1 dimensional-mixing confusion by declaring the working unit convention.
+- id: EMASS
+  title: Restless/Rest Neutrino Mass equivalence in c=1 units
+  status: accepted
+  statement: 'With c=1, E=mc^2 reduces to E=m; Restless Neutrino Mass and Rest Neutrino Mass are treated
+    as the same mass-energy in different topological states: open wave motion versus stored curl/kink/loop/knot
+    structure.'
+  assumptions:
+  - This is an Atom 2.1 natural-unit statement, not a claim that ordinary photons have rest mass in standard
+    relativity.
+  open_limits:
+  - Requires careful SI restoration in cosmology, G, and Lambda derivations.
+  notes:
+  - Use this as the default mass-energy language for BBRV/Luminal Realm work.
 - id: A120
-  claim: 120° stability axiom recorded as core resonance condition.
+  title: Luminal Trinity 120° threshold
   status: accepted
+  statement: The 120° Trinity Addition is retained as the Mach-1 Luminal Realm threshold for two Mach-1
+    wave structures defining a third Mach-1 NewWave mode.
+  assumptions:
+  - Trinity Addition is an Atom 2.1 NewWave rule and must be distinguished from ordinary four-momentum
+    addition.
+  open_limits:
+  - The 120° case is not the entire Superluminal Realm and is not by itself a tired-light derivation.
+  notes:
+  - Older wording that made 120° the only interaction angle should be read as Luminal-Realm shorthand.
 - id: CMBMED
-  claim: CMB treated as stabilizing medium for wave-knot resonances.
+  title: CMB/BBRV stabilizing medium
   status: accepted
+  statement: The CMB is treated as the observable photon-sea/BBRV medium supporting resonance, seed-line
+    behavior, and wave-knot stabilization.
+  assumptions:
+  - CMB medium language belongs to Atom 2.1 model-building unless cross-walked to standard cosmology.
+  open_limits:
+  - Does not fix the absolute vacuum-energy scale by itself.
+  notes:
+  - Use BBRV photon/CMB sea as the default Luminal Realm background.
+- id: REGIME_SPLIT
+  title: Luminal and Superluminal regime separation
+  status: accepted
+  statement: Atom 2.1 is now explicitly divided into the developed Mach-1 Luminal Realm and the proposed
+    Mach>1 Superluminal Realm. Most prior ledger work belongs to the Luminal Realm.
+  assumptions:
+  - Mach>1 language describes geometric/interference/phase-channel artifacts unless explicitly proven
+    otherwise.
+  open_limits:
+  - Superluminal Realm mathematics remains frontier work.
+  notes:
+  - This entry is the main ledger correction requested on 2026-09-07.
 not_settled:
+- id: SCALING
+  claim: Derive stable seed-line to electron closure; see nodes/N017_electron_closure_scaling/narrative.md.
+  status: open
+- id: ALPHA
+  claim: Derive electromagnetic coupling from closure and charge/action normalization; see nodes/N018_fine_structure_constant/narrative.md.
+  status: open
 - id: E-GEOM
   claim: Electron geometry finalized (trefoil scaling law) and linked to alpha.
   status: open
 - id: H-SPEC
   claim: Derive hydrogen spectrum from Atom 2.1 knot/field dynamics.
   status: open
-- id: MACH1
-  claim: Resolve Mach 1 energy / dimensional-mixing discrepancy flagged previously.
+- id: SUPERLUMINAL
+  title: Mach>1 Superluminal Realm
   status: open
+  statement: Future Atom 2.1 work may extend from Mach 1 toward Mach infinity, with incidence angles 120°
+    to 180°, superluminal-looking channel artifacts, and Mach-infinity curl/spike limits.
+  assumptions:
+  - No ordinary matter, energy, or information is assumed to travel faster than c.
+  open_limits:
+  - Requires an angle-dependent kernel M_A2.1(theta) and a tested mapping from 120° to 180°.
+  notes:
+  - 'Candidate working relation: M_A2.1(theta)=1/(2 cos(theta/2)); 120° maps to Mach 1 and 180° maps to
+    Mach infinity.'
+- id: TIRED-LIGHT
+  title: Tired-light candidate mechanisms
+  status: open
+  statement: Tired light remains an unsettled parallel family of proposed mechanisms involving Traveler
+    photons, Void CMB photons, NewWave charge/magnetic oscillation, and Neutrino Kink coupling.
+  assumptions:
+  - Traveler photon amplitude is usually much larger than the void CMB amplitude.
+  - A 180° interaction needs a symmetry breaker such as polarization, chirality, local BBRV geometry,
+    or a Neutrino Kink to define a 90° transverse curl direction.
+  open_limits:
+  - Requires a redshift accumulation law and a conservation-consistent charge-to-magnetic conversion efficiency.
+  notes:
+  - Do not present one tired-light mechanism as settled until the math closes.

@@ -1,0 +1,31 @@
+meta:
+  id: N017
+  title: Electron closure and seed-line scaling (open)
+  status: open
+  maturity: M1
+  updated_utc: '2026-09-11'
+  owner: WeBeGood
+depends_on:
+- N016
+scope:
+  domain: Atom 2.1 frontier; conditional mathematics, not an accepted particle derivation
+  coordinate_system: x along the incoming seed-line; loop arclength s when specified
+  units: SI explicit; restore c and hbar from natural units
+claims: []
+assumptions:
+- No closure law or numerical alpha is inferred from the 120-degree interference contrast.
+- Conditional relations in the narrative are not promoted to settled ledger claims.
+interfaces:
+  exports:
+  - Conditional dimensional form L_e = L_nu F(kappa L_nu, dimensionless parameters)
+  - Open stable-closure requirements; no selected electron solution
+  imports:
+  - 'N016: candidate seed-line and Beltrami inverse length; stability unresolved'
+artifacts:
+  narrative: nodes/N017_electron_closure_scaling/narrative.md
+validation:
+  checks:
+  - Review units, all free parameters, boundary conditions and provenance before promotion.
+  falsifiers:
+  - Reject a specific proposed solution if it violates its stated field equations
+    or independently tested predictions.

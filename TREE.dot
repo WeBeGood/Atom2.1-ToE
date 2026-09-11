@@ -7,6 +7,8 @@ digraph Atom21Nodes {
   "N012" [label="N012\nEM potentials and gauge (quantization on-ramp)"];
   "N015" [label="N015\nTwo coherent vacuum plane waves at 120 degrees (vector baseline)"];
   "N016" [label="N016\nCMB-spectrum seeded Beltrami line (Trinity phase-lock extension)"];
+  "N017" [label="N017\nElectron closure and seed-line scaling (open)"];
+  "N018" [label="N018\nFine-structure coupling from closure (open)"];
   "N000" -> "N010";
   "N000" -> "N011";
   "N000" -> "N012";
@@ -16,4 +18,7 @@ digraph Atom21Nodes {
   "N010" -> "N016";
   "N011" -> "N016";
   "N012" -> "N016";
+  "N016" -> "N017";
+  "N017" -> "N018";
+  "N000" -> "N018";
 }

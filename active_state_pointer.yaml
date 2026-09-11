@@ -1,10 +1,13 @@
 meta:
   name: Atom2.1 Active State Pointer
   schema: atom2.1.state
-  version: 0.1.0
+  version: 0.1.1
 next_focus:
+- Continue N017 stable electron closure, then N018 charge/action coupling; no numerical alpha prediction
+  yet.
 - Maintain bootstrap pack integrity in GitHub.
-- Expand to full Atom 2.1 YAML (axioms, primitives, mappings, contracts).
+- Keep existing derivations in the c=1, Mach-1 Luminal Realm unless explicitly marked Superluminal.
+- 'Expand Superluminal Realm only as open theory: Mach>1 to Mach infinity, incidence angles 120° to 180°.'
 - 'Formalize electron model milestone: L_e = f(L_ν) candidate scaling.'
 working_set:
   open_issues:
@@ -12,6 +15,8 @@ working_set:
     short: Electron geometry + alpha derivation
   - id: H-SPEC
     short: Hydrogen spectrum derivation
-  - id: MACH1
-    short: Mach 1 energy/dimensions discrepancy
+  - id: SUPERLUMINAL
+    short: Mach>1 angle kernel and Mach-infinity geometry
+  - id: TIRED-LIGHT
+    short: Traveler photon + Void CMB + Neutrino Kink tired-light mechanisms
 operating_contract_ref: contract.rules

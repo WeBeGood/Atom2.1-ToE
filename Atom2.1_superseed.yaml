@@ -1,13 +1,15 @@
 meta:
   name: "Atom2.1 SuperSeed"
   schema: "atom2.1.superseed"
-  version: "0.1.0"
+  version: "0.1.1"
   created_utc: "2026-02-19"
+  updated_utc: "2026-09-07"
   owner: "WeBeGood"
   purpose:
     - "Single YAML that declares the full Atom 2.1 initialization contract"
     - "Source-of-truth that can regenerate the split-pack files"
     - "Initialize LLM, human, or simulation consistently"
+    - "Make the Mach-1 Luminal Realm versus Mach>1 Superluminal Realm separation explicit"
 
 outputs:
   files:
@@ -33,6 +35,7 @@ contract:
     scope_rule: "Stay inside Atom 2.1 vocabulary unless user asks for cross-walk to standard physics."
     rigor_rule: "Use units, dimensions, and explicit assumptions; flag speculation."
     attribution_rule: "Treat WeBeGood as co-creator; preserve IP sensitivity."
+    regime_rule: "Default Atom 2.1 discussions to the Mach-1 Luminal Realm with c=1 unless the user explicitly enters the Mach>1 Superluminal Realm."
 
 manifest:
   meta:
@@ -65,57 +68,144 @@ seed_latest:
   meta:
     name: "Atom2.1 Seed (Latest)"
     schema: "atom2.1.seed"
-    version: "0.1.0"
+    version: "0.1.1"
   axioms:
+    - id: "LUMINAL"
+      name: "Mach-1 Luminal Realm"
+      statement: "Most Atom 2.1 development is in the Luminal Realm: c=1, Mach 1, waves following waves through the Beltrami Blackbody Radiation Vortex photon/CMB sea."
+    - id: "EMASS"
+      name: "Natural-Unit Mass-Energy Equivalence"
+      statement: "In the Mach-1 Luminal Realm, Einstein's E=mc^2 is handled in natural units as E=m; Restless Neutrino Mass and Rest Neutrino Mass are the same mass-energy in different topological states."
     - id: "A120"
-      name: "Trinity 120° Stability"
-      statement: "Wave + antiwave at 120° yields stable luminal fusion (matter formation)."
+      name: "Luminal Trinity 120° Threshold"
+      statement: "Within the Mach-1 Luminal Realm, the 120° Trinity Addition is treated as the first stable NewWave phase-lock threshold, not as the full future superluminal angle domain."
     - id: "CMBMED"
       name: "CMB as Stabilizing Medium"
-      statement: "CMB acts as universal medium supporting resonance / stabilization of wave knots."
+      statement: "CMB acts as universal medium supporting resonance / stabilization of wave knots in the Beltrami Blackbody Radiation Vortex."
+    - id: "REGIME_SPLIT"
+      name: "Luminal versus Superluminal Regimes"
+      statement: "Atom 2.1 separates the developed Mach-1 Luminal Realm from the proposed Mach>1 Superluminal Realm, where incidence angles run from 120° toward 180° and Mach-infinity is a geometric/interference limit."
   primitives:
     - "photon_wave"
     - "antiwave"
-    - "phase_lock_120"
+    - "trinity_addition"
+    - "phase_lock_120_luminal_threshold"
+    - "luminal_realm_mach_1"
+    - "superluminal_realm_mach_gt_1"
+    - "mach_infinity_180_limit"
     - "knot_loop"
     - "seed_line"
+    - "neutrino_kink"
     - "beltrami_vortex_mode"
   canonical_notes:
     - "Particles modeled as self-sustaining geometric wave patterns; rest mass from circular energy circulation."
     - "Neutrino phenomena interpreted as boundary/turning-region behavior at loop edges."
     - "Electron model under development; suspected geometric scaling relates to fine-structure constant."
+    - "Default ledger interpretation: unless a section explicitly says Superluminal Realm, treat the math as c=1, Mach-1 Luminal Realm math."
+    - "Superluminal Realm development is proposed/open: it concerns interference geometry, phase closure, superluminal-looking channel artifacts, and Mach-infinity limits, not ordinary energy traveling faster than c."
 
 derived_ledger:
   meta:
     name: "Atom2.1 Derived Ledger"
     schema: "atom2.1.ledger"
-    version: "0.1.0"
+    version: "0.1.1"
   settled:
+    - id: "LUMINAL"
+      title: "Mach-1 Luminal Realm convention"
+      status: "accepted"
+      statement: "Atom 2.1's developed core defaults to c=1, Mach 1, waves following waves in the BBRV photon/CMB sea."
+      assumptions:
+        - "Natural units are used inside the Luminal Realm."
+        - "SI factors of c must be restored before comparing to external measurements."
+      open_limits:
+        - "Does not itself prove particle closure, gravity, or tired-light mechanisms."
+      notes:
+        - "This resolves the prior Mach-1 dimensional-mixing confusion by declaring the working unit convention."
+    - id: "EMASS"
+      title: "Restless/Rest Neutrino Mass equivalence in c=1 units"
+      status: "accepted"
+      statement: "With c=1, E=mc^2 reduces to E=m; Restless Neutrino Mass and Rest Neutrino Mass are treated as the same mass-energy in different topological states: open wave motion versus stored curl/kink/loop/knot structure."
+      assumptions:
+        - "This is an Atom 2.1 natural-unit statement, not a claim that ordinary photons have rest mass in standard relativity."
+      open_limits:
+        - "Requires careful SI restoration in cosmology, G, and Lambda derivations."
+      notes:
+        - "Use this as the default mass-energy language for BBRV/Luminal Realm work."
     - id: "A120"
-      claim: "120° stability axiom recorded as core resonance condition."
+      title: "Luminal Trinity 120° threshold"
       status: "accepted"
+      statement: "The 120° Trinity Addition is retained as the Mach-1 Luminal Realm threshold for two Mach-1 wave structures defining a third Mach-1 NewWave mode."
+      assumptions:
+        - "Trinity Addition is an Atom 2.1 NewWave rule and must be distinguished from ordinary four-momentum addition."
+      open_limits:
+        - "The 120° case is not the entire Superluminal Realm and is not by itself a tired-light derivation."
+      notes:
+        - "Older wording that made 120° the only interaction angle should be read as Luminal-Realm shorthand."
     - id: "CMBMED"
-      claim: "CMB treated as stabilizing medium for wave-knot resonances."
+      title: "CMB/BBRV stabilizing medium"
       status: "accepted"
+      statement: "The CMB is treated as the observable photon-sea/BBRV medium supporting resonance, seed-line behavior, and wave-knot stabilization."
+      assumptions:
+        - "CMB medium language belongs to Atom 2.1 model-building unless cross-walked to standard cosmology."
+      open_limits:
+        - "Does not fix the absolute vacuum-energy scale by itself."
+      notes:
+        - "Use BBRV photon/CMB sea as the default Luminal Realm background."
+    - id: "REGIME_SPLIT"
+      title: "Luminal and Superluminal regime separation"
+      status: "accepted"
+      statement: "Atom 2.1 is now explicitly divided into the developed Mach-1 Luminal Realm and the proposed Mach>1 Superluminal Realm. Most prior ledger work belongs to the Luminal Realm."
+      assumptions:
+        - "Mach>1 language describes geometric/interference/phase-channel artifacts unless explicitly proven otherwise."
+      open_limits:
+        - "Superluminal Realm mathematics remains frontier work."
+      notes:
+        - "This entry is the main ledger correction requested on 2026-09-07."
   not_settled:
+    - id: "SCALING"
+      claim: "Derive stable seed-line to electron closure; see nodes/N017_electron_closure_scaling/narrative.md."
+      status: "open"
+    - id: "ALPHA"
+      claim: "Derive electromagnetic coupling from closure and charge/action normalization; see nodes/N018_fine_structure_constant/narrative.md."
+      status: "open"
     - id: "E-GEOM"
       claim: "Electron geometry finalized (trefoil scaling law) and linked to alpha."
       status: "open"
     - id: "H-SPEC"
       claim: "Derive hydrogen spectrum from Atom 2.1 knot/field dynamics."
       status: "open"
-    - id: "MACH1"
-      claim: "Resolve Mach 1 energy / dimensional-mixing discrepancy flagged previously."
+    - id: "SUPERLUMINAL"
+      title: "Mach>1 Superluminal Realm"
       status: "open"
+      statement: "Future Atom 2.1 work may extend from Mach 1 toward Mach infinity, with incidence angles 120° to 180°, superluminal-looking channel artifacts, and Mach-infinity curl/spike limits."
+      assumptions:
+        - "No ordinary matter, energy, or information is assumed to travel faster than c."
+      open_limits:
+        - "Requires an angle-dependent kernel M_A2.1(theta) and a tested mapping from 120° to 180°."
+      notes:
+        - "Candidate working relation: M_A2.1(theta)=1/(2 cos(theta/2)); 120° maps to Mach 1 and 180° maps to Mach infinity."
+    - id: "TIRED-LIGHT"
+      title: "Tired-light candidate mechanisms"
+      status: "open"
+      statement: "Tired light remains an unsettled parallel family of proposed mechanisms involving Traveler photons, Void CMB photons, NewWave charge/magnetic oscillation, and Neutrino Kink coupling."
+      assumptions:
+        - "Traveler photon amplitude is usually much larger than the void CMB amplitude."
+        - "A 180° interaction needs a symmetry breaker such as polarization, chirality, local BBRV geometry, or a Neutrino Kink to define a 90° transverse curl direction."
+      open_limits:
+        - "Requires a redshift accumulation law and a conservation-consistent charge-to-magnetic conversion efficiency."
+      notes:
+        - "Do not present one tired-light mechanism as settled until the math closes."
 
 active_state_pointer:
   meta:
     name: "Atom2.1 Active State Pointer"
     schema: "atom2.1.state"
-    version: "0.1.0"
+    version: "0.1.1"
   next_focus:
+    - "Continue N017 stable electron closure, then N018 charge/action coupling; no numerical alpha prediction yet."
     - "Maintain bootstrap pack integrity in GitHub."
-    - "Expand to full Atom 2.1 YAML (axioms, primitives, mappings, contracts)."
+    - "Keep existing derivations in the c=1, Mach-1 Luminal Realm unless explicitly marked Superluminal."
+    - "Expand Superluminal Realm only as open theory: Mach>1 to Mach infinity, incidence angles 120° to 180°."
     - "Formalize electron model milestone: L_e = f(L_ν) candidate scaling."
   working_set:
     open_issues:
@@ -123,28 +213,42 @@ active_state_pointer:
         short: "Electron geometry + alpha derivation"
       - id: "H-SPEC"
         short: "Hydrogen spectrum derivation"
-      - id: "MACH1"
-        short: "Mach 1 energy/dimensions discrepancy"
+      - id: "SUPERLUMINAL"
+        short: "Mach>1 angle kernel and Mach-infinity geometry"
+      - id: "TIRED-LIGHT"
+        short: "Traveler photon + Void CMB + Neutrino Kink tired-light mechanisms"
   operating_contract_ref: "contract.rules"
 
 frontier:
   meta:
     name: "Atom2.1 Frontier"
     schema: "atom2.1.frontier"
-    version: "0.1.0"
+    version: "0.1.1"
   questions:
     - id: "SCALING"
       prompt: "What explicit geometric scaling law maps neutrino boundary phenomena to electron trefoil closure?"
+      node: "N017"
+      narrative: "nodes/N017_electron_closure_scaling/narrative.md"
       desired_output: "Equation set with units + testable predictions."
     - id: "ALPHA"
       prompt: "Derive fine-structure constant alpha from knot/phase-lock geometry (including correction terms)."
+      node: "N018"
+      narrative: "nodes/N018_fine_structure_constant/narrative.md"
       desired_output: "Derivation + numeric target alpha^-1 ≈ 137.035999."
+    - id: "SUPERLUMINAL"
+      prompt: "Formalize the Mach>1 Superluminal Realm from incidence angles 120° to 180°, including the Mach-infinity limit."
+      desired_output: "Angle-dependent kernel M_A2.1(theta), conserved quantities, and clear separation from ordinary FTL claims."
+    - id: "TIRED-LIGHT"
+      prompt: "Develop parallel tired-light candidate mechanisms for Traveler photon + Void CMB photon + Neutrino Kink interactions."
+      desired_output: "Charge-to-magnetic conversion efficiency, redshift accumulation law, and falsifiable observational signatures."
     - id: "ENTANGLE"
-      prompt: "Formalize θ=180° instantaneous/entanglement boundary in Atom 2.1 and propose falsifiable tests."
+      prompt: "Formalize θ=180° Mach-infinity/entanglement boundary in Atom 2.1 and propose falsifiable tests."
       desired_output: "Operational definition + experimental signatures."
   tasks:
     - id: "BOOTPACK"
       action: "Validate load_order across seed/ledger/state/frontier."
+    - id: "REGIME-AUDIT"
+      action: "Audit ledger and node text so Mach-1 Luminal Realm statements are not mistaken for Superluminal Realm claims."
     - id: "SIM-INIT"
       action: "Define simulation initial conditions mapping primitives to fields + boundary conditions."
     - id: "LLM-INIT"
@@ -162,4 +266,4 @@ init_md:
 llm_prompt:
   title: "ATOM 2.1 BOOTSTRAP (Single-shot)"
   notes:
-    - "This section is used to generate LLM_BOOTSTRAP_PROMPT.txt in outputs."
+    - "This section is used to generate LLM_BOOTSTRAP_PROMPT.txt."
