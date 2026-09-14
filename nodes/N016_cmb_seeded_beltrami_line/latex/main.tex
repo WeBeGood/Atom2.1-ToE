@@ -1,31 +1,35 @@
 \documentclass[11pt]{article}
-\usepackage{amsmath,amssymb}
-\usepackage{geometry}
+\usepackage{amsmath,amssymb,geometry,hyperref}
 \geometry{margin=1in}
-
-\title{N016: CMB-Spectrum Seeded Beltrami Line (Trinity Phase-Lock Extension)}
-\author{WeBeGood (Atom 2.1 ToE)}
-\date{}
-
+\title{N016: All-Direction CMB, Trinity Representations and a Standing Beltrami-Maxwell Solution}
+\author{Craig Fink / WeBeGood\\AI-assisted working derivation}
+\date{2026-09-14}
 \begin{document}
 \maketitle
-
-\section{Seed-line definition}
-Let $\mathcal{S}(\mathbf{E},\mathbf{B})$ be a gauge-invariant seed functional (N015). A candidate line satisfies a persistent criterion along an axis/parameter.
-
-\section{CMB spectral interface}
-Introduce a spectral energy density $u_{\nu}(\nu;T_{\mathrm{cmb}})$ with units $\mathrm{J/m^3/Hz}$ as a broadband forcing/constraint.
-
-\section{Beltrami ansatz}
-Use curl-eigenfield family:
-\begin{equation}
-\nabla\times \mathbf{A} = \kappa\, \mathbf{A}
-\end{equation}
-with $\kappa$ an inverse length scale.
-
-\section{Interpretation note}
-Historical "aether" parallels (Kelvin-era intuition) are treated as interpretive context, not a mathematical premise.
-
-\bibliographystyle{plain}
-\bibliography{refs,../../refs/global}
+\section{Scope}
+The owner's intended Trinity construction acts within the full all-direction CMB/BBRV field, not just two isolated incident beams. The observed blackbody spectrum supplies a spectral input. A coherent standing BBRV state and its neutrino identification remain project hypotheses. This note supplies exact conditional representations and a special solution; the complete readable paper is P004.
+\section{Blackbody normalization}
+For Planck constant $h_P$ and temperature $T$,
+\[
+u_\nu=\frac{8\pi h_P\nu^3}{c^3(e^{h_P\nu/(k_BT)}-1)},\quad
+u=\frac{8\pi^5k_B^4T^4}{15h_P^3c^3},\quad
+n_\gamma=\frac{16\pi\zeta(3)}{c^3}\left(\frac{k_BT}{h_P}\right)^3.
+\]
+The symbols $u_\nu$ and $u$ denote spectral and total energy density. The spectrum does not fix microscopic relative phases.
+\section{Standing and cyclic representations}
+Opposite-direction traveling modes transform unitarily into sine and cosine standing spatial modes. For a spatial rotation operator $\mathcal R$ with $\mathcal R^3=I$ on a compatible domain, define
+\[
+\omega=e^{2\pi i/3},\qquad\Pi_j=\frac13\sum_{r=0}^{2}\omega^{-jr}\mathcal R^r.
+\]
+The root-of-unity identity proves orthogonality, completeness and commutation with Maxwell evolution. For finite-energy fields $U[F]=\sum_jU[\Pi_jF]$. This decomposes existing degrees of freedom. A unitary transform of equal-occupation thermal covariance $P I$ preserves that covariance.
+\section{Exact standing Beltrami solution}
+Let a real divergence-free field satisfy $\nabla\times\mathbf e=k\mathbf e$, for constant $k>0$. Then
+\[
+\mathbf E=\mathbf e\cos(ckt),\qquad\mathbf B=-\mathbf e\sin(ckt)/c
+\]
+satisfy source-free Maxwell. An example is $\mathbf e=E_0(\cos kz,-\sin kz,0)$. Rotated same-$k$ sums are also valid. Here $F=\mathbf e e^{-ickt}$, $u=\epsilon_0|\mathbf e|^2/2$, and $\mathbf S=0$. Thus luminal constituents permit stationary bulk energy. The field exchanges electric and magnetic energy but is generally non-null and not localized.
+\section{Limitations with proofs}
+Any constant-phase sum of equal curl-eigenvalue fields retains that eigenvalue, so no unique $120^\circ$ phase follows from curl alone. Free equal-frequency phases persist neutrally, not attractively. A square-integrable constant-real-nonzero-$\lambda$ eigenfield on all of $\mathbb R^3$ would have Fourier support only on the measure-zero sphere $|\mathbf k|=|\lambda|$ and must vanish. Periodic modes and broadband knots are distinct cases.
+\section{Next physical step}
+Specify the NewWave observable, correlations, localization, energy-momentum and dynamics. The representation theorem does not determine neutrino mass or weak interactions. Full proofs and reproducible code are in N016 and P004; corrected helicity and line-energy relations are in N019.
 \end{document}

@@ -76,3 +76,7 @@ This node assumes infinite monochromatic coherent plane waves in linear vacuum e
 ## Paper handoff
 
 The full human-readable derivation, journal-style scope statements, references, table, and reproducibility notes are in `papers/P002_trinity_vector_baseline/paper.md`.
+
+## Full-field continuation (2026-09-14)
+
+N015 is not the complete owner-proposed CMB construction. The intended all-direction standing-field interpretation is developed in [N016](../N016_cmb_seeded_beltrami_line/narrative.md) and [P004](../../papers/P004_cmb_trinity_audit/paper.md). Its exact representations and conditional standing solution should be considered before extrapolating this two-beam baseline.

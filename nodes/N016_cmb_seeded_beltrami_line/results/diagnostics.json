@@ -1,0 +1,19 @@
+{
+  "dft_norm_error": 4.440892098500626e-16,
+  "interpretation": "Exact representation and standing solution checked; no neutrino identity or attracting lock inferred.",
+  "max_divergence": 0.0,
+  "maxwell_finite_difference_residual": 1.5777592898246716e-11,
+  "projector_algebra_error": 5.250225931237846e-16,
+  "projector_energy_error": 4.440892098500626e-16,
+  "standing_energy_error": 1.1102230246251565e-16,
+  "standing_flux_max": 3.469446951953614e-18,
+  "thermal": {
+    "energy_density_J_m3": 4.171738250885235e-14,
+    "energy_integral_relative_error": 5.073719222536965e-13,
+    "integral_x2": 2.404113806318639,
+    "integral_x3": 6.493939402270122,
+    "number_integral_relative_error": 2.284838984678572e-13,
+    "photon_density_m3": 410500842.6943533,
+    "temperature_K": 2.725
+  }
+}

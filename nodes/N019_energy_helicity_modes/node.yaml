@@ -1,0 +1,78 @@
+meta:
+  id: N019
+  title: Maxwell energy, magnetic helicity, effective line energy and C3 mass-mode audit
+  status: open
+  maturity: M3
+  updated_utc: '2026-09-14'
+  owner: WeBeGood
+depends_on: &id001
+- N000
+- N011
+- N012
+- N016
+scope:
+  classification: conditional_theorems_and_counterexamples
+  units: SI unless numerical normalization is stated
+  physical_prediction_status: No derived neutrino masses, coupling, or Hubble constant
+claims:
+- id: N019-C1
+  statement: Under constant-lambda and compatible boundary conditions, U_B=lambda H_B/(2mu0); total Maxwell energy
+    includes electric energy.
+  units: J; H_B T^2 m^4
+  proof: math/proofs.md#EH-01
+- id: N019-C2
+  statement: Grok imaginary-part helicity formula vanishes on real-lambda curl eigenfields and is not magnetic helicity.
+  units: formula disproved as stated
+  proof: math/proofs.md#EH-01
+- id: N019-C3
+  statement: Flux/helicity-preserving dilation in unbounded space gives U_B[B_a]=a U_B[B], so the cited constraint
+    alone does not select a finite equilibrium radius.
+  units: a dimensionless; energy J
+  proof: math/proofs.md#EH-02
+- id: N019-C4
+  statement: Thin-tube energy reduction requires transverse integration and geometric Jacobian; line energy density
+    need not equal mechanical tension.
+  units: J/m
+  proof: math/proofs.md#EH-03
+- id: N019-C5
+  statement: For an assumed elastic model at fixed total twist, uniform twist minimizes energy and L*=abs(Theta)sqrt(C/(2tau));
+    this does not derive C or tau from Maxwell.
+  units: L m; C J m; tau J/m
+  proof: math/proofs.md#EH-03
+- id: N019-C6
+  statement: Hermitian C3 circulants share Fourier eigenvectors but have coupling-dependent eigenvalues; real coupling
+    yields a double degeneracy.
+  units: operator units specified by chosen physical model
+  proof: math/proofs.md#EH-04
+- id: N019-C7
+  statement: Invariant mass requires total momentum and the relativistic oscillation phase is Delta m^2 c^3 D/(2E
+    hbar) for SI masses.
+  units: mass kg; phase dimensionless
+  proof: math/proofs.md#EH-05
+assumptions:
+- Every theorem has explicit domain/model conditions in math/proofs.md.
+- Numerical examples verify equations, not empirical particle identity or cosmology.
+interfaces:
+  imports: *id001
+  exports:
+  - EH-01
+  - EH-01
+  - EH-02
+  - EH-03
+  - EH-03
+  - EH-04
+  - EH-05
+artifacts:
+  narrative: nodes/N019_energy_helicity_modes/narrative.md
+  math:
+  - nodes/N019_energy_helicity_modes/math/proofs.md
+  code:
+  - nodes/N019_energy_helicity_modes/code/sim.py
+  results:
+  - nodes/N019_energy_helicity_modes/results/diagnostics.json
+validation:
+  checks:
+  - Run code/sim.py and tests/test_cmb_peer_review.py.
+  falsifiers:
+  - Violation of stated identities under their assumptions invalidates the corresponding result.
+  - No promotion of the physical model without derived dynamics and observations.

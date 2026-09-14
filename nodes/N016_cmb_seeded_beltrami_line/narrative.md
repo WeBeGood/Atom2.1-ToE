@@ -1,39 +1,13 @@
-# N016 — CMB-spectrum seeded Beltrami line (Trinity phase-lock extension)
+# N016 - All-direction CMB, standing waves and Beltrami representations
 
-## Purpose
-Extend **N015’s local seed event** into a candidate **line-like field structure** under persistent broadband forcing.
+The originating Atom 2.1 proposal belongs to Craig Fink / WeBeGood: Trinity acts within the complete all-direction CMB/BBRV field and is interpreted as the NewWave neutrino field. N015's two-beam scope does not exhaust this proposal.
 
-This node is the first step toward the Atom 2.1 “seed-line / Beltrami neutrino line” concept, without prematurely claiming particle identity.
+N016 is now M3 for **conditional mathematical results with numerical checks**, not for proven neutrino identity. The complete proof track is [cmb_trinity_proofs.md](math/cmb_trinity_proofs.md) and the human-readable synthesis is [P004](../../papers/P004_cmb_trinity_audit/paper.md).
 
-## What this node asserts (M1)
-1) A **seed** is defined locally by a gauge-invariant functional S(E,B) (from N015).
-2) A **seed-line** is defined by *propagating or repeating* that criterion along an axis k̂.
-3) The **CMB spectrum** is introduced as a formally defined broadband driver/constraint, via u_ν(ν; T_cmb).
-4) A **Beltrami family** (∇×A = κA) is introduced as an organizing ansatz for helical/line-like modes.
+The node proves a standing basis, a full-field C3 decomposition, thermal-covariance invariance, and an exact standing Beltrami-Maxwell solution. It derives the Planck normalization and distinguishes neutral phase persistence from an attracting lock. It also proves the global finite-energy limitation of a constant-lambda curl eigenfield.
 
-## CMB is introduced here; load-bearing comes later
-In N016, CMB enters as:
-- a **spectral forcing / background constraint**
-- a source of multi-frequency drive for mode-locking hypotheses
+A blackbody spectrum is an observed spectral input. Coherent BBRV correlations, a localized seed observable, confinement and neutrino quantum properties remain hypotheses. Background superposition alone is not a dynamical forcing term in linear Maxwell equations.
 
-Later nodes may elevate CMB to **load-bearing**, where it constrains constants, rest-mass scales, and cosmological observables (e.g., H₀).
-That upgrade must be explicit, justified, and testable.
+The real-e standing solution exchanges electric and magnetic energy and has zero Poynting flux. Its constituents have omega=ck, so it preserves the luminal constituent convention without calling the whole standing pattern a particle traveling at c.
 
-## Beltrami as organizing ansatz
-Beltrami fields are “curl-eigenfields”:
-
-∇×A = κA
-
-This does not modify Maxwell; it selects a candidate mode family with a built-in twist scale κ.
-
-## Historical / ontology note: Kelvin “aether” (non-load-bearing)
-Atom 2.1 often resembles a **modernized aether-like picture** (Kelvin-era intuition) in the sense of a universal medium.
-Here we treat that as:
-- a historical alignment / interpretation
-- **not** a premise required for the mathematical claims of N016
-
-## Atom 2.1 handoff
-Next nodes can:
-- choose a specific S(E,B) from N015 and test stability numerically
-- connect seed-line candidates to neutrino phenomenology
-- promote CMB from “constraint” to “load-bearing” when constants/masses are derived rather than inserted
+Run `python nodes/N016_cmb_seeded_beltrami_line/code/sim.py` and `python -m pytest -q tests/test_cmb_peer_review.py` from the repository root. The prior Kelvin/aether analogy remains historical interpretation, not a premise of these proofs.

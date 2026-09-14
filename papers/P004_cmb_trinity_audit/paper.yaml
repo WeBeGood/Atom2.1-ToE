@@ -1,0 +1,32 @@
+meta:
+  paper_id: P004
+  title: From an All-Direction Blackbody Field to Trinity and Beltrami Representations
+  status: working_draft
+  updated_utc: '2026-09-14'
+  scope_note: Exact representations and conditional theorems; neutrino identity and transfer mechanism remain open.
+artifacts:
+  readable: papers/P004_cmb_trinity_audit/paper.md
+  latex: papers/P004_cmb_trinity_audit/main.tex
+  bibliography: papers/P004_cmb_trinity_audit/refs.bib
+  outline: papers/P004_cmb_trinity_audit/outline.md
+sections:
+- id: S1
+  title: All-direction CMB, standing waves and cyclic decomposition
+  nodes:
+  - N000
+  - N015
+  - N016
+- id: S2
+  title: Energy, helicity, elastic line models and mass modes
+  nodes:
+  - N019
+- id: S3
+  title: Conditional tired-light statistics and observational limits
+  nodes:
+  - N020
+- id: S4
+  title: Interpretation, reproducibility and research frontier
+  nodes:
+  - N016
+  - N019
+  - N020

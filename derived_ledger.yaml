@@ -15,6 +15,7 @@ settled:
   - Does not itself prove particle closure, gravity, or tired-light mechanisms.
   notes:
   - This resolves the prior Mach-1 dimensional-mixing confusion by declaring the working unit convention.
+  epistemic_status: accepted_project_convention_not_independent_physical_proof
 - id: EMASS
   title: Restless/Rest Neutrino Mass equivalence in c=1 units
   status: accepted
@@ -26,8 +27,11 @@ settled:
     relativity.
   open_limits:
   - Requires careful SI restoration in cosmology, G, and Lambda derivations.
+  - Calculate invariant mass from U^2-c^2|P|^2. Constituent luminality and natural units do not identify
+    arbitrary frame energy with rest mass.
   notes:
   - Use this as the default mass-energy language for BBRV/Luminal Realm work.
+  epistemic_status: accepted_project_convention_not_independent_physical_proof
 - id: A120
   title: Luminal Trinity 120° threshold
   status: accepted
@@ -36,10 +40,15 @@ settled:
   assumptions:
   - Trinity Addition is an Atom 2.1 NewWave rule and must be distinguished from ordinary four-momentum
     addition.
+  - The intended construction is within the all-direction CMB field, not limited to the N015 two-beam
+    scope.
   open_limits:
   - The 120° case is not the entire Superluminal Realm and is not by itself a tired-light derivation.
+  - N016 proves a cyclic representation but free Maxwell evolution does not select an attracting 120-degree
+    phase lock.
   notes:
   - Older wording that made 120° the only interaction angle should be read as Luminal-Realm shorthand.
+  epistemic_status: accepted_project_convention_not_independent_physical_proof
 - id: CMBMED
   title: CMB/BBRV stabilizing medium
   status: accepted
@@ -49,8 +58,11 @@ settled:
   - CMB medium language belongs to Atom 2.1 model-building unless cross-walked to standard cosmology.
   open_limits:
   - Does not fix the absolute vacuum-energy scale by itself.
+  - Observed isotropy/blackbody spectrum is not proof of coherent standing phases, neutrino identity or
+    self-confinement.
   notes:
   - Use BBRV photon/CMB sea as the default Luminal Realm background.
+  epistemic_status: accepted_project_convention_not_independent_physical_proof
 - id: REGIME_SPLIT
   title: Luminal and Superluminal regime separation
   status: accepted
@@ -63,6 +75,131 @@ settled:
   - Superluminal Realm mathematics remains frontier work.
   notes:
   - This entry is the main ledger correction requested on 2026-09-07.
+  epistemic_status: accepted_project_convention_not_independent_physical_proof
+- id: CMB-STANDING-BASIS
+  title: Standing representation of the full radiation field
+  status: proved_conditional
+  epistemic_status: mathematical_result_under_explicit_assumptions
+  statement: Opposite-direction Maxwell modes admit a unitary standing sine/cosine basis preserving the
+    complete field and energy.
+  assumptions:
+  - All partners and transformed coefficients retained.
+  proof: nodes/N016_cmb_seeded_beltrami_line/math/cmb_trinity_proofs.md
+  proof_section: CMB-02
+  open_limits:
+  - Does not establish the complete BBRV/neutrino identification.
+- id: CMB-C3-DECOMPOSITION
+  title: Threefold decomposition of an all-direction Maxwell field
+  status: proved_conditional
+  epistemic_status: mathematical_result_under_explicit_assumptions
+  statement: Pi_j=(1/3) sum_r omega^(-jr) R^r are orthogonal complete projectors commuting with Maxwell
+    evolution.
+  assumptions:
+  - Rotation-invariant domain and compatible boundary conditions.
+  - Use finite energy or controlled spectral/volume normalization.
+  proof: nodes/N016_cmb_seeded_beltrami_line/math/cmb_trinity_proofs.md
+  proof_section: CMB-03
+  open_limits:
+  - Does not establish the complete BBRV/neutrino identification.
+- id: CMB-THERMAL-COVARIANCE
+  title: Thermal covariance invariance under passive Trinity transform
+  status: proved_conditional
+  epistemic_status: mathematical_result_under_explicit_assumptions
+  statement: A same-frequency equal-occupation covariance P I is unchanged by a unitary three-mode transformation.
+  assumptions:
+  - Ideal homogeneous isotropic unpolarized free thermal ensemble.
+  - No independently specified nonthermal coherence or physical nonlinear transformation.
+  proof: nodes/N016_cmb_seeded_beltrami_line/math/cmb_trinity_proofs.md
+  proof_section: CMB-01 to CMB-03
+  open_limits:
+  - Does not establish the complete BBRV/neutrino identification.
+- id: CMB-STANDING-BELTRAMI
+  title: Exact standing Beltrami-Maxwell example
+  status: proved_conditional
+  epistemic_status: mathematical_result_under_explicit_assumptions
+  statement: For real divergence-free e with curl e=k e, E=e cos(ckt), B=-e sin(ckt)/c obey vacuum Maxwell
+    and exchange electric/magnetic energy with zero Poynting flux.
+  assumptions:
+  - Constant k>0; fields are periodic/generalized modes unless localization is separately specified.
+  proof: nodes/N016_cmb_seeded_beltrami_line/math/cmb_trinity_proofs.md
+  proof_section: CMB-04
+  open_limits:
+  - Does not establish the complete BBRV/neutrino identification.
+- id: CMB-PHASE-NONSELECTION
+  title: Curl and free evolution do not uniquely select 120-degree phase
+  status: proved_conditional
+  epistemic_status: mathematical_result_under_explicit_assumptions
+  statement: Any constant-phase superposition of equal curl-eigenvalue fields retains that eigenvalue;
+    free equal-frequency phases are neutrally preserved.
+  assumptions:
+  - Linear source-free Maxwell evolution.
+  - No claim excluding separately specified coupled dynamics.
+  proof: nodes/N016_cmb_seeded_beltrami_line/math/cmb_trinity_proofs.md
+  proof_section: CMB-05
+  open_limits:
+  - Does not establish the complete BBRV/neutrino identification.
+- id: CMB-LOCALIZATION-LIMIT
+  title: No nonzero global L2 constant-lambda curl eigenfield
+  status: proved_conditional
+  epistemic_status: mathematical_result_under_explicit_assumptions
+  statement: The Helmholtz/Fourier shell argument excludes a nonzero square-integrable constant-real-nonzero-lambda
+    curl eigenfield on R^3.
+  assumptions:
+  - Unbounded flat space, square integrability, constant real nonzero eigenvalue.
+  - Does not exclude broadband time-dependent finite-energy knots or bounded modes.
+  proof: nodes/N016_cmb_seeded_beltrami_line/math/cmb_trinity_proofs.md
+  proof_section: CMB-06
+  open_limits:
+  - Does not establish the complete BBRV/neutrino identification.
+- id: EH-MAGNETIC-RELATION
+  title: Correctly normalized magnetic energy-helicity relation
+  status: proved_conditional
+  epistemic_status: mathematical_result_under_explicit_assumptions
+  statement: U_B=lambda H_B/(2mu0), distinct from total Maxwell energy; Grok imaginary-part identity fails
+    on an explicit nonzero-helicity example.
+  assumptions:
+  - Constant nonzero lambda and compatible gauge/boundary conditions.
+  proof: nodes/N019_energy_helicity_modes/math/proofs.md
+  proof_section: EH-01
+  open_limits:
+  - Does not establish the complete BBRV/neutrino identification.
+- id: EH-ELASTIC-MINIMUM
+  title: Conditional uniform-twist elastic energy minimum
+  status: proved_conditional
+  epistemic_status: mathematical_result_under_explicit_assumptions
+  statement: For fixed total twist, U=tau L+C Theta^2/(2L); positive fixed tau,C give L*=abs(Theta)sqrt(C/(2tau)).
+  assumptions:
+  - Postulated elastic functional; no derivation of its coefficients from Maxwell.
+  - Fixed total twist, not fixed twist density; effective model valid at minimum.
+  proof: nodes/N019_energy_helicity_modes/math/proofs.md
+  proof_section: EH-03
+  open_limits:
+  - Does not establish the complete BBRV/neutrino identification.
+- id: EH-C3-SPECTRAL-FREEDOM
+  title: C3 does not fix a mass spectrum
+  status: proved_conditional
+  epistemic_status: mathematical_result_under_explicit_assumptions
+  statement: A Hermitian circulant has Fourier eigenvectors but eigenvalues a+2Re(b omega^j); unspecified
+    coefficients prevent a mass prediction.
+  assumptions:
+  - Circulant Hermitian three-mode operator.
+  proof: nodes/N019_energy_helicity_modes/math/proofs.md
+  proof_section: EH-04
+  open_limits:
+  - Does not establish the complete BBRV/neutrino identification.
+- id: TL-POISSON-MOMENTS
+  title: Exact independent-event loss statistics
+  status: proved_conditional
+  epistemic_status: mathematical_result_under_explicit_assumptions
+  statement: Poisson fixed-fraction losses give CV=sqrt(exp(mu kappa^2)-1), equal to 0.30084503098 at
+    half mean energy and kappa=1/8.
+  assumptions:
+  - Independent Poisson event counts, fixed loss fraction, no energy-dependent rate.
+  - Not a universal constraint on coherent/deterministic alternatives.
+  proof: nodes/N020_tired_light_statistics/math/proofs.md
+  proof_section: TL-02
+  open_limits:
+  - Does not establish the complete BBRV/neutrino identification.
 not_settled:
 - id: TL-TENSION-TWIST
   title: Longitudinal tension transfer into loop twist
@@ -130,6 +267,9 @@ not_settled:
     and thermalization mechanism are supplied.
   - Derive reservoir energy balance, spectral broadening, image preservation and source-duration stretching;
     a common extra travel delay does not stretch a light curve.
+  - Distinguish -d ln<E>/ds=r kappa from -d<ln E>/ds=-r ln(1-kappa).
+  - Back-calibrated sigma=1.4764982e-34 m^2 is conditional, not a prediction; wavelength squared is not
+    a mandatory cross-section.
   provenance: notes/grok_tired_light_ledger_additions.md
 - id: TL-KAPPA-AUDIT
   title: Grok 120-degree and loop coefficients retained for audit
@@ -145,10 +285,15 @@ not_settled:
   - If each of three sequential events removes 1/8 of the remaining energy, the total is 1-(7/8)^3=169/512=0.330078125.
     The value 3/8 requires each fraction to refer to the original energy.
   - Capture probability and loss per capture must not count kappa twice.
+  - 'Claude width estimate corrected: exact Poisson CV is 30.0845031 percent at half mean energy for kappa=1/8;
+    see N020.'
+  - Normalized energy density 7/8 is not itself a universal 7:1 contrast.
   open_limits:
   - Derive the coupling, cross-section and phase-lock dynamics before promoting either coefficient.
   - Preserve the original Grok claims for traceability; the corrected conditional arithmetic is not a
     proven physical conversion efficiency.
+  - Derive spectral-line, image, timing and thermal-reservoir predictions for a specified kernel.
+  - Random-event broadening does not automatically apply to a coherent field transformation.
   provenance: notes/grok_tired_light_ledger_additions.md
 - id: ALPHA
   claim: Parameter-free fine-structure constant from stable charged NewWave closure.
@@ -191,3 +336,25 @@ not_settled:
   - Requires a redshift accumulation law and a conservation-consistent charge-to-magnetic conversion efficiency.
   notes:
   - Do not present one tired-light mechanism as settled until the math closes.
+- id: CMB-NEWWAVE-MAP
+  status: open
+  category: project_hypothesis
+  statement: Specify the physical NewWave observable and Trinity map within the full all-direction CMB
+    field.
+  blockers:
+  - Distinguish representation, chosen coherent special state and physical conversion.
+  - Give modal covariance/coherence beyond spectral isotropy if needed.
+  - If a linear invertible map is intended, identify an observable interpretation without double-counting
+    energy.
+  attribution: Craig Fink / WeBeGood; CMB clarification 2026-09-14
+  provenance: notes/2026-09-14_grok_claude_peer_review.md
+- id: NEUTRINO-SEED-DYNAMICS
+  status: open
+  category: project_hypothesis
+  statement: Establish localization, stability, dispersion and neutrino identity of a BBRV seed.
+  blockers:
+  - Specify field action/constraints/boundaries and demonstrate stability to perturbations.
+  - Derive mass operator and spin/statistics/weak production and detection.
+  - Predict mass-squared differences independently of measured targets.
+  attribution: Craig Fink / WeBeGood; CMB clarification 2026-09-14
+  provenance: notes/2026-09-14_grok_claude_peer_review.md

@@ -1,0 +1,74 @@
+meta:
+  id: N020
+  title: Conditional tired-light loss statistics and conservation audit
+  status: open
+  maturity: M3
+  updated_utc: '2026-09-14'
+  owner: WeBeGood
+depends_on: &id001
+- N000
+- N015
+scope:
+  classification: conditional_theorems_and_counterexamples
+  units: SI unless numerical normalization is stated
+  physical_prediction_status: No derived neutrino masses, coupling, or Hubble constant
+claims:
+- id: N020-C1
+  statement: Three losses of one eighth of remaining energy compound to 169/512, not 3/8.
+  units: dimensionless
+  proof: math/proofs.md#TL-01
+- id: N020-C2
+  statement: An assumed differential log-frequency law integrates to exponential redshift; matching a_loss=H0/c
+    is calibration.
+  units: a_loss 1/m; redshift dimensionless
+  proof: math/proofs.md#TL-01
+- id: N020-C3
+  statement: Poisson fixed-fraction events give mean E/E0=exp(-mu kappa) and CV=sqrt(exp(mu kappa^2)-1).
+  units: dimensionless
+  proof: math/proofs.md#TL-02
+- id: N020-C4
+  statement: At half surviving mean and kappa=1/8, exact relative RMS width is 0.30084503098; the ideal distribution
+    is discrete.
+  units: dimensionless
+  proof: math/proofs.md#TL-02
+- id: N020-C5
+  statement: Mean-log-energy and log-mean-energy attenuation coefficients differ; at kappa=1/8 their ratio is 1.06825114.
+  units: dimensionless ratio
+  proof: math/proofs.md#TL-02
+- id: N020-C6
+  statement: H0=70 km/s/Mpc, n=4.1e8/m^3 and kappa=1/8 imply a back-calibrated sigma=1.4764982e-34 m^2; wavelength
+    squared is not a required interaction area.
+  units: m^2
+  proof: math/proofs.md#TL-03
+- id: N020-C7
+  statement: A constant propagation delay leaves emission intervals unchanged; spectral, angular, timing and reservoir
+    predictions need an explicit interaction kernel.
+  units: timing derivative dimensionless
+  proof: math/proofs.md#TL-04
+assumptions:
+- Every theorem has explicit domain/model conditions in math/proofs.md.
+- Numerical examples verify equations, not empirical particle identity or cosmology.
+interfaces:
+  imports: *id001
+  exports:
+  - TL-01
+  - TL-01
+  - TL-02
+  - TL-02
+  - TL-02
+  - TL-03
+  - TL-04
+artifacts:
+  narrative: nodes/N020_tired_light_statistics/narrative.md
+  math:
+  - nodes/N020_tired_light_statistics/math/proofs.md
+  code:
+  - nodes/N020_tired_light_statistics/code/sim.py
+  results:
+  - nodes/N020_tired_light_statistics/results/diagnostics.json
+validation:
+  checks:
+  - Run code/sim.py and tests/test_cmb_peer_review.py.
+  falsifiers:
+  - Violation of stated identities under their assumptions invalidates the corresponding result.
+  - No promotion of the physical model without derived dynamics and observations.

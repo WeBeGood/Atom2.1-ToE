@@ -1,0 +1,21 @@
+{
+  "c3_spectrum_complex_coupling": [
+    6.0,
+    2.3071796769724493,
+    3.69282032302755
+  ],
+  "c3_spectrum_real_coupling": [
+    6.0,
+    3.0000000000000004,
+    2.999999999999999
+  ],
+  "elastic_energy_optimum": 21.765592370810616,
+  "elastic_length_optimum": 5.441398092702653,
+  "elastic_neighbors_above_minimum": true,
+  "energy_helicity_relative_error": 0.0,
+  "grok_imaginary_formula": 0.0,
+  "interpretation": "C3 eigenvalues depend on unspecified dynamics; elastic coefficients are illustrative, not fitted masses.",
+  "magnetic_energy": 1.5707963267948164,
+  "magnetic_helicity": 1.5707963267948164,
+  "two_equal_photons_120_mass_energy_over_E0": 1.7320508075688772
+}

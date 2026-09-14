@@ -47,3 +47,13 @@
 ## Notes
 - Prefer edits to **Atom2.1_superseed.yaml**; the agent auto-renders when SuperSeed changes.
 - Nodes should declare `depends_on` so we can generate an ordered tree/graph.
+
+## CMB/Trinity audit and current research handoff
+
+- [P004 readable manuscript](papers/P004_cmb_trinity_audit/paper.md) and [printable PDF](papers/P004_cmb_trinity_audit/paper.pdf)
+- [Grok/Claude claim-by-claim review](notes/2026-09-14_grok_claude_peer_review.md)
+- [Dependency and research roadmap](docs/2026-09-14_research_roadmap.md)
+- N016: complete all-direction CMB representation proofs and standing Beltrami example.
+- N019: magnetic energy/helicity, conditional elastic minimum, mass-mode audit.
+- N020: conditional loss statistics, cross-section calibration and observational tests.
+- [P003 alpha work](papers/P003_alpha_charge_action/paper.md) remains intact; numerical alpha is still open.

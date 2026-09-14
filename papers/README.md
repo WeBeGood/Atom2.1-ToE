@@ -57,3 +57,5 @@ A standard derivation may constrain a project hypothesis, but it must not be pre
 Later CMB, QED, particle, or nonlinear-field papers should be separate manuscripts rather than being folded into the vector-baseline paper.
 
 - `P003_alpha_charge_action` — closure family, conditional alpha reduction and explicit unresolved normalization.
+
+- `P004_cmb_trinity_audit` — all-direction CMB/standing/C3 representations, exact Beltrami example, energy-helicity and neutrino-mode audit, and conditional tired-light statistics. Preserves the owner clarification beyond P002's restricted two-wave scope.

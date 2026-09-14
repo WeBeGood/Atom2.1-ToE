@@ -1,17 +1,7 @@
-# N016 Math Track — CMB Spectrum Interface u_ν(ν; T_cmb)
+# CMB spectral interface
 
-## Goal
-Define a formally correct spectral forcing/constraint interface for the CMB background.
+The explicit Planck formula, its energy and photon-number integrals, units, thermal covariance model and observational scope are derived in [CMB-01](cmb_trinity_proofs.md#cmb-01-what-the-observed-blackbody-fixes).
 
-## Minimal requirement (M1)
-Provide a function u_ν(ν; T_cmb) with units:
-- J/m^3/Hz
+At input T=2.725 K, u=4.17173825e-14 J/m^3 and n_gamma=4.10500843e8 m^-3. The standard-library implementation independently integrates the dimensionless Planck functions; it does not fit any particle mass.
 
-## Notes
-- The exact dataset or measurement source can be cited later.
-- In N016, u_ν is used as a **driver/constraint**, not as a direct “cause” of nonlinearity.
-
-## Upgrade hook (later nodes)
-If CMB becomes load-bearing, we will explicitly connect:
-- T_cmb and/or spectral moments to derived constants and mass scales
-- testable cosmological observables
+Spectrum and angular isotropy do not determine microscopic modal phase coherence. A proposed coherent BBRV ensemble must specify that additional information.

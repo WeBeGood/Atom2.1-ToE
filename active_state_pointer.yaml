@@ -3,6 +3,14 @@ meta:
   schema: atom2.1.state
   version: 0.1.1
 next_focus:
+- Read notes/2026-09-14_grok_claude_peer_review.md and papers/P004_cmb_trinity_audit/paper.md; preserve
+  the full CMB field interpretation.
+- N016 now proves standing/C3 representations and an exact standing Beltrami example. Next specify the
+  physical NewWave map and seed observable.
+- N019 audits energy/helicity/line models; N020 proves conditional loss statistics. Do not repeat corrected
+  Grok or Claude claims.
+- Use docs/2026-09-14_research_roadmap.md for the remaining dependency path; no unproved neutrino masses
+  or coupling may be marked settled.
 - Maintain bootstrap pack integrity in GitHub.
 - Keep existing derivations in the c=1, Mach-1 Luminal Realm unless explicitly marked Superluminal.
 - 'Expand Superluminal Realm only as open theory: Mach>1 to Mach infinity, incidence angles 120° to 180°.'
@@ -21,4 +29,8 @@ working_set:
     short: Mach>1 angle kernel and Mach-infinity geometry
   - id: TIRED-LIGHT
     short: Traveler photon + Void CMB + Neutrino Kink tired-light mechanisms
+  - id: CMB-NEWWAVE-MAP
+    short: Specify the physical NewWave observable and Trinity map within the full all-direction CMB field.
+  - id: NEUTRINO-SEED-DYNAMICS
+    short: Establish localization, stability, dispersion and neutrino identity of a BBRV seed.
 operating_contract_ref: contract.rules

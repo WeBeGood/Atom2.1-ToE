@@ -31,3 +31,7 @@ Under independent Poisson encounter counts with mean mu and fixed fractional los
 Frequency conversion, forward momentum transfer, phase locking, reservoir heating/thermalization, and temporal signal stretching remain open. Zero net Poynting flux alone does not establish a zero-temperature reservoir. The receiving loop population and the observed CMB are not silently identified.
 
 No scientific acceptance is implied by recording an entry. Promotion requires the corresponding interaction derivation, conservation accounting and testable predictions. No new animations or numerical alpha result are part of this ledger update.
+
+## Subsequent audit, 2026-09-14
+
+The original entries above are preserved. See [Grok/Claude audit and full-field clarification](2026-09-14_grok_claude_peer_review.md), N016/N019/N020 and P004 for the additional CMB construction, corrected energy/helicity equations and exact conditional event-loss statistics.

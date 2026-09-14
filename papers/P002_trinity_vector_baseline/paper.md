@@ -21,6 +21,8 @@ Atom 2.1 proposes that a 120° (“Trinity”) relation between electromagnetic 
 
 The phrase “identical photon plane waves” is interpreted here as two classical modes with the same ω, k=ω/c, peak amplitude E₀, and polarization. A photon-number or particle-creation interpretation would require a quantum theory and is outside this paper.
 
+**Full-field continuation (2026-09-14):** The owner clarified that Trinity addition is intended within the complete all-direction CMB/BBRV standing-field construction. This paper remains the restricted two-wave baseline. [P004](../P004_cmb_trinity_audit/paper.md) derives standing and cyclic field representations and an exact Beltrami example, with the physical seed interpretation evaluated separately.
+
 ## 2. Background
 
 The source-free Maxwell equations are linear, so sums of solutions are solutions [1,2]. Coherent plane waves produce interference terms determined by their local phase difference and polarization overlap [3,4]. Energy density and Poynting flux are quadratic in the total fields; they can vary locally even though integration or averaging over complete fringes preserves the summed input energy and momentum accounting.

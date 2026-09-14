@@ -32,6 +32,18 @@ questions:
 - id: ENTANGLE
   prompt: Formalize θ=180° Mach-infinity/entanglement boundary in Atom 2.1 and propose falsifiable tests.
   desired_output: Operational definition + experimental signatures.
+- id: CMB-NEWWAVE-MAP
+  prompt: Specify the physical NewWave observable and Trinity map within the full all-direction CMB field.
+  desired_output: Explicit equations, assumptions, conserved quantities, discriminating predictions and
+    uncertainties.
+  status: open
+  provenance: papers/P004_cmb_trinity_audit/paper.md
+- id: NEUTRINO-SEED-DYNAMICS
+  prompt: Establish localization, stability, dispersion and neutrino identity of a BBRV seed.
+  desired_output: Explicit equations, assumptions, conserved quantities, discriminating predictions and
+    uncertainties.
+  status: open
+  provenance: papers/P004_cmb_trinity_audit/paper.md
 tasks:
 - id: BOOTPACK
   action: Validate load_order across seed/ledger/state/frontier.
@@ -46,3 +58,17 @@ tasks:
   action: Create INDEX.md listing derivations and open issues.
 - id: NOTES
   action: Add NOTES.md for session notes + decisions.
+- id: CMB-COHERENCE
+  action: Supply mode covariance/correlation model and compare a thermal standing-basis ensemble with
+    the proposed coherent BBRV state.
+- id: SEED-STABILITY
+  action: Define gauge-invariant seed observable and finite-energy background-subtracted domain; derive
+    perturbation spectrum and energy-momentum balance.
+- id: NEUTRINO-MASS-OPERATOR
+  action: Derive physical coefficients of the mass operator rather than treating C3 eigenvectors as a
+    mass prediction.
+- id: TL-KERNEL
+  action: Derive a frequency-angle-time interaction kernel and recipient stress-energy; test line widths,
+    image preservation, time stretch and CMB spectrum.
+- id: PAPER-P004
+  action: Human revision of P004; complete affiliations/declarations and choose a journal before any submission.

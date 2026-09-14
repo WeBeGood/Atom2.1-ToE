@@ -1,0 +1,16 @@
+{
+  "a_loss_m_inverse": 7.567053279942939e-27,
+  "illustrative_kappa_bound_z1_width_0p001": 1.4426943195419239e-06,
+  "interpretation": "Conditional independent-event statistics only; cross-section is inverse calibration and width limit illustrative.",
+  "kappa": 0.125,
+  "log_energy_rate_over_mean_energy_rate": 1.068251140996181,
+  "loss_after_three": 0.330078125,
+  "mu_at_mean_half": 5.545177444479562,
+  "poisson_mean_error": 2.7755575615628914e-16,
+  "poisson_probability_sum": 0.9999999999999997,
+  "poisson_second_moment_error": 0.0,
+  "relative_rms_width": 0.3008450309798346,
+  "sd_over_initial_energy": 0.1504225154899173,
+  "sigma_m2_back_calibrated": 1.476498200964476e-34,
+  "surviving_mean_fraction": 0.5
+}

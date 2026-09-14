@@ -24,3 +24,7 @@ python -m pytest -q
 ```
 
 The repository-wide readable-paper contract is in `papers/README.md`.
+
+## Full-field CMB continuation
+
+The owner clarified on 2026-09-14 that the intended Trinity construction acts within the full all-direction CMB/BBRV field. This paper is the deliberately restricted two-wave baseline. See [P004](../P004_cmb_trinity_audit/paper.md) for standing-wave and C3 field transformations, an exact Beltrami example, and the physical identification still to be derived.

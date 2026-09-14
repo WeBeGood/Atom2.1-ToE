@@ -2,3 +2,11 @@
 patch_*.json
 patch-*.json
 *.patch.json
+# Python caches and local manuscript build intermediates
+__pycache__/
+.pytest_cache/
+*.pyc
+papers/P004_cmb_trinity_audit/main.aux
+papers/P004_cmb_trinity_audit/main.log
+papers/P004_cmb_trinity_audit/main.out
+papers/P004_cmb_trinity_audit/main.pdf

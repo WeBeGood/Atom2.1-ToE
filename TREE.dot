@@ -9,6 +9,8 @@ digraph Atom21Nodes {
   "N016" [label="N016\nCMB-spectrum seeded Beltrami line (Trinity phase-lock extension)"];
   "N017" [label="N017\nElectron trefoil closure and seed-length scaling"];
   "N018" [label="N018\nFine-structure charge-energy-action reduction and open normalization"];
+  "N019" [label="N019\nMaxwell energy, magnetic helicity, effective line energy and C3 mass-mode audit"];
+  "N020" [label="N020\nConditional tired-light loss statistics and conservation audit"];
   "N000" -> "N010";
   "N000" -> "N011";
   "N000" -> "N012";
@@ -23,4 +25,10 @@ digraph Atom21Nodes {
   "N015" -> "N018";
   "N016" -> "N018";
   "N017" -> "N018";
+  "N000" -> "N019";
+  "N011" -> "N019";
+  "N012" -> "N019";
+  "N016" -> "N019";
+  "N000" -> "N020";
+  "N015" -> "N020";
 }
