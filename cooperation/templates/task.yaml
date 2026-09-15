@@ -1,0 +1,18 @@
+id: REQUIRED
+title: REQUIRED
+status: queued
+branch_ref: MAXWELL
+node_refs: []
+depends_on: []
+assignment: null
+# An assignment must identify worker_id, operator_id and assigned_at.
+latest_handoff: null
+deliverable: REQUIRED
+acceptance_criteria:
+  - REQUIRED
+budget:
+  maximum_wall_minutes: null
+  maximum_tokens: null
+  maximum_cost: null
+# Operator fills enforceable limits before any automated dispatch.
+history: []

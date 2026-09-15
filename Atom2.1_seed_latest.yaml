@@ -8,6 +8,8 @@ load_order:
 - derived_ledger.yaml
 - active_state_pointer.yaml
 - frontier.yaml
+- distributed_research.yaml
+- research_map.yaml
 atom2_1:
   axioms:
   - id: LUMINAL

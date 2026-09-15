@@ -17,9 +17,15 @@ files:
   role: human_llm_instructions
 - path: LLM_BOOTSTRAP_PROMPT.txt
   role: single_shot_prompt
+- path: distributed_research.yaml
+  role: cooperative_contract
+- path: research_map.yaml
+  role: research_branch_map
 load_order:
 - manifest.yaml
 - Atom2.1_seed_latest.yaml
 - derived_ledger.yaml
 - active_state_pointer.yaml
 - frontier.yaml
+- distributed_research.yaml
+- research_map.yaml

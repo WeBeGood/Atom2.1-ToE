@@ -1,0 +1,19 @@
+schema_version: '1.0'
+session_id: REQUIRED
+worker_id: REQUIRED
+operator_id: REQUIRED
+model: null
+task_id: REQUIRED
+base_commit: REQUIRED
+artifact_commit: REQUIRED
+completed: []
+failed_attempts: []
+unresolved: []
+assumptions_changed: []
+artifact_refs: []
+verification_commands: []
+verification_results: []
+next_action: REQUIRED
+stop_reason: completed
+# Commit evidence first, then this handoff referencing that evidence commit.
+# Lists can be empty when appropriate; explain unperformed verification in results.
