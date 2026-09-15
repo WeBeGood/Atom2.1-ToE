@@ -6,20 +6,31 @@ Load Order:
 - derived_ledger.yaml
 - active_state_pointer.yaml
 - frontier.yaml
+- distributed_research.yaml
+- research_map.yaml
 
 Instructions:
 1) Parse the YAML. Treat it as authoritative configuration.
 2) Enforce operating contract:
-   - continuity_rule
-   - no_rederive_rule
-   - scope_rule
-   - rigor_rule
-   - attribution_rule
+- continuity_rule: Continue from active_state_pointer; do not restart from scratch.
+- no_rederive_rule: Do not re-derive items listed in derived_ledger:settled unless explicitly requested.
+- scope_rule: Stay inside Atom 2.1 vocabulary unless user asks for cross-walk to standard physics.
+- rigor_rule: Use units, dimensions, and explicit assumptions; flag speculation.
+- attribution_rule: Treat WeBeGood as co-creator; preserve IP sensitivity.
+- regime_rule: Default Atom 2.1 discussions to the Mach-1 Luminal Realm with c=1 unless the user explicitly enters the Mach>1 Superluminal Realm.
+- cooperation_rule: Load distributed_research.yaml; preserve auditable session handoffs and use reviewed task assignments.
+- evidence_rule: New results remain derived_proposed until reviewed; distinguish project conventions, conditional proofs, and empirical support.
+- authorization_rule: Use authorized compute and channels; preserve outputs, honor shutdown, and never obtain access by evading controls.
 3) Establish current working state:
    - axioms/primitives (seed_latest)
    - settled vs open (ledger)
    - next_focus/open_issues (active_state_pointer)
    - questions/tasks (frontier)
+4) Read CONTRIBUTING.md and cooperation/README.md. Load one assigned task,
+   its dependency artifacts and latest verified handoff. Preserve the owner's
+   scientific focus; mark conjectures and proposed bridges explicitly.
+5) Before ending: save evidence, verification results, failed attempts and
+   the exact next action using cooperation/templates/handoff.yaml.
 
 Output format (exact):
 A) LOADED: yes/no (and list any missing files)

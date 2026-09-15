@@ -1,0 +1,109 @@
+schema_version: '1.0'
+tasks:
+- id: COOP-001
+  title: Fresh-session recovery pilot
+  status: queued
+  branch_ref: MAXWELL
+  node_refs:
+  - N015
+  depends_on: []
+  assignment: null
+  latest_handoff: null
+  deliverable: Reproduce the existing N015 numerical check from a committed handoff.
+  acceptance_criteria:
+  - Record exact input commit and command.
+  - Fresh participant reports missing context and numerical agreement without rederiving
+    the settled result.
+  budget:
+    maximum_wall_minutes: null
+    maximum_tokens: null
+    maximum_cost: null
+  history: []
+- id: MAX-001
+  title: Index Maxwell equations and proof dependencies
+  status: queued
+  branch_ref: MAXWELL
+  node_refs:
+  - N000
+  - N010
+  - N011
+  - N012
+  - N015
+  - N016
+  depends_on: []
+  assignment: null
+  latest_handoff: null
+  deliverable: Equation inventory linking statements to existing proofs, assumptions
+    and open gaps.
+  acceptance_criteria:
+  - Give stable equation/claim references.
+  - Do not duplicate settled derivations; identify missing coverage.
+  budget:
+    maximum_wall_minutes: null
+    maximum_tokens: null
+    maximum_cost: null
+  history: []
+- id: SEED-001
+  title: Specify the NewWave observable and Trinity map
+  status: queued
+  branch_ref: SEED
+  node_refs:
+  - N015
+  - N016
+  - N019
+  depends_on: []
+  assignment: null
+  latest_handoff: null
+  deliverable: Owner-faithful mathematical interface for NewWave within the intended
+    full field.
+  acceptance_criteria:
+  - Keep the motivating epiphany distinct from the two-photon derivation step.
+  - List equations, units, assumptions, conserved quantities and unresolved definitions.
+  budget:
+    maximum_wall_minutes: null
+    maximum_tokens: null
+    maximum_cost: null
+  history: []
+- id: ALPHA-001
+  title: Derive independent alpha coefficients
+  status: queued
+  branch_ref: PARTICLES
+  node_refs:
+  - N017
+  - N018
+  depends_on:
+  - SEED-001
+  assignment: null
+  latest_handoff: null
+  deliverable: Derive C_Q, C_U and eta_EM from candidate dynamics, or identify the
+    precise missing equation.
+  acceptance_criteria:
+  - Keep benchmark calibration separate from prediction.
+  - Record finite-energy, charge and stability checks applicable to the candidate.
+  budget:
+    maximum_wall_minutes: null
+    maximum_tokens: null
+    maximum_cost: null
+  history: []
+- id: BRIDGE-001
+  title: Specify interfaces to modern physics branches
+  status: queued
+  branch_ref: QUANTUM
+  node_refs:
+  - N000
+  - N011
+  depends_on:
+  - MAX-001
+  assignment: null
+  latest_handoff: null
+  deliverable: Reviewable interface table for quantum, relativity/gravity, nuclear,
+    thermal and cosmological branches.
+  acceptance_criteria:
+  - Each bridge lists source equations, added assumptions, observables and limiting
+    cases.
+  - Mark absent derivations as open; do not assert completed unification.
+  budget:
+    maximum_wall_minutes: null
+    maximum_tokens: null
+    maximum_cost: null
+  history: []

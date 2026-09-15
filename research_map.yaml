@@ -1,0 +1,85 @@
+meta:
+  schema: atom2.1.research_map
+  version: 0.1.0
+interpretation: Planning dependencies, not a proof that one branch reduces to another. Existing node claims
+  retain their current status.
+branches:
+- id: MAXWELL
+  title: Maxwell to the Max
+  status: open
+  node_refs:
+  - N000
+  - N010
+  - N011
+  - N012
+  - N015
+  - N016
+  depends_on: []
+  next_deliverable: Map field equations, potentials, symmetries, energy-momentum, helicity and boundary-value
+    problems; index existing proofs before new work.
+- id: SEED
+  title: NewWave and neutrino seed
+  status: open
+  node_refs:
+  - N015
+  - N016
+  - N019
+  depends_on:
+  - MAXWELL
+  next_deliverable: Specify the physical Trinity map, seed observable, localization, stability and measurable
+    particle identification.
+- id: PARTICLES
+  title: Electron closure and coupling
+  status: open
+  node_refs:
+  - N017
+  - N018
+  depends_on:
+  - SEED
+  next_deliverable: Derive charge, action, finite-energy closure and alpha coefficients independently
+    of benchmark fitting.
+- id: QUANTUM
+  title: Quantum mechanics and quantum field theory
+  status: open
+  node_refs: []
+  depends_on:
+  - MAXWELL
+  - SEED
+  next_deliverable: Identify required bridges to amplitudes, Born probabilities, spin/statistics and quantum
+    field observables; state what is assumed versus derived.
+- id: RELATIVITY
+  title: Relativity and gravity
+  status: open
+  node_refs: []
+  depends_on:
+  - MAXWELL
+  next_deliverable: Specify covariant observables and stress-energy, then pose a testable bridge to gravitation
+    and relevant limiting cases.
+- id: NUCLEAR
+  title: Weak, strong and nuclear phenomena
+  status: open
+  node_refs: []
+  depends_on:
+  - PARTICLES
+  - QUANTUM
+  next_deliverable: Create explicit interfaces for weak/strong interactions and nuclear observables; do
+    not infer them from electromagnetic analogy alone.
+- id: THERMAL
+  title: Statistical physics and matter
+  status: open
+  node_refs: []
+  depends_on:
+  - MAXWELL
+  - QUANTUM
+  next_deliverable: Connect ensemble assumptions to thermodynamics and collective material behavior with
+    declared approximation regimes.
+- id: COSMOLOGY
+  title: Cosmology and tired light
+  status: open
+  node_refs:
+  - N020
+  depends_on:
+  - MAXWELL
+  - SEED
+  next_deliverable: Derive candidate transport kernels and observational consequences; distinguish hypotheses
+    from successful observational tests.

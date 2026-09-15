@@ -1,0 +1,15 @@
+schema_version: '1.0'
+task_id: REQUIRED
+claim_refs: []
+reviewer: REQUIRED
+operator_id: REQUIRED
+model: null
+reviewed_commit: REQUIRED
+exposure_to_proposed_answer: REQUIRED
+independent_method: REQUIRED
+reproduction_commands: []
+results: []
+assumption_checks: []
+counterexamples: []
+recommendation: needs_work
+# Maintainer acceptance, not this record alone, promotes a claim.

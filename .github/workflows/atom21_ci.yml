@@ -29,3 +29,4 @@ jobs:
       - name: Validate Atom 2.1 pack
         run: |
           python validate_atom2_1.py
+          python scripts/validate_cooperation.py

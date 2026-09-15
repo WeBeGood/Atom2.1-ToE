@@ -72,3 +72,8 @@ tasks:
     image preservation, time stretch and CMB spectrum.
 - id: PAPER-P004
   action: Human revision of P004; complete affiliations/declarations and choose a journal before any submission.
+- id: COOP-HANDOFF
+  action: Run a fresh-session recovery trial from a durable handoff; see cooperation/tasks.yaml.
+- id: PHYSICS-BRANCH-MAP
+  action: Refine the research_map bridges into bounded tasks with equations, assumptions and acceptance
+    criteria.

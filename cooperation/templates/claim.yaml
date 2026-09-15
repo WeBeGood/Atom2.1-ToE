@@ -1,0 +1,11 @@
+id: REQUIRED
+statement: REQUIRED
+status: derived_proposed
+epistemic_status: conditional_mathematical_result
+depends_on: []
+assumptions: []
+units: REQUIRED
+derivation_artifacts: []
+validation_results: []
+open_limits: []
+provenance: []

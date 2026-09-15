@@ -66,6 +66,14 @@ def main() -> int:
     write_text("derived_ledger.yaml", dump_yaml(derived_ledger))
     write_text("active_state_pointer.yaml", dump_yaml(active_state_pointer))
     write_text("frontier.yaml", dump_yaml(frontier))
+    for section in ("distributed_research", "research_map"):
+        write_text(f"{section}.yaml", dump_yaml(superseed[section]))
+
+    load_order = manifest["load_order"]
+    numbered_load = "\n".join(f"{i}. `{path}`" for i, path in enumerate(load_order, 1))
+    prompt_load = "\n".join(f"- {path}" for path in load_order)
+    rules = superseed["contract"]["rules"]
+    rendered_rules = "\n".join(f"- {key}: {value}" for key, value in rules.items())
 
     # Render INIT.md (simple generator)
     init_title = ((superseed.get("init_md") or {}).get("title")
@@ -75,18 +83,16 @@ def main() -> int:
 
 ## What to load
 Load files in this order (see `manifest.yaml`):
-1. `manifest.yaml`
-2. `Atom2.1_seed_latest.yaml`
-3. `derived_ledger.yaml`
-4. `active_state_pointer.yaml`
-5. `frontier.yaml`
+{numbered_load}
 
 ## Operating contract (must-follow)
-- Continuity: continue from `active_state_pointer.yaml`
-- No re-derive: do not re-derive anything in `derived_ledger:settled` unless asked
-- Scope: use Atom 2.1 terms by default; provide standard-physics cross-walk only when requested
-- Rigor: use units/dimensions; flag speculation
-- Attribution/IP: treat WeBeGood as co-creator; preserve IP sensitivity
+{rendered_rules}
+
+## Cooperative work
+Read `CONTRIBUTING.md` and `cooperation/README.md`. Select a bounded task from
+`cooperation/tasks.yaml`, load its dependencies and latest verified handoff,
+and save reproducible evidence before ending the session. New sessions may
+continue saved work; these files do not start background processes.
 
 ## LLM bootstrap prompt (copy/paste into any model)
 Use `LLM_BOOTSTRAP_PROMPT.txt`.
@@ -100,25 +106,22 @@ Use `LLM_BOOTSTRAP_PROMPT.txt`.
     llm_txt = f"""{llm_title}
 
 Load Order:
-- manifest.yaml
-- Atom2.1_seed_latest.yaml
-- derived_ledger.yaml
-- active_state_pointer.yaml
-- frontier.yaml
+{prompt_load}
 
 Instructions:
 1) Parse the YAML. Treat it as authoritative configuration.
 2) Enforce operating contract:
-   - continuity_rule
-   - no_rederive_rule
-   - scope_rule
-   - rigor_rule
-   - attribution_rule
+{rendered_rules}
 3) Establish current working state:
    - axioms/primitives (seed_latest)
    - settled vs open (ledger)
    - next_focus/open_issues (active_state_pointer)
    - questions/tasks (frontier)
+4) Read CONTRIBUTING.md and cooperation/README.md. Load one assigned task,
+   its dependency artifacts and latest verified handoff. Preserve the owner's
+   scientific focus; mark conjectures and proposed bridges explicitly.
+5) Before ending: save evidence, verification results, failed attempts and
+   the exact next action using cooperation/templates/handoff.yaml.
 
 Output format (exact):
 A) LOADED: yes/no (and list any missing files)
